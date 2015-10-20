@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Vi-bz4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plane" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Vi-bz4">
                                 <rect key="frame" x="100" y="410" width="40" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +38,7 @@
                         </constraints>
                         <connections>
                             <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Pce-az-f99"/>
+                            <outlet property="planeImageView" destination="tIs-Vi-bz4" id="zWP-rO-XtE"/>
                             <outlet property="planeTopConstraint" destination="0UW-uU-aOV" id="Ip2-BG-EAB"/>
                         </connections>
                     </view>
@@ -47,4 +48,7 @@
             <point key="canvasLocation" x="266" y="501"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plane" width="79" height="104"/>
+    </resources>
 </document>
