@@ -27,7 +27,15 @@ class MetarParserLBBGTests: QuickSpec {
                     expect(metar.station.name) == "LBBG"
                 }
                 it("should correctly parse the observation time.") {
-//                    expect(metar.observationTime?.description) == "2015-06-04 16:00:00 +0000"
+                    let calendar = NSCalendar.currentCalendar()
+                    let components = calendar.componentsInTimeZone(NSTimeZone(abbreviation: "UTC")!, fromDate: NSDate())
+                    components.day = 4
+                    components.hour = 16
+                    components.minute = 0
+                    components.second = 0
+                    let date = calendar.dateFromComponents(components)
+                    
+                    expect(metar.observationTime?.description) == date?.description
                 }
             }
             

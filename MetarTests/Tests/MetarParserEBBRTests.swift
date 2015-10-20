@@ -28,7 +28,15 @@ class MetarParserEBBRTests: QuickSpec {
                     expect(metar.station.name) == "EBBR"
                 }
                 it("should correctly parse the observation time.") {
-//                    expect(metar.observationTime?.description) == "2015-06-11 12:20:00 +0000"
+                    let calendar = NSCalendar.currentCalendar()
+                    let components = calendar.componentsInTimeZone(NSTimeZone(abbreviation: "UTC")!, fromDate: NSDate())
+                    components.day = 11
+                    components.hour = 12
+                    components.minute = 20
+                    components.second = 0
+                    let date = calendar.dateFromComponents(components)
+                    
+                    expect(metar.observationTime?.description) == date?.description
                 }
             }
             
