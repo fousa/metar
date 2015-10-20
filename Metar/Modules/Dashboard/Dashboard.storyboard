@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="a3a-Bc-Drc"/>
                         <viewControllerLayoutGuide type="bottom" id="bV3-AF-Kbh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yL7-O5-1EO">
+                    <view key="view" contentMode="scaleToFill" id="yL7-O5-1EO" customClass="DashboardView" customModule="Metar" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -36,11 +36,11 @@
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" priority="750" constant="150" id="2Tl-A3-ah0"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="centerX" secondItem="yL7-O5-1EO" secondAttribute="centerX" priority="250" id="Fi9-Eg-vAD"/>
                         </constraints>
+                        <connections>
+                            <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Pce-az-f99"/>
+                            <outlet property="planeTopConstraint" destination="0UW-uU-aOV" id="Ip2-BG-EAB"/>
+                        </connections>
                     </view>
-                    <connections>
-                        <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Cr1-7D-3Uw"/>
-                        <outlet property="planeTopConstraint" destination="0UW-uU-aOV" id="V0R-Ip-lqC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9h-NC-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
