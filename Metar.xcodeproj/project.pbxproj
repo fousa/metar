@@ -9,22 +9,22 @@
 /* Begin PBXBuildFile section */
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
-		626D6B381BD664D80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B371BD664D80042619F /* Metar.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B3A1BD665070042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B391BD665070042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B441BD6790F0042619F /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B431BD6790F0042619F /* MetarParser.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B4B1BD6793F0042619F /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B451BD6793F0042619F /* Cloud.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B4C1BD6793F0042619F /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B461BD6793F0042619F /* Pressure.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B4D1BD6793F0042619F /* Runway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B471BD6793F0042619F /* Runway.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B4E1BD6793F0042619F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B481BD6793F0042619F /* Station.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B4F1BD6793F0042619F /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B491BD6793F0042619F /* Visibility.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B501BD6793F0042619F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B4A1BD6793F0042619F /* Wind.swift */; settings = {ASSET_TAGS = (); }; };
-		626D6B531BD679D50042619F /* String+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B521BD679D50042619F /* String+Formatters.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B561BD67C140042619F /* SwiftRegex.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B5C1BD67D740042619F /* MetarParserCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B581BD67D740042619F /* MetarParserCategoryTests.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B641BD67FB00042619F /* MetarParserEBBRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B621BD67FB00042619F /* MetarParserEBBRTests.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B651BD67FB00042619F /* MetarParserLBBGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B631BD67FB00042619F /* MetarParserLBBGTests.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B751BD689B80042619F /* String+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B681BD689B80042619F /* String+Formatters.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B761BD689B80042619F /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6A1BD689B80042619F /* Cloud.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B771BD689B80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6B1BD689B80042619F /* Metar.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B781BD689B80042619F /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6C1BD689B80042619F /* Pressure.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B791BD689B80042619F /* Runway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6D1BD689B80042619F /* Runway.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B7A1BD689B80042619F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6E1BD689B80042619F /* Station.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B7B1BD689B80042619F /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6F1BD689B80042619F /* Visibility.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B7C1BD689B80042619F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B701BD689B80042619F /* Wind.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B721BD689B80042619F /* MetarParser.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B7E1BD689B80042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B741BD689B80042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
@@ -50,22 +50,22 @@
 
 /* Begin PBXFileReference section */
 		02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.debug.xcconfig"; sourceTree = "<group>"; };
-		626D6B371BD664D80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
-		626D6B391BD665070042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
 		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
 		626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Expectations.swift"; sourceTree = "<group>"; };
-		626D6B431BD6790F0042619F /* MetarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
-		626D6B451BD6793F0042619F /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
-		626D6B461BD6793F0042619F /* Pressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
-		626D6B471BD6793F0042619F /* Runway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runway.swift; sourceTree = "<group>"; };
-		626D6B481BD6793F0042619F /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		626D6B491BD6793F0042619F /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
-		626D6B4A1BD6793F0042619F /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
-		626D6B521BD679D50042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatters.swift"; sourceTree = "<group>"; };
 		626D6B561BD67C140042619F /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		626D6B581BD67D740042619F /* MetarParserCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserCategoryTests.swift; sourceTree = "<group>"; };
 		626D6B621BD67FB00042619F /* MetarParserEBBRTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserEBBRTests.swift; sourceTree = "<group>"; };
 		626D6B631BD67FB00042619F /* MetarParserLBBGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserLBBGTests.swift; sourceTree = "<group>"; };
+		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatters.swift"; sourceTree = "<group>"; };
+		626D6B6A1BD689B80042619F /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		626D6B6B1BD689B80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
+		626D6B6C1BD689B80042619F /* Pressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
+		626D6B6D1BD689B80042619F /* Runway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runway.swift; sourceTree = "<group>"; };
+		626D6B6E1BD689B80042619F /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		626D6B6F1BD689B80042619F /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		626D6B701BD689B80042619F /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		626D6B721BD689B80042619F /* MetarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
+		626D6B741BD689B80042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,30 +119,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		626D6B351BD664CC0042619F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				626D6B371BD664D80042619F /* Metar.swift */,
-				626D6B451BD6793F0042619F /* Cloud.swift */,
-				626D6B461BD6793F0042619F /* Pressure.swift */,
-				626D6B471BD6793F0042619F /* Runway.swift */,
-				626D6B481BD6793F0042619F /* Station.swift */,
-				626D6B491BD6793F0042619F /* Visibility.swift */,
-				626D6B4A1BD6793F0042619F /* Wind.swift */,
-			);
-			name = Models;
-			path = Components/Models;
-			sourceTree = "<group>";
-		};
-		626D6B361BD664CC0042619F /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				626D6B391BD665070042619F /* MetarService.swift */,
-			);
-			name = Service;
-			path = Components/Service;
-			sourceTree = "<group>";
-		};
 		626D6B3C1BD674E60042619F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,24 +134,6 @@
 				626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		626D6B421BD679020042619F /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				626D6B431BD6790F0042619F /* MetarParser.swift */,
-			);
-			name = Parser;
-			path = Components/Parser;
-			sourceTree = "<group>";
-		};
-		626D6B511BD679D10042619F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				626D6B521BD679D50042619F /* String+Formatters.swift */,
-			);
-			name = Extensions;
-			path = Components/Extensions;
 			sourceTree = "<group>";
 		};
 		626D6B541BD67C140042619F /* Vendor */ = {
@@ -212,6 +170,55 @@
 			name = Parser;
 			sourceTree = "<group>";
 		};
+		626D6B661BD689B80042619F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B671BD689B80042619F /* Extensions */,
+				626D6B691BD689B80042619F /* Models */,
+				626D6B711BD689B80042619F /* Parser */,
+				626D6B731BD689B80042619F /* Service */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		626D6B671BD689B80042619F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B681BD689B80042619F /* String+Formatters.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		626D6B691BD689B80042619F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B6A1BD689B80042619F /* Cloud.swift */,
+				626D6B6B1BD689B80042619F /* Metar.swift */,
+				626D6B6C1BD689B80042619F /* Pressure.swift */,
+				626D6B6D1BD689B80042619F /* Runway.swift */,
+				626D6B6E1BD689B80042619F /* Station.swift */,
+				626D6B6F1BD689B80042619F /* Visibility.swift */,
+				626D6B701BD689B80042619F /* Wind.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		626D6B711BD689B80042619F /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B721BD689B80042619F /* MetarParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		626D6B731BD689B80042619F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B741BD689B80042619F /* MetarService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		62DD04BD1BD635C800628E9D = {
 			isa = PBXGroup;
 			children = (
@@ -238,13 +245,10 @@
 			isa = PBXGroup;
 			children = (
 				62DD04C91BD635C800628E9D /* AppDelegate.swift */,
-				626D6B541BD67C140042619F /* Vendor */,
-				626D6B511BD679D10042619F /* Extensions */,
-				626D6B351BD664CC0042619F /* Models */,
-				626D6B421BD679020042619F /* Parser */,
-				626D6B361BD664CC0042619F /* Service */,
+				626D6B661BD689B80042619F /* Components */,
 				62DD04F81BD635DA00628E9D /* Supporting Files */,
 				62DD04F71BD635D700628E9D /* UI */,
+				626D6B541BD67C140042619F /* Vendor */,
 			);
 			path = Metar;
 			sourceTree = "<group>";
@@ -540,18 +544,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				626D6B4B1BD6793F0042619F /* Cloud.swift in Sources */,
-				626D6B501BD6793F0042619F /* Wind.swift in Sources */,
 				62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */,
-				626D6B531BD679D50042619F /* String+Formatters.swift in Sources */,
-				626D6B4E1BD6793F0042619F /* Station.swift in Sources */,
-				626D6B4C1BD6793F0042619F /* Pressure.swift in Sources */,
-				626D6B381BD664D80042619F /* Metar.swift in Sources */,
-				626D6B4D1BD6793F0042619F /* Runway.swift in Sources */,
-				626D6B441BD6790F0042619F /* MetarParser.swift in Sources */,
-				626D6B4F1BD6793F0042619F /* Visibility.swift in Sources */,
-				626D6B3A1BD665070042619F /* MetarService.swift in Sources */,
+				626D6B7C1BD689B80042619F /* Wind.swift in Sources */,
+				626D6B761BD689B80042619F /* Cloud.swift in Sources */,
+				626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */,
+				626D6B7A1BD689B80042619F /* Station.swift in Sources */,
+				626D6B781BD689B80042619F /* Pressure.swift in Sources */,
 				626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */,
+				626D6B791BD689B80042619F /* Runway.swift in Sources */,
+				626D6B771BD689B80042619F /* Metar.swift in Sources */,
+				626D6B7B1BD689B80042619F /* Visibility.swift in Sources */,
+				626D6B751BD689B80042619F /* String+Formatters.swift in Sources */,
+				626D6B7E1BD689B80042619F /* MetarService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
