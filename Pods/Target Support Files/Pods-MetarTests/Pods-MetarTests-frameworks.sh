@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MetarTests/Mockingjay.framework"
   install_framework "Pods-MetarTests/Nimble.framework"
+  install_framework "Pods-MetarTests/Quick.framework"
   install_framework "Pods-MetarTests/URITemplate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MetarTests/Mockingjay.framework"
   install_framework "Pods-MetarTests/Nimble.framework"
+  install_framework "Pods-MetarTests/Quick.framework"
   install_framework "Pods-MetarTests/URITemplate.framework"
 fi
