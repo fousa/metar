@@ -25,6 +25,8 @@
 		626D6B7C1BD689B80042619F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B701BD689B80042619F /* Wind.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B721BD689B80042619F /* MetarParser.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B7E1BD689B80042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B741BD689B80042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B841BD68ADF0042619F /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D6B831BD68ADF0042619F /* Dashboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B851BD68B330042619F /* DashboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
@@ -66,6 +68,8 @@
 		626D6B701BD689B80042619F /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		626D6B721BD689B80042619F /* MetarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
 		626D6B741BD689B80042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
+		626D6B831BD68ADF0042619F /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		626D6B851BD68B330042619F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +223,39 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		626D6B7F1BD68AB80042619F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B801BD68AD40042619F /* Dashboard */,
+				626D6B811BD68AD40042619F /* Metar */,
+				626D6B821BD68AD40042619F /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		626D6B801BD68AD40042619F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
+				626D6B851BD68B330042619F /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		626D6B811BD68AD40042619F /* Metar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Metar;
+			sourceTree = "<group>";
+		};
+		626D6B821BD68AD40042619F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		62DD04BD1BD635C800628E9D = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +283,7 @@
 			children = (
 				62DD04C91BD635C800628E9D /* AppDelegate.swift */,
 				626D6B661BD689B80042619F /* Components */,
+				626D6B7F1BD68AB80042619F /* Modules */,
 				62DD04F81BD635DA00628E9D /* Supporting Files */,
 				62DD04F71BD635D700628E9D /* UI */,
 				626D6B541BD67C140042619F /* Vendor */,
@@ -426,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */,
+				626D6B841BD68ADF0042619F /* Dashboard.storyboard in Resources */,
 				62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +590,7 @@
 				626D6B7A1BD689B80042619F /* Station.swift in Sources */,
 				626D6B781BD689B80042619F /* Pressure.swift in Sources */,
 				626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */,
+				626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
 				626D6B771BD689B80042619F /* Metar.swift in Sources */,
 				626D6B7B1BD689B80042619F /* Visibility.swift in Sources */,

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U0B-vT-6CS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="U3i-um-ss9">
+            <objects>
+                <viewController id="U0B-vT-6CS" customClass="DashboardViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a3a-Bc-Drc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bV3-AF-Kbh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yL7-O5-1EO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Vi-bz4">
+                                <rect key="frame" x="100" y="410" width="40" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5lR-vl-U8b"/>
+                                    <constraint firstAttribute="width" constant="40" id="L4h-Hf-gyS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Ndq-Qf-nEl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dRi-vy-7vh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tIs-Vi-bz4" firstAttribute="top" secondItem="a3a-Bc-Drc" secondAttribute="bottom" priority="250" constant="20" id="0UW-uU-aOV"/>
+                            <constraint firstItem="tIs-Vi-bz4" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" priority="750" constant="100" id="2TJ-xn-MDj"/>
+                            <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" priority="750" constant="150" id="2Tl-A3-ah0"/>
+                            <constraint firstItem="tIs-Vi-bz4" firstAttribute="centerX" secondItem="yL7-O5-1EO" secondAttribute="centerX" priority="250" id="Fi9-Eg-vAD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Cr1-7D-3Uw"/>
+                        <outlet property="planeTopConstraint" destination="0UW-uU-aOV" id="V0R-Ip-lqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9h-NC-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="501"/>
+        </scene>
+    </scenes>
+</document>
