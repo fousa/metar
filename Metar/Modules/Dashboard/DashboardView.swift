@@ -12,6 +12,7 @@ class DashboardView: UIView {
     
     @IBOutlet private var planeImageView: UIImageView!
     @IBOutlet private var tableContainerView: UIView!
+    @IBOutlet private var placeholderContainerView: UIView!
     @IBOutlet private var addButton: UIButton!
     
     @IBOutlet private var planeTopConstraint: NSLayoutConstraint!
@@ -21,6 +22,7 @@ class DashboardView: UIView {
         super.awakeFromNib()
         
         tableContainerView.alpha = 0.0
+        placeholderContainerView.alpha = 0.0
         addButton.alpha = 0.0
     }
     
@@ -28,7 +30,8 @@ class DashboardView: UIView {
         planeTopConstraint.priority = 900
         planeHorizontalConstraint.priority = 900
         UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: { () -> Void in
-            self.tableContainerView.alpha = 1.0
+            self.tableContainerView.alpha = 0.0
+            self.placeholderContainerView.alpha = 1.0
             self.addButton.alpha = 1.0
             self.layoutIfNeeded()
         }, completion: { finished in

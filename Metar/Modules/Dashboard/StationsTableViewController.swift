@@ -9,11 +9,4 @@
 import UIKit
 
 class StationsTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        tableView.backgroundColor = UIColor.redColor()
-    }
-    
 }
