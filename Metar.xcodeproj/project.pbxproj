@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
+		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
 		626D6B381BD664D80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B371BD664D80042619F /* Metar.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B3A1BD665070042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B391BD665070042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
-		62DD04DF1BD635C800628E9D /* MetarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04DE1BD635C800628E9D /* MetarTests.swift */; };
 		62DD04EA1BD635C800628E9D /* MetarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04E91BD635C800628E9D /* MetarUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,20 +36,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		626D6B371BD664D80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
 		626D6B391BD665070042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
+		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DD04D31BD635C800628E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DD04D51BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD04DA1BD635C800628E9D /* MetarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DD04DE1BD635C800628E9D /* MetarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarTests.swift; sourceTree = "<group>"; };
 		62DD04E01BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD04E51BD635C800628E9D /* MetarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04E91BD635C800628E9D /* MetarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarUITests.swift; sourceTree = "<group>"; };
 		62DD04EB1BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90728424445FD54E398F4BB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E8826967B2D55A9014719AB6 /* Pods-MetarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.release.xcconfig"; sourceTree = "<group>"; };
 		F1C42FAD29132B037F942857 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA920EAA2B82E22FA60EBF63 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				FA920EAA2B82E22FA60EBF63 /* Pods.framework */,
+				8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +109,21 @@
 			);
 			name = Service;
 			path = Components/Service;
+			sourceTree = "<group>";
+		};
+		626D6B3C1BD674E60042619F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B3D1BD674E60042619F /* MetarServiceTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		626D6B3F1BD674EF0042619F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		62DD04BD1BD635C800628E9D = {
@@ -142,8 +163,9 @@
 		62DD04DD1BD635C800628E9D /* MetarTests */ = {
 			isa = PBXGroup;
 			children = (
-				62DD04DE1BD635C800628E9D /* MetarTests.swift */,
+				626D6B3F1BD674EF0042619F /* Extensions */,
 				62DD04F91BD635F000628E9D /* Supporting Files */,
+				626D6B3C1BD674E60042619F /* Tests */,
 			);
 			path = MetarTests;
 			sourceTree = "<group>";
@@ -195,6 +217,8 @@
 			children = (
 				90728424445FD54E398F4BB6 /* Pods.debug.xcconfig */,
 				F1C42FAD29132B037F942857 /* Pods.release.xcconfig */,
+				02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */,
+				E8826967B2D55A9014719AB6 /* Pods-MetarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -226,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62DD04F11BD635C800628E9D /* Build configuration list for PBXNativeTarget "MetarTests" */;
 			buildPhases = (
+				22B22A8A50857E1FE4A1DFA5 /* Check Pods Manifest.lock */,
 				62DD04D61BD635C800628E9D /* Sources */,
 				62DD04D71BD635C800628E9D /* Frameworks */,
 				62DD04D81BD635C800628E9D /* Resources */,
+				F34535D70CAD553E48D9DBCB /* Embed Pods Frameworks */,
+				AA32DE3E78220581E25B46B0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +369,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		22B22A8A50857E1FE4A1DFA5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9EF574769A2573B63F84FD1B /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +399,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AA32DE3E78220581E25B46B0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8010CE9EFD83DC528BF84FD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +427,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F34535D70CAD553E48D9DBCB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -389,7 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DD04DF1BD635C800628E9D /* MetarTests.swift in Sources */,
+				626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +609,7 @@
 		};
 		62DD04F21BD635C800628E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MetarTests/Info.plist;
@@ -549,6 +622,7 @@
 		};
 		62DD04F31BD635C800628E9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8826967B2D55A9014719AB6 /* Pods-MetarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MetarTests/Info.plist;

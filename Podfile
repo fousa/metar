@@ -4,3 +4,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 pod 'Ono', '~> 1.2'
+
+target 'MetarTests', exclusive: true do
+    pod 'Mockingjay', '~> 1.1'
+end

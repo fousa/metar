@@ -1,10 +1,24 @@
 PODS:
+  - Mockingjay (1.1.0):
+    - Mockingjay/Core (= 1.1.0)
+    - Mockingjay/Session (= 1.1.0)
+    - Mockingjay/XCTest (= 1.1.0)
+  - Mockingjay/Core (1.1.0):
+    - URITemplate (~> 1.3)
+  - Mockingjay/Session (1.1.0):
+    - Mockingjay/Core
+  - Mockingjay/XCTest (1.1.0):
+    - Mockingjay/Core
   - Ono (1.2.2)
+  - URITemplate (1.3.0)
 
 DEPENDENCIES:
+  - Mockingjay (~> 1.1)
   - Ono (~> 1.2)
 
 SPEC CHECKSUMS:
+  Mockingjay: 5782cb22c9e99dece7aad5bdf738bfa187cfcdcc
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  URITemplate: 0ebbec80d1eb59a89e29db9b14c99d5908d3e574
 
 COCOAPODS: 0.39.0
