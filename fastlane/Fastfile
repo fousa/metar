@@ -16,5 +16,5 @@ lane :beta do
   gym(scheme: "Metar")
 
   # Deploy the application to TestFlight.
-  deliver(beta: true)
+  pilot
 end
