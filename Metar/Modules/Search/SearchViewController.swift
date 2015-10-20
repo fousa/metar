@@ -55,4 +55,11 @@ extension SearchViewController: SearchViewDelegate {
     func searchViewWillUseCurrentLocation(searchView: SearchView) {
         print("👀 Use current location")
     }
+    
+    func searchViewWillClear(searchView: SearchView) {
+        print("👀 Clear the text field")
+        self.searchView.metars = [Metar]()
+        self.searchView.invalidateData()
+
+    }
 }

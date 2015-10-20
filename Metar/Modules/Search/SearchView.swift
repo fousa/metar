@@ -11,6 +11,7 @@ import UIKit
 
 protocol SearchViewDelegate: class {
     func searchViewWillUseCurrentLocation(searchView: SearchView)
+    func searchViewWillClear(searchView: SearchView)
 }
 
 class SearchView: UIView {
@@ -63,7 +64,7 @@ class SearchView: UIView {
     // MARK: - Data
     
     func invalidateData() {
-        print("📕 Found metars \(self.metars)")
+        print("📕 Found \(self.metars.count) metar(s)")
         dispatch_async_main {
             self.tableView.reloadData()
         }
@@ -90,6 +91,12 @@ class SearchView: UIView {
                 self.layoutIfNeeded()
             }
         }
+    }
+}
+
+extension SearchView: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.searchViewWillClear(self)
     }
 }
 
