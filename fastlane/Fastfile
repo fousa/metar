@@ -1,4 +1,4 @@
-fastlane_version "1.33.6"
+fastlane_version '1.33.6'
 
 lane :sign do
   # Setup signing.
@@ -13,7 +13,7 @@ lane :beta do
   push_to_git_remote local_branch: 'master'
 
   # Build the application.
-  gym(scheme: "Metar")
+  gym(scheme: 'Metar')
 
   # Deploy the application to TestFlight.
   pilot
