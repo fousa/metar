@@ -8,7 +8,10 @@
 
 import XCTest
 import CoreLocation
+
 import Mockingjay
+import Nimble
+
 @testable import Metar
 
 class MetarServiceTests: XCTestCase {
@@ -19,8 +22,8 @@ class MetarServiceTests: XCTestCase {
             self.stub(everything, builder: http(200, headers: nil, data: NSData()))
             
             MetarService().fetchList(station: "EBAW") { (error, data) -> () in
-                XCTAssertNotNil(data)
-                XCTAssertNil(error)
+                expect(error).to(beNil())
+                expect(data).toNot(beNil())
                 expectation.fulfill()
             }
         }
@@ -32,8 +35,8 @@ class MetarServiceTests: XCTestCase {
             self.stub(everything, builder: failure(stubbedError))
         
             MetarService().fetchList(station: "EBBT") { (error, data) -> () in
-                XCTAssertNotNil(error)
-                XCTAssertNil(data)
+                expect(error).toNot(beNil())
+                expect(data).to(beNil())
                 expectation.fulfill()
             }
         }
@@ -46,8 +49,8 @@ class MetarServiceTests: XCTestCase {
             self.stub(everything, builder: http(200, headers: nil, data: NSData()))
             
             MetarService().fetchList(location: CLLocation()) { (error, data) -> () in
-                XCTAssertNotNil(data)
-                XCTAssertNil(error)
+                expect(error).to(beNil())
+                expect(data).toNot(beNil())
                 expectation.fulfill()
             }
         }
@@ -59,8 +62,8 @@ class MetarServiceTests: XCTestCase {
             self.stub(everything, builder: failure(stubbedError))
             
             MetarService().fetchList(location: CLLocation()) { (error, data) -> () in
-                XCTAssertNotNil(error)
-                XCTAssertNil(data)
+                expect(error).toNot(beNil())
+                expect(data).to(beNil())
                 expectation.fulfill()
             }
         }

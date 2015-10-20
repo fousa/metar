@@ -9,15 +9,18 @@ PODS:
     - Mockingjay/Core
   - Mockingjay/XCTest (1.1.0):
     - Mockingjay/Core
+  - Nimble (2.0.0)
   - Ono (1.2.2)
   - URITemplate (1.3.0)
 
 DEPENDENCIES:
   - Mockingjay (~> 1.1)
+  - Nimble (~> 2.0)
   - Ono (~> 1.2)
 
 SPEC CHECKSUMS:
   Mockingjay: 5782cb22c9e99dece7aad5bdf738bfa187cfcdcc
+  Nimble: 472e75466819eb8c06299233e87c694a9b51328a
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   URITemplate: 0ebbec80d1eb59a89e29db9b14c99d5908d3e574
 
