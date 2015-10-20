@@ -12,6 +12,7 @@
 		626D6B381BD664D80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B371BD664D80042619F /* Metar.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B3A1BD665070042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B391BD665070042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B411BD675AC0042619F /* XCTestCase+Expectations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B401BD675AC0042619F /* XCTestCase+Expectations.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		626D6B371BD664D80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
 		626D6B391BD665070042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
 		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
+		626D6B401BD675AC0042619F /* XCTestCase+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Expectations.swift"; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		626D6B3F1BD674EF0042619F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				626D6B401BD675AC0042619F /* XCTestCase+Expectations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */,
+				626D6B411BD675AC0042619F /* XCTestCase+Expectations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
