@@ -15,6 +15,14 @@ class DashboardViewController: UIViewController {
     
     private var locationManager: CLLocationManager?
     
+    // MARK: - View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dashboardView.dataSource = self
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -42,5 +50,11 @@ extension DashboardViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         let angle = CGFloat(-newHeading.magneticHeading / 180.0 * M_PI)
         dashboardView.rotatePlane(toAngle: angle)
+    }
+}
+
+extension DashboardViewController: DashboardViewDataSource {
+    func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int {
+        return 1
     }
 }

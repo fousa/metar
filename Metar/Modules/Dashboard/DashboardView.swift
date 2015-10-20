@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol DashboardViewDataSource {
+    func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int
+}
+
 class DashboardView: UIView {
+    
+    // MARK: - Outlets
     
     @IBOutlet private var planeImageView: UIImageView!
     @IBOutlet private var tableContainerView: UIView!
@@ -18,6 +24,12 @@ class DashboardView: UIView {
     @IBOutlet private var planeTopConstraint: NSLayoutConstraint!
     @IBOutlet private var planeHorizontalConstraint: NSLayoutConstraint!
     
+    // MARK: - Variables
+    
+    var dataSource: DashboardViewDataSource?
+    
+    // MARK: - View
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -26,12 +38,14 @@ class DashboardView: UIView {
         addButton.alpha = 0.0
     }
     
+    // MARK: - Animation
+    
     func startIntroAnimation(completion: () -> ()) {
         planeTopConstraint.priority = 900
         planeHorizontalConstraint.priority = 900
         UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: { () -> Void in
-            self.tableContainerView.alpha = 0.0
-            self.placeholderContainerView.alpha = 1.0
+            self.tableContainerView.alpha = self.numberOfStations() > 0 ? 1.0 : 0.0
+            self.placeholderContainerView.alpha = self.tableContainerView.alpha == 1.0 ? 0.0 : 1.0
             self.addButton.alpha = 1.0
             self.layoutIfNeeded()
         }, completion: { finished in
@@ -43,5 +57,11 @@ class DashboardView: UIView {
         UIView.animateWithDuration(0.35) {
             self.planeImageView.transform = CGAffineTransformMakeRotation(angle)
         }
+    }
+    
+    // MARK: - Data Source
+    
+    func numberOfStations() -> Int {
+        return dataSource?.numberOfStationsInDashboardView(self) ?? 0
     }
 }
