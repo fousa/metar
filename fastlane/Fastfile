@@ -6,6 +6,7 @@ lane :sign do
 end
 
 lane :beta do
+  # Run the tests.
   xctool
 
   # Update build number, tag and commit.
@@ -14,7 +15,9 @@ lane :beta do
   add_git_tag prefix: 'v'
   push_to_git_remote local_branch: 'master'
 
+  # Build the application.
   gym(scheme: "Metar")
 
+  # Deploy the application to TestFlight.
   deliver(beta: true)
 end
