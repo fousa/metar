@@ -6,9 +6,6 @@ lane :sign do
 end
 
 lane :beta do
-  # Run the tests.
-  xctool
-
   # Update build number, tag and commit.
   increment_build_number
   commit_version_bump
