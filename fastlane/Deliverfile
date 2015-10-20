@@ -1,0 +1,54 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/KrauseFx/deliver/blob/master/Deliverfile.md
+
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+app_identifier "be.fousa.metar" # The bundle identifier of your app
+username "fousa" # your Apple ID user
+
+default_language "en"
+
+hide_transporter_output
+
+apple_id "991619333"
+
+title({
+  "en-US" => "METAR - Aviation Weather for Pilots"
+})
+
+# Set the changelog.
+# changelog({
+ # "en-US" => ""
+# })
+
+# The application description.
+description({
+    "en-US" => File.read("descriptions/en.txt")
+})
+
+# The application keywords.
+keywords({
+  "en-US" => ["metar", "icao"]
+})
+# The current application version.
+version "1.0.0"
+
+# The support URL.
+support_url "http://fousa.be"
+
+# The marketing URL.
+marketing_url "http://fousa.be"
+
+# The app review information.
+app_review_information({
+  first_name: "Jelle",
+  last_name: "Vandebeeck",
+  phone_number: "0032 494 86 03 25",
+  email_address: "jelle@fousa.be"
+})
+
+# Copyright information.
+copyright "#{Time.now.year} Jelle Vandebeeck"

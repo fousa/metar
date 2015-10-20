@@ -1,0 +1,22 @@
+fastlane_version "1.33.6"
+
+lane :sign do
+  # Setup signing.
+  sigh app_identifier: 'be.fousa.metar'
+end
+
+lane :beta do
+  update_fastlane
+
+  xctool
+
+  # Update build number, tag and commit.
+  increment_build_number
+  commit_version_bump
+  add_git_tag prefix: 'v'
+  push_to_git_remote local_branch: 'master'
+
+  gym(scheme: "Metar")
+
+  deliver(beta: true)
+end

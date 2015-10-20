@@ -764,10 +764,10 @@
 			baseConfigurationReference = 90728424445FD54E398F4BB6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 24;
 				INFOPLIST_FILE = Metar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.Metar;
+				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.metar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -777,10 +777,10 @@
 			baseConfigurationReference = F1C42FAD29132B037F942857 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 24;
 				INFOPLIST_FILE = Metar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.Metar;
+				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.metar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
