@@ -46,6 +46,9 @@
                                     <constraint firstAttribute="height" constant="44" id="6md-wE-pCo"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="search:" destination="GXt-hT-OCr" eventType="touchUpInside" id="cSG-37-3au"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

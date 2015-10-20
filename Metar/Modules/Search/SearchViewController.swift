@@ -14,6 +14,10 @@ class SearchViewController: UIViewController {
     
     // MARK: - Actions
     
+    @IBAction func search(sender: AnyObject) {
+        print("👀 Search stations")
+    }
+    
     @IBAction func close(sender: AnyObject) {
         print("🎯 Dismiss search screen")
         
