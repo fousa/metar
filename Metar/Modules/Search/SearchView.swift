@@ -28,21 +28,29 @@ class SearchView: UIView {
     
     var delegate: SearchViewDelegate?
     
+    private var keyboardShowNotification: AnyObject!
+    private var keyboardHideNotification: AnyObject!
+    
     // MARK: - View
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+        keyboardShowNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Show keyboard")
             self.keyboardTapGesture.enabled = true
             self.moveSearch(up: true, notification: notification)
         }
-        NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+        keyboardHideNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Hide keyboard")
             self.keyboardTapGesture.enabled = false
             self.moveSearch(up: false, notification: notification)
         }
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(keyboardShowNotification)
+        NSNotificationCenter.defaultCenter().removeObserver(keyboardHideNotification)
     }
     
     // MARK: - Responder
