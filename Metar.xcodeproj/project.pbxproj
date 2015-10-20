@@ -11,6 +11,7 @@
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		04C22BA41BD6A90E00175B52 /* UIStoryboard+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */; settings = {ASSET_TAGS = (); }; };
 		04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA51BD6AA5C00175B52 /* SearchView.swift */; settings = {ASSET_TAGS = (); }; };
+		04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
 		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -63,6 +64,7 @@
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
 		04C22BA51BD6AA5C00175B52 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
 		626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Expectations.swift"; sourceTree = "<group>"; };
 		626D6B561BD67C140042619F /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
 				626D6B871BD68DE20042619F /* DashboardView.swift */,
 				626D6B851BD68B330042619F /* DashboardViewController.swift */,
+				04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */,
 				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
 			);
 			path = Dashboard;
@@ -617,6 +620,7 @@
 				626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */,
 				626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */,
 				04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */,
+				04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
 				04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */,
 				626D6B771BD689B80042619F /* Metar.swift in Sources */,

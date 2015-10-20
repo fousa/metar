@@ -31,6 +31,14 @@ class DashboardViewController: UIViewController {
         }
     }
     
+    // MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? PlaceholderViewController {
+            controller.delegate = self
+        }
+    }
+    
     // MARK: - Heading
     
     private func startUpdatingHeading() {
@@ -73,5 +81,11 @@ extension DashboardViewController: DashboardViewDataSource {
 extension DashboardViewController: UIStoryboardDelegate {
     func storyboardShouldDismiss(storyboard: UIStoryboard) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension DashboardViewController: PlaceholderViewControllerDelegate {
+    func placeholderViewControllerWillAddStation(controller: PlaceholderViewController) {
+        addStation(controller)
     }
 }

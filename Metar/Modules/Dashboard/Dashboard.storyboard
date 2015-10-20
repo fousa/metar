@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="266" y="1197"/>
         </scene>
-        <!--View Controller-->
+        <!--Placeholder View Controller-->
         <scene sceneID="ady-1w-lsW">
             <objects>
-                <viewController id="eQ5-p5-bYg" sceneMemberID="viewController">
+                <viewController id="eQ5-p5-bYg" customClass="PlaceholderViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="423-Su-1wO"/>
                         <viewControllerLayoutGuide type="bottom" id="zzH-CM-Dn9"/>
@@ -143,6 +143,9 @@
                                 <rect key="frame" x="261" y="81" width="79" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Add station"/>
+                                <connections>
+                                    <action selector="addStation:" destination="eQ5-p5-bYg" eventType="touchUpInside" id="yqu-VB-eSQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
