@@ -12,6 +12,14 @@ class SearchViewController: UIViewController {
     
     var searchView: SearchView! { return self.view as! SearchView }
     
+    // MARK: - View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        searchView.delegate = self
+    }
+    
     // MARK: - Actions
     
     @IBAction func search(sender: AnyObject) {
@@ -27,5 +35,10 @@ class SearchViewController: UIViewController {
     @IBAction func hideKeyboard(sender: AnyObject) {
         searchView.resignFirstResponder()
     }
-    
+}
+
+extension SearchViewController: SearchViewDelegate {
+    func searchViewWillUseCurrentLocation(searchView: SearchView) {
+        print("👀 Use current location")
+    }
 }

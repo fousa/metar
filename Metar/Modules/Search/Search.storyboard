@@ -50,19 +50,58 @@
                                     <action selector="search:" destination="GXt-hT-OCr" eventType="touchUpInside" id="cSG-37-3au"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-W9-J1N">
+                                <rect key="frame" x="0.0" y="108" width="600" height="448"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Location" id="r7A-1G-2eq">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7A-1G-2eq" id="vtt-3F-xfu">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use current location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62S-ze-Rb3">
+                                                    <rect key="frame" x="223" y="11" width="155" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="62S-ze-Rb3" firstAttribute="centerY" secondItem="vtt-3F-xfu" secondAttribute="centerY" id="L7U-j7-NtS"/>
+                                                <constraint firstItem="62S-ze-Rb3" firstAttribute="centerX" secondItem="vtt-3F-xfu" secondAttribute="centerX" id="MCt-8n-QUC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LRL-rn-iNy" id="AsC-zN-2dD"/>
+                                    <outlet property="delegate" destination="LRL-rn-iNy" id="w06-wy-dT7"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="bhv-W9-J1N" firstAttribute="top" secondItem="IdV-c8-6eX" secondAttribute="bottom" id="6bD-Yb-VgV"/>
+                            <constraint firstItem="H3G-9g-6Fw" firstAttribute="top" secondItem="bhv-W9-J1N" secondAttribute="bottom" id="7dS-xu-wIj"/>
                             <constraint firstItem="IdV-c8-6eX" firstAttribute="top" secondItem="IxO-2u-PB2" secondAttribute="bottom" id="Hbq-sd-OIi"/>
                             <constraint firstItem="IdV-c8-6eX" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="Hzz-hc-LM6"/>
                             <constraint firstItem="yFp-LG-kZX" firstAttribute="top" secondItem="H3G-9g-6Fw" secondAttribute="bottom" id="IEU-cd-sN6"/>
                             <constraint firstAttribute="trailing" secondItem="IdV-c8-6eX" secondAttribute="trailing" id="J5Y-Zs-jrB"/>
                             <constraint firstItem="H3G-9g-6Fw" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="J9i-Tv-VsO"/>
                             <constraint firstAttribute="trailing" secondItem="H3G-9g-6Fw" secondAttribute="trailing" id="gfV-qO-4nz"/>
+                            <constraint firstItem="bhv-W9-J1N" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="snC-mr-qFL"/>
+                            <constraint firstAttribute="trailing" secondItem="bhv-W9-J1N" secondAttribute="trailing" id="uad-IL-A8a"/>
                         </constraints>
                         <connections>
+                            <outlet property="keyboardTapGesture" destination="gSj-Zm-yiH" id="15D-g5-5V9"/>
                             <outlet property="searchButton" destination="H3G-9g-6Fw" id="531-gf-qv5"/>
                             <outlet property="searchButtonBottomConstraint" destination="IEU-cd-sN6" id="wA6-fx-a6t"/>
                             <outlet property="searchField" destination="IdV-c8-6eX" id="r9m-7Q-wqs"/>
@@ -78,7 +117,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09W-J1-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gSj-Zm-yiH">
+                <tapGestureRecognizer enabled="NO" id="gSj-Zm-yiH">
                     <connections>
                         <action selector="hideKeyboard:" destination="GXt-hT-OCr" id="tFf-DK-nL7"/>
                     </connections>
