@@ -21,6 +21,7 @@ class SearchView: UIView {
     
     @IBOutlet private var searchField: UISearchBar!
     @IBOutlet private var searchButton: UIButton!
+    @IBOutlet private var tableView: UITableView!
     
     @IBOutlet private var searchButtonBottomConstraint: NSLayoutConstraint!
     
@@ -28,8 +29,14 @@ class SearchView: UIView {
     
     weak var delegate: SearchViewDelegate?
     
+    var metars = [Metar]()
+    
     private var keyboardShowNotification: AnyObject!
     private var keyboardHideNotification: AnyObject!
+    
+    var query: String? {
+        return searchField.text
+    }
     
     // MARK: - View
     
@@ -51,6 +58,13 @@ class SearchView: UIView {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(keyboardShowNotification)
         NSNotificationCenter.defaultCenter().removeObserver(keyboardHideNotification)
+    }
+    
+    // MARK: - Data
+    
+    func invalidateData() {
+        print("📕 Found metars \(metars)")
+        tableView.reloadData()
     }
     
     // MARK: - Responder
@@ -79,7 +93,8 @@ class SearchView: UIView {
 
 extension SearchView: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        // When no metars are available, show the 'use current location' cell.
+        return metars.count > 0 ? metars.count : 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

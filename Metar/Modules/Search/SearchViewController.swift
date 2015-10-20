@@ -28,7 +28,16 @@ class SearchViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func search(sender: AnyObject) {
-        print("👀 Search stations")
+        if let stationQuery = searchView.query {
+            print("👀 Search stations with query \(stationQuery)")
+            MetarService().fetchList(station: stationQuery, completion: { (error, data) -> () in
+                let metars: [Metar]? = MetarXMLParser(data: data)?.parseMetars()
+                self.searchView.metars = metars ?? [Metar]()
+                self.searchView.invalidateData()
+            })
+        } else {
+            print("👀 Search no stations")
+        }
     }
     
     @IBAction func close(sender: AnyObject) {

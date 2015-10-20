@@ -105,6 +105,7 @@
                             <outlet property="searchButton" destination="H3G-9g-6Fw" id="531-gf-qv5"/>
                             <outlet property="searchButtonBottomConstraint" destination="IEU-cd-sN6" id="wA6-fx-a6t"/>
                             <outlet property="searchField" destination="IdV-c8-6eX" id="r9m-7Q-wqs"/>
+                            <outlet property="tableView" destination="bhv-W9-J1N" id="gp9-Yd-Ret"/>
                             <outletCollection property="gestureRecognizers" destination="gSj-Zm-yiH" appends="YES" id="DSJ-PY-kFN"/>
                         </connections>
                     </view>
