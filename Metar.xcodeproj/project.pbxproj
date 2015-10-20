@@ -13,6 +13,8 @@
 		04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA51BD6AA5C00175B52 /* SearchView.swift */; settings = {ASSET_TAGS = (); }; };
 		04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		04C22BAA1BD6EC4C00175B52 /* MetarXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */; settings = {ASSET_TAGS = (); }; };
+		04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		04C22BAE1BD6F0C600175B52 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAD1BD6F0C600175B52 /* Threading.swift */; settings = {ASSET_TAGS = (); }; };
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
 		1DFE268CFCEF2622764714E7 /* Pods_MetarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
@@ -68,6 +70,8 @@
 		04C22BA51BD6AA5C00175B52 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarXMLParser.swift; sourceTree = "<group>"; };
+		04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMetarTableViewCell.swift; sourceTree = "<group>"; };
+		04C22BAD1BD6F0C600175B52 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
 		626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Expectations.swift"; sourceTree = "<group>"; };
 		626D6B561BD67C140042619F /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		626D6B661BD689B80042619F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04C22BAD1BD6F0C600175B52 /* Threading.swift */,
 				626D6B671BD689B80042619F /* Extensions */,
 				626D6B691BD689B80042619F /* Models */,
 				626D6B711BD689B80042619F /* Parser */,
@@ -284,8 +289,9 @@
 			isa = PBXGroup;
 			children = (
 				04C22B9F1BD6A5D800175B52 /* Search.storyboard */,
-				04C22BA11BD6A82F00175B52 /* SearchViewController.swift */,
+				04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */,
 				04C22BA51BD6AA5C00175B52 /* SearchView.swift */,
+				04C22BA11BD6A82F00175B52 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -665,7 +671,9 @@
 				626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */,
 				04C22BAA1BD6EC4C00175B52 /* MetarXMLParser.swift in Sources */,
 				04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */,
+				04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */,
 				04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */,
+				04C22BAE1BD6F0C600175B52 /* Threading.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
 				04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */,
 				626D6B771BD689B80042619F /* Metar.swift in Sources */,

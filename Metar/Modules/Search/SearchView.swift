@@ -63,8 +63,10 @@ class SearchView: UIView {
     // MARK: - Data
     
     func invalidateData() {
-        print("📕 Found metars \(metars)")
-        tableView.reloadData()
+        print("📕 Found metars \(self.metars)")
+        dispatch_async_main {
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Responder
@@ -98,7 +100,21 @@ extension SearchView: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if metars.count > 0 {
+            return self.tableView(tableView, metarCellForRowAtIndexPath: indexPath)
+        } else {
+            return self.tableView(tableView, locationCellForRowAtIndexPath: indexPath)
+        }
+    }
+    
+    private func tableView(tableView: UITableView, locationCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Location") as UITableViewCell!
+        return cell
+    }
+    
+    private func tableView(tableView: UITableView, metarCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Metar") as! SearchMetarTableViewCell
+        cell.configure(withMetar: metars[indexPath.row])
         return cell
     }
 }
