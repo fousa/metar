@@ -27,6 +27,23 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dRi-vy-7vh"/>
                                 </constraints>
                             </imageView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-16-fnv">
+                                <rect key="frame" x="0.0" y="470" width="600" height="500"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="t7n-hP-bXE" kind="embed" id="PrQ-88-uHQ"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ij-IjE">
+                                <rect key="frame" x="550" y="30" width="40" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Tzf-es-n8V"/>
+                                    <constraint firstAttribute="height" constant="40" id="X8A-ea-SyJ"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,18 +51,59 @@
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="top" secondItem="a3a-Bc-Drc" secondAttribute="bottom" priority="250" constant="20" id="0UW-uU-aOV"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" priority="750" constant="100" id="2TJ-xn-MDj"/>
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" priority="750" constant="150" id="2Tl-A3-ah0"/>
+                            <constraint firstAttribute="trailing" secondItem="fYI-Ij-IjE" secondAttribute="trailing" constant="10" id="369-OY-9xm"/>
+                            <constraint firstItem="nc7-16-fnv" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" constant="20" id="4WI-Fz-bo7"/>
+                            <constraint firstItem="nc7-16-fnv" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="7zN-te-Mjf"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="centerX" secondItem="yL7-O5-1EO" secondAttribute="centerX" priority="250" id="Fi9-Eg-vAD"/>
+                            <constraint firstAttribute="trailing" secondItem="nc7-16-fnv" secondAttribute="trailing" id="XeJ-9K-2vT"/>
+                            <constraint firstItem="nc7-16-fnv" firstAttribute="height" secondItem="yL7-O5-1EO" secondAttribute="height" constant="-100" id="pZM-QI-Xkm"/>
+                            <constraint firstItem="fYI-Ij-IjE" firstAttribute="top" secondItem="a3a-Bc-Drc" secondAttribute="bottom" constant="10" id="sIG-vd-kwv"/>
+                            <constraint firstItem="nc7-16-fnv" firstAttribute="width" secondItem="yL7-O5-1EO" secondAttribute="width" id="scK-ey-fi5"/>
                         </constraints>
                         <connections>
+                            <outlet property="addButton" destination="fYI-Ij-IjE" id="Slf-Bc-xqc"/>
                             <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Pce-az-f99"/>
                             <outlet property="planeImageView" destination="tIs-Vi-bz4" id="zWP-rO-XtE"/>
                             <outlet property="planeTopConstraint" destination="0UW-uU-aOV" id="Ip2-BG-EAB"/>
+                            <outlet property="tableContainerView" destination="nc7-16-fnv" id="Gxc-82-2CY"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9h-NC-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="266" y="501"/>
+        </scene>
+        <!--Stations Table View Controller-->
+        <scene sceneID="Rnb-33-V28">
+            <objects>
+                <tableViewController id="t7n-hP-bXE" customClass="StationsTableViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x0B-7a-Csp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U1D-5Y-nGp">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U1D-5Y-nGp" id="Znh-5L-ZDx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t7n-hP-bXE" id="qMt-gb-YHl"/>
+                            <outlet property="delegate" destination="t7n-hP-bXE" id="AYW-kH-jbi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSG-RM-fON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="1197"/>
         </scene>
     </scenes>
     <resources>

@@ -11,13 +11,25 @@ import UIKit
 class DashboardView: UIView {
     
     @IBOutlet private var planeImageView: UIImageView!
+    @IBOutlet private var tableContainerView: UIView!
+    @IBOutlet private var addButton: UIButton!
+    
     @IBOutlet private var planeTopConstraint: NSLayoutConstraint!
     @IBOutlet private var planeHorizontalConstraint: NSLayoutConstraint!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        tableContainerView.alpha = 0.0
+        addButton.alpha = 0.0
+    }
     
     func startIntroAnimation(completion: () -> ()) {
         planeTopConstraint.priority = 900
         planeHorizontalConstraint.priority = 900
         UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: { () -> Void in
+            self.tableContainerView.alpha = 1.0
+            self.addButton.alpha = 1.0
             self.layoutIfNeeded()
         }, completion: { finished in
             completion()

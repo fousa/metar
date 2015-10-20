@@ -29,6 +29,7 @@
 		626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B851BD68B330042619F /* DashboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B881BD68DE20042619F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B871BD68DE20042619F /* DashboardView.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B8A1BD68EE50042619F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626D6B891BD68EE50042619F /* CoreLocation.framework */; };
+		626D6B8C1BD69A0D0042619F /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		626D6B851BD68B330042619F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		626D6B871BD68DE20042619F /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		626D6B891BD68EE50042619F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
 				626D6B871BD68DE20042619F /* DashboardView.swift */,
 				626D6B851BD68B330042619F /* DashboardViewController.swift */,
+				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
 				626D6B771BD689B80042619F /* Metar.swift in Sources */,
+				626D6B8C1BD69A0D0042619F /* StationsTableViewController.swift in Sources */,
 				626D6B7B1BD689B80042619F /* Visibility.swift in Sources */,
 				626D6B751BD689B80042619F /* String+Formatters.swift in Sources */,
 				626D6B7E1BD689B80042619F /* MetarService.swift in Sources */,
