@@ -6,8 +6,6 @@ lane :sign do
 end
 
 lane :beta do
-  update_fastlane
-
   xctool
 
   # Update build number, tag and commit.
