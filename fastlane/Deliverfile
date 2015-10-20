@@ -13,7 +13,7 @@ default_language "en"
 
 hide_transporter_output
 
-apple_id "991619333"
+app "991619333"
 
 title({
   "en-US" => "METAR - Aviation Weather for Pilots"
