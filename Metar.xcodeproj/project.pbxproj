@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
+		626D6B381BD664D80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B371BD664D80042619F /* Metar.swift */; settings = {ASSET_TAGS = (); }; };
+		626D6B3A1BD665070042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B391BD665070042619F /* MetarService.swift */; settings = {ASSET_TAGS = (); }; };
 		62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD04C91BD635C800628E9D /* AppDelegate.swift */; };
 		62DD04D11BD635C800628E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D01BD635C800628E9D /* Assets.xcassets */; };
 		62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		626D6B371BD664D80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
+		626D6B391BD665070042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +87,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		626D6B351BD664CC0042619F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B371BD664D80042619F /* Metar.swift */,
+			);
+			name = Models;
+			path = Components/Models;
+			sourceTree = "<group>";
+		};
+		626D6B361BD664CC0042619F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B391BD665070042619F /* MetarService.swift */,
+			);
+			name = Service;
+			path = Components/Service;
+			sourceTree = "<group>";
+		};
 		62DD04BD1BD635C800628E9D = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				62DD04C91BD635C800628E9D /* AppDelegate.swift */,
+				626D6B351BD664CC0042619F /* Models */,
+				626D6B361BD664CC0042619F /* Service */,
 				62DD04F81BD635DA00628E9D /* Supporting Files */,
 				62DD04F71BD635D700628E9D /* UI */,
 			);
@@ -356,6 +380,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */,
+				626D6B381BD664D80042619F /* Metar.swift in Sources */,
+				626D6B3A1BD665070042619F /* MetarService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
