@@ -9,7 +9,7 @@
 
 import UIKit
 
-protocol SearchViewDelegate {
+protocol SearchViewDelegate: class {
     func searchViewWillUseCurrentLocation(searchView: SearchView)
 }
 
@@ -26,7 +26,7 @@ class SearchView: UIView {
     
     // MARK: - Variables
     
-    var delegate: SearchViewDelegate?
+    weak var delegate: SearchViewDelegate?
     
     private var keyboardShowNotification: AnyObject!
     private var keyboardHideNotification: AnyObject!

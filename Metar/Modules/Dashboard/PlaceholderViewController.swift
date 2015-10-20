@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol PlaceholderViewControllerDelegate {
+protocol PlaceholderViewControllerDelegate: class {
     func placeholderViewControllerWillAddStation(controller: PlaceholderViewController)
 }
 
 class PlaceholderViewController: UIViewController {
     
-    var delegate: PlaceholderViewControllerDelegate?
+    weak var delegate: PlaceholderViewControllerDelegate?
     
     // MARK: - Actions
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DashboardViewDataSource {
+protocol DashboardViewDataSource: class {
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int
 }
 
@@ -26,7 +26,7 @@ class DashboardView: UIView {
     
     // MARK: - Variables
     
-    var dataSource: DashboardViewDataSource?
+    weak var dataSource: DashboardViewDataSource?
     
     // MARK: - View
     
