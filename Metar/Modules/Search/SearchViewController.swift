@@ -20,6 +20,11 @@ class SearchViewController: UIViewController {
         searchView.delegate = self
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchView.resignFirstResponder()
+    }
+    
     // MARK: - Actions
     
     @IBAction func search(sender: AnyObject) {
