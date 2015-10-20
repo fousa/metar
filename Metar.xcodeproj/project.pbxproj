@@ -13,6 +13,7 @@
 		04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA51BD6AA5C00175B52 /* SearchView.swift */; settings = {ASSET_TAGS = (); }; };
 		04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
+		1DFE268CFCEF2622764714E7 /* Pods_MetarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
 		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */; settings = {ASSET_TAGS = (); }; };
@@ -96,9 +97,12 @@
 		62DD04E51BD635C800628E9D /* MetarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04E91BD635C800628E9D /* MetarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarUITests.swift; sourceTree = "<group>"; };
 		62DD04EB1BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C18784C63CBC00C74E2AEC /* Pods-MetarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetarUITests/Pods-MetarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90728424445FD54E398F4BB6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E8826967B2D55A9014719AB6 /* Pods-MetarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC553B6FC9ACB89C1311035B /* Pods-MetarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarUITests/Pods-MetarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C42FAD29132B037F942857 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA920EAA2B82E22FA60EBF63 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DFE268CFCEF2622764714E7 /* Pods_MetarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +142,7 @@
 				626D6B891BD68EE50042619F /* CoreLocation.framework */,
 				FA920EAA2B82E22FA60EBF63 /* Pods.framework */,
 				8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */,
+				811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -375,6 +381,8 @@
 				F1C42FAD29132B037F942857 /* Pods.release.xcconfig */,
 				02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */,
 				E8826967B2D55A9014719AB6 /* Pods-MetarTests.release.xcconfig */,
+				EC553B6FC9ACB89C1311035B /* Pods-MetarUITests.debug.xcconfig */,
+				87C18784C63CBC00C74E2AEC /* Pods-MetarUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -427,9 +435,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62DD04F41BD635C800628E9D /* Build configuration list for PBXNativeTarget "MetarUITests" */;
 			buildPhases = (
+				BAFBBE3410F5421478DC9FB6 /* Check Pods Manifest.lock */,
 				62DD04E11BD635C800628E9D /* Sources */,
 				62DD04E21BD635C800628E9D /* Frameworks */,
 				62DD04E31BD635C800628E9D /* Resources */,
+				06FBFCB5C09D74FDAF29665C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -527,6 +537,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		06FBFCB5C09D74FDAF29665C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetarUITests/Pods-MetarUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		22B22A8A50857E1FE4A1DFA5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -573,6 +598,21 @@
 			showEnvVarsInLog = 0;
 		};
 		B8010CE9EFD83DC528BF84FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BAFBBE3410F5421478DC9FB6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -813,6 +853,7 @@
 		};
 		62DD04F51BD635C800628E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC553B6FC9ACB89C1311035B /* Pods-MetarUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MetarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -825,6 +866,7 @@
 		};
 		62DD04F61BD635C800628E9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87C18784C63CBC00C74E2AEC /* Pods-MetarUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MetarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
