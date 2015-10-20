@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import CoreLocation
 
 class MetarService: NSObject {
     
     // MARK: - Properties
+    
+    typealias ServiceCompletionBlock = (error: NSError?, data: NSData?) -> ()
     
     private var configuration: NSURLSessionConfiguration
     private var session: NSURLSession?
@@ -31,8 +34,8 @@ class MetarService: NSObject {
     }
     
     // MARK: - Fetching
-    
-    private func fetch(query query: String, completion: (error: NSError?, data: NSData?) -> ()) {
+
+    private func fetch(query query: String, completion: ServiceCompletionBlock) {
         let URLString = NSString(format: "%@%@", BaseURLString, query)
         let URL = NSURL(string: URLString as String)
         let request = NSMutableURLRequest(URL: URL!)
@@ -48,4 +51,15 @@ class MetarService: NSObject {
         task.resume()
     }
     
+    // MARK: List
+    
+    func fetchList(location location: CLLocation, completion: ServiceCompletionBlock) {
+        let query = NSString(format: "radialDistance=50;%f,%f", location.coordinate.longitude, location.coordinate.latitude) as String
+        fetch(query: query, completion: completion)
+    }
+    
+    func fetchList(station stationString: String, completion: ServiceCompletionBlock) {
+        let query = NSString(format: "stationString=%@", stationString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!) as String
+        fetch(query: query, completion: completion)
+    }
 }
