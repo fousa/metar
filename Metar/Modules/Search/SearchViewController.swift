@@ -10,12 +10,18 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    var searchView: SearchView! { return self.view as! SearchView }
+    
     // MARK: - Actions
     
     @IBAction func close(sender: AnyObject) {
         print("🎯 Dismiss search screen")
         
         storyboard?.dismiss()
+    }
+    
+    @IBAction func hideKeyboard(sender: AnyObject) {
+        searchView.resignFirstResponder()
     }
     
 }

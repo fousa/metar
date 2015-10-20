@@ -21,7 +21,6 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         dashboardView.dataSource = self
-        dashboardView.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -45,6 +44,17 @@ class DashboardViewController: UIViewController {
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.startUpdatingLocation()
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func addStation(sender: AnyObject) {
+        print("🎯 Open search screen")
+        
+        let storyboard = UIStoryboard(name: "Search", bundle: nil)
+        storyboard.delegate = self
+        let controller = storyboard.instantiateInitialViewController()!
+        presentViewController(controller, animated: true, completion: nil)
+    }
 }
 
 extension DashboardViewController: CLLocationManagerDelegate {
@@ -57,17 +67,6 @@ extension DashboardViewController: CLLocationManagerDelegate {
 extension DashboardViewController: DashboardViewDataSource {
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int {
         return 1
-    }
-}
-
-extension DashboardViewController: DashboardViewDelegate {
-    func dashboardViewDidAddStation(dashboardView: DashboardView) {
-        print("🎯 Open search screen")
-        
-        let storyboard = UIStoryboard(name: "Search", bundle: nil)
-        storyboard.delegate = self
-        let controller = storyboard.instantiateInitialViewController()!
-        presentViewController(controller, animated: true, completion: nil)
     }
 }
 

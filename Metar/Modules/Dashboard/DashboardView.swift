@@ -12,10 +12,6 @@ protocol DashboardViewDataSource {
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int
 }
 
-protocol DashboardViewDelegate {
-    func dashboardViewDidAddStation(dashboardView: DashboardView)
-}
-
 class DashboardView: UIView {
     
     // MARK: - Outlets
@@ -31,7 +27,6 @@ class DashboardView: UIView {
     // MARK: - Variables
     
     var dataSource: DashboardViewDataSource?
-    var delegate: DashboardViewDelegate?
     
     // MARK: - View
     
@@ -62,12 +57,6 @@ class DashboardView: UIView {
         UIView.animateWithDuration(0.35) {
             self.planeImageView.transform = CGAffineTransformMakeRotation(angle)
         }
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func addStation(sender: AnyObject) {
-        self.delegate?.dashboardViewDidAddStation(self)
     }
     
     // MARK: - Data Source

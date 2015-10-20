@@ -51,7 +51,7 @@
                                 </constraints>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="addStation:" destination="yL7-O5-1EO" eventType="touchUpInside" id="SiC-R1-Y74"/>
+                                    <action selector="addStation:" destination="U0B-vT-6CS" eventType="touchUpInside" id="boa-So-F87"/>
                                 </connections>
                             </button>
                         </subviews>
