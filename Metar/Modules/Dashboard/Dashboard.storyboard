@@ -50,6 +50,9 @@
                                     <constraint firstAttribute="height" constant="40" id="X8A-ea-SyJ"/>
                                 </constraints>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addStation:" destination="yL7-O5-1EO" eventType="touchUpInside" id="SiC-R1-Y74"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -100,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U1D-5Y-nGp" id="Znh-5L-ZDx">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -130,14 +133,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the add button to add stations." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGg-pY-4Aq">
-                                <rect key="frame" x="158" y="40" width="283" height="20.5"/>
+                                <rect key="frame" x="158" y="40" width="283" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGc-mT-Wef">
-                                <rect key="frame" x="260.5" y="80.5" width="79" height="30"/>
+                                <rect key="frame" x="261" y="81" width="79" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Add station"/>
                             </button>

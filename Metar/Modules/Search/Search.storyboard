@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DJK-hi-GP9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aBh-me-K2I">
+            <objects>
+                <navigationController id="DJK-hi-GP9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ctd-IM-P2s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GXt-hT-OCr" kind="relationship" relationship="rootViewController" id="yg7-Td-oTu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0O-9H-Ebv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="585"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="GRG-eZ-rGw">
+            <objects>
+                <viewController id="GXt-hT-OCr" customClass="SearchViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IxO-2u-PB2"/>
+                        <viewControllerLayoutGuide type="bottom" id="yFp-LG-kZX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LRL-rn-iNy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IdV-c8-6eX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IdV-c8-6eX" firstAttribute="top" secondItem="IxO-2u-PB2" secondAttribute="bottom" id="Hbq-sd-OIi"/>
+                            <constraint firstItem="IdV-c8-6eX" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="Hzz-hc-LM6"/>
+                            <constraint firstAttribute="trailing" secondItem="IdV-c8-6eX" secondAttribute="trailing" id="J5Y-Zs-jrB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gTf-oO-FOo">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="Zga-Yc-4KD">
+                            <connections>
+                                <action selector="close:" destination="GXt-hT-OCr" id="DdZ-WF-SMQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09W-J1-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="585"/>
+        </scene>
+    </scenes>
+</document>
