@@ -50,10 +50,15 @@
                                     <action selector="addStation:" destination="U0B-vT-6CS" eventType="touchUpInside" id="boa-So-F87"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Metar" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-dy-mPV">
+                                <rect key="frame" x="182" y="142" width="237" height="98"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0078431372550000003" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hE7-dy-mPV" firstAttribute="centerX" secondItem="yL7-O5-1EO" secondAttribute="centerX" id="04k-p6-JkD"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="top" secondItem="a3a-Bc-Drc" secondAttribute="bottom" priority="250" constant="20" id="0UW-uU-aOV"/>
+                            <constraint firstItem="tIs-Vi-bz4" firstAttribute="top" secondItem="hE7-dy-mPV" secondAttribute="bottom" constant="170" id="1Zr-PT-DVr"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" priority="750" constant="100" id="2TJ-xn-MDj"/>
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" priority="750" constant="150" id="2Tl-A3-ah0"/>
                             <constraint firstAttribute="trailing" secondItem="fYI-Ij-IjE" secondAttribute="trailing" constant="10" id="369-OY-9xm"/>
@@ -71,6 +76,7 @@
                         </constraints>
                         <connections>
                             <outlet property="addButton" destination="fYI-Ij-IjE" id="Slf-Bc-xqc"/>
+                            <outlet property="logoImageView" destination="hE7-dy-mPV" id="E1C-Ci-Ev5"/>
                             <outlet property="placeholderContainerView" destination="Kwv-vt-Izk" id="Xtv-5n-Tl2"/>
                             <outlet property="planeHorizontalConstraint" destination="Fi9-Eg-vAD" id="Pce-az-f99"/>
                             <outlet property="planeImageView" destination="tIs-Vi-bz4" id="zWP-rO-XtE"/>
@@ -153,6 +159,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Metar" width="237" height="98"/>
         <image name="Plane" width="79" height="104"/>
     </resources>
 </document>

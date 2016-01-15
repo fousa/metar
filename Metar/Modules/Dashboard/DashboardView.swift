@@ -16,6 +16,7 @@ class DashboardView: UIView {
     
     // MARK: - Outlets
     
+    @IBOutlet private var logoImageView: UIImageView!
     @IBOutlet private var planeImageView: UIImageView!
     @IBOutlet private var tableContainerView: UIView!
     @IBOutlet private var placeholderContainerView: UIView!
@@ -47,6 +48,7 @@ class DashboardView: UIView {
             self.tableContainerView.alpha = self.numberOfStations() > 0 ? 1.0 : 0.0
             self.placeholderContainerView.alpha = self.tableContainerView.alpha == 1.0 ? 0.0 : 1.0
             self.addButton.alpha = 1.0
+            self.logoImageView.alpha = 0.0
             self.layoutIfNeeded()
         }, completion: { finished in
             completion()
