@@ -63,6 +63,12 @@ class DashboardViewController: UIViewController {
         let controller = storyboard.instantiateInitialViewController()!
         presentViewController(controller, animated: true, completion: nil)
     }
+    
+    // MARK: - Status bar
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 }
 
 extension DashboardViewController: CLLocationManagerDelegate {

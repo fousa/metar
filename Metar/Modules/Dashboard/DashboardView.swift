@@ -22,6 +22,8 @@ class DashboardView: UIView {
     @IBOutlet private var placeholderContainerView: UIView!
     @IBOutlet private var addButton: UIButton!
     
+    @IBOutlet private var planeWidthConstraints: NSLayoutConstraint!
+    @IBOutlet private var planeHeightConstraints: NSLayoutConstraint!
     @IBOutlet private var planeTopConstraint: NSLayoutConstraint!
     @IBOutlet private var planeHorizontalConstraint: NSLayoutConstraint!
     
@@ -44,6 +46,8 @@ class DashboardView: UIView {
     func startIntroAnimation(completion: () -> ()) {
         planeTopConstraint.priority = 900
         planeHorizontalConstraint.priority = 900
+        planeWidthConstraints.priority = 900
+        planeHeightConstraints.priority = 900
         UIView.animateWithDuration(0.8, delay: 0.5, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: { () -> Void in
             self.tableContainerView.alpha = self.numberOfStations() > 0 ? 1.0 : 0.0
             self.placeholderContainerView.alpha = self.tableContainerView.alpha == 1.0 ? 0.0 : 1.0

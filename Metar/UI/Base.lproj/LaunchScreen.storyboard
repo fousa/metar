@@ -16,24 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plane" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-ve-BNp">
-                                <rect key="frame" x="100" y="410" width="40" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="YuR-XG-w3o"/>
-                                    <constraint firstAttribute="width" constant="40" id="jNK-cG-SkY"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Sri-dQ-QOf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Metar" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-2f-zrs">
-                                <rect key="frame" x="182" y="142" width="237" height="98"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plane" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-ve-BNp">
+                                <rect key="frame" x="100" y="378" width="76" height="72"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-2f-zrs">
+                                <rect key="frame" x="182" y="140" width="237" height="98"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0078431372549019607" green="0.0078431372549019607" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b6e-ve-BNp" firstAttribute="top" secondItem="aGd-2f-zrs" secondAttribute="bottom" constant="170" id="01Y-Tj-RYS"/>
+                            <constraint firstItem="b6e-ve-BNp" firstAttribute="top" secondItem="aGd-2f-zrs" secondAttribute="bottom" constant="140" id="01Y-Tj-RYS"/>
                             <constraint firstItem="b6e-ve-BNp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="100" id="GE2-NV-Woq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Sri-dQ-QOf" secondAttribute="bottom" id="JAg-IC-2Q7"/>
                             <constraint firstItem="aGd-2f-zrs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OHn-5K-hu9"/>
+                            <constraint firstAttribute="trailing" secondItem="Sri-dQ-QOf" secondAttribute="trailing" id="YxX-3u-bRz"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="b6e-ve-BNp" secondAttribute="bottom" constant="150" id="bce-sj-vi8"/>
+                            <constraint firstItem="Sri-dQ-QOf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="kbi-UF-K14"/>
+                            <constraint firstItem="Sri-dQ-QOf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mBr-NH-Cv6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,7 +46,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Metar" width="237" height="98"/>
-        <image name="Plane" width="79" height="104"/>
+        <image name="Background" width="375" height="667"/>
+        <image name="Logo" width="237" height="98"/>
+        <image name="Plane" width="76" height="72"/>
     </resources>
 </document>
