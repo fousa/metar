@@ -40,20 +40,20 @@
                                     <segue destination="t7n-hP-bXE" kind="embed" id="PrQ-88-uHQ"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ij-IjE">
-                                <rect key="frame" x="550" y="30" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-dy-mPV">
+                                <rect key="frame" x="182" y="140" width="237" height="98"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ij-IjE">
+                                <rect key="frame" x="549" y="27" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Tzf-es-n8V"/>
                                     <constraint firstAttribute="height" constant="40" id="X8A-ea-SyJ"/>
                                 </constraints>
-                                <state key="normal" title="+"/>
+                                <state key="normal" image="Add"/>
                                 <connections>
                                     <action selector="addStation:" destination="U0B-vT-6CS" eventType="touchUpInside" id="boa-So-F87"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-dy-mPV">
-                                <rect key="frame" x="182" y="140" width="237" height="98"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0078431372550000003" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -62,10 +62,10 @@
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="top" secondItem="hE7-dy-mPV" secondAttribute="bottom" constant="140" id="1Zr-PT-DVr"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" priority="750" constant="100" id="2TJ-xn-MDj"/>
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" priority="750" constant="150" id="2Tl-A3-ah0"/>
-                            <constraint firstAttribute="trailing" secondItem="fYI-Ij-IjE" secondAttribute="trailing" constant="10" id="369-OY-9xm"/>
                             <constraint firstItem="nc7-16-fnv" firstAttribute="top" secondItem="tIs-Vi-bz4" secondAttribute="bottom" constant="20" id="4WI-Fz-bo7"/>
                             <constraint firstItem="nc7-16-fnv" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="7zN-te-Mjf"/>
                             <constraint firstAttribute="trailing" secondItem="Kwv-vt-Izk" secondAttribute="trailing" id="9op-ET-T7G"/>
+                            <constraint firstItem="fYI-Ij-IjE" firstAttribute="top" secondItem="yL7-O5-1EO" secondAttribute="top" constant="27" id="AiA-qz-mW7"/>
                             <constraint firstItem="tIs-Vi-bz4" firstAttribute="centerX" secondItem="yL7-O5-1EO" secondAttribute="centerX" priority="250" id="Fi9-Eg-vAD"/>
                             <constraint firstAttribute="trailing" secondItem="SZw-kP-kgh" secondAttribute="trailing" id="MLU-sz-r0v"/>
                             <constraint firstItem="Kwv-vt-Izk" firstAttribute="bottom" secondItem="nc7-16-fnv" secondAttribute="bottom" id="Qn5-nY-9CW"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="SZw-kP-kgh" secondAttribute="bottom" id="iPT-Os-dvK"/>
                             <constraint firstItem="Kwv-vt-Izk" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="kVd-tu-0AU"/>
                             <constraint firstItem="nc7-16-fnv" firstAttribute="height" secondItem="yL7-O5-1EO" secondAttribute="height" constant="-100" id="pZM-QI-Xkm"/>
-                            <constraint firstItem="fYI-Ij-IjE" firstAttribute="top" secondItem="a3a-Bc-Drc" secondAttribute="bottom" constant="10" id="sIG-vd-kwv"/>
+                            <constraint firstAttribute="trailing" secondItem="fYI-Ij-IjE" secondAttribute="trailing" constant="11" id="rfH-8i-I62"/>
                             <constraint firstItem="nc7-16-fnv" firstAttribute="width" secondItem="yL7-O5-1EO" secondAttribute="width" id="scK-ey-fi5"/>
                             <constraint firstItem="SZw-kP-kgh" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="xjD-Up-Roo"/>
                         </constraints>
@@ -91,6 +91,7 @@
                             <outlet property="tableContainerView" destination="nc7-16-fnv" id="Gxc-82-2CY"/>
                         </connections>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9h-NC-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +167,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="24" height="24"/>
         <image name="Background" width="375" height="667"/>
         <image name="Logo" width="237" height="98"/>
         <image name="Plane" width="76" height="72"/>
