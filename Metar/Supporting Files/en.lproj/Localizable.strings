@@ -1,0 +1,12 @@
+/* dashboard_placeholder_add_one */
+"dashboard_placeholder_add_one" = "add one";
+
+/* dashboard_placeholder_add_one_text */
+"dashboard_placeholder_add_one_text" = "Please press {button} to add one";
+
+/* dashboard_placeholder_no_airports */
+"dashboard_placeholder_no_airports" = "no airports";
+
+/* dashboard_placeholder_no_data */
+"dashboard_placeholder_no_data" = "You currently have no airports saved to your dashboard.";
+

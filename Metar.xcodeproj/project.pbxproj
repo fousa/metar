@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0475507E1C49B49B009DD792 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047550801C49B49B009DD792 /* Localizable.strings */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
 		04C22BA41BD6A90E00175B52 /* UIStoryboard+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */; };
@@ -64,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0475507B1C49B48B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0475507F1C49B49B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		62DD04C61BD635C800628E9D /* Metar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04C91BD635C800628E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DD04D01BD635C800628E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		62DD04D31BD635C800628E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DD04D51BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DD04DA1BD635C800628E9D /* MetarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DD04E01BD635C800628E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				62DD04D51BD635C800628E9D /* Info.plist */,
+				047550801C49B49B009DD792 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -489,7 +492,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 62DD04BD1BD635C800628E9D;
 			productRefGroup = 62DD04C71BD635C800628E9D /* Products */;
@@ -508,6 +510,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0475507E1C49B49B009DD792 /* Localizable.strings in Resources */,
 				62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */,
 				626D6B841BD68ADF0042619F /* Dashboard.storyboard in Resources */,
 				04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */,
@@ -720,10 +723,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		047550801C49B49B009DD792 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0475507F1C49B49B009DD792 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		62DD04D21BD635C800628E9D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62DD04D31BD635C800628E9D /* Base */,
+				0475507B1C49B48B009DD792 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
