@@ -46,11 +46,13 @@ class SearchView: UIView {
         
         keyboardShowNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Show keyboard")
+            
             self.keyboardTapGesture.enabled = true
             self.moveSearch(up: true, notification: notification)
         }
         keyboardHideNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Hide keyboard")
+            
             self.keyboardTapGesture.enabled = false
             self.moveSearch(up: false, notification: notification)
         }
@@ -65,6 +67,7 @@ class SearchView: UIView {
     
     func invalidateData() {
         print("📕 Found \(self.metars.count) metar(s)")
+        
         dispatch_async_main {
             self.tableView.reloadData()
         }

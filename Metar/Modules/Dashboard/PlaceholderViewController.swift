@@ -21,5 +21,4 @@ class PlaceholderViewController: UIViewController {
     @IBAction func addStation(sender: AnyObject) {
         delegate?.placeholderViewControllerWillAddStation(self)
     }
-
 }
