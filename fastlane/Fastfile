@@ -11,10 +11,10 @@ lane :deploy do
   gym(scheme: 'Metar')
 
   # Deploy the application to TestFlight.
-#   pilot
+  pilot
 
   # Tag and push the version bump.
-#   commit_version_bump
-#   add_git_tag prefix: 'v'
-#   push_to_git_remote
+  commit_version_bump
+  add_git_tag prefix: 'v'
+  push_to_git_remote
 end
