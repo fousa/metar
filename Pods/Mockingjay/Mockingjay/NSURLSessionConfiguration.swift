@@ -8,9 +8,12 @@
 
 import Foundation
 
+var mockingjaySessionSwizzleToken: dispatch_once_t = 0
+
 extension NSURLSessionConfiguration {
-  override public class func initialize() {
-    if (self === NSURLSessionConfiguration.self) {
+  /// Swizzles NSURLSessionConfiguration's default and ephermeral sessions to add Mockingjay
+  public class func mockingjaySwizzleDefaultSessionConfiguration() {
+    dispatch_once(&mockingjaySessionSwizzleToken) {
       let defaultSessionConfiguration = class_getClassMethod(self, "defaultSessionConfiguration")
       let mockingjayDefaultSessionConfiguration = class_getClassMethod(self, "mockingjayDefaultSessionConfiguration")
       method_exchangeImplementations(defaultSessionConfiguration, mockingjayDefaultSessionConfiguration)
