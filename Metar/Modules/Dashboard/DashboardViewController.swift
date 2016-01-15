@@ -10,7 +10,6 @@ import UIKit
 import CoreLocation
 
 class DashboardViewController: UIViewController {
-    
     var dashboardView: DashboardView! { return self.view as! DashboardView }
     
     private var locationManager: CLLocationManager?
@@ -80,7 +79,7 @@ extension DashboardViewController: CLLocationManagerDelegate {
 
 extension DashboardViewController: DashboardViewDataSource {
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int {
-        return 1
+        return 0
     }
 }
 

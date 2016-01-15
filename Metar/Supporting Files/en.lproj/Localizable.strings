@@ -2,7 +2,7 @@
 "dashboard_placeholder_add_one" = "add one";
 
 /* dashboard_placeholder_add_one_text */
-"dashboard_placeholder_add_one_text" = "Please press {button} to add one";
+"dashboard_placeholder_add_one_text" = "Please press {add} to add one";
 
 /* dashboard_placeholder_no_airports */
 "dashboard_placeholder_no_airports" = "no airports";

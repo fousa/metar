@@ -13,6 +13,7 @@ protocol PlaceholderViewControllerDelegate: class {
 }
 
 class PlaceholderViewController: UIViewController {
+    var placeholderView: PlaceholderView! { return self.view as! PlaceholderView }
     
     weak var delegate: PlaceholderViewControllerDelegate?
     
