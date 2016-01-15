@@ -37,9 +37,7 @@ marketing_url 'http://fousa.be'
 # The app review information.
 app_review_information({
   first_name: 'Jelle',
-  last_name: 'Vandebeeck',
-  phone_number: '0032 494 86 03 25',
-  email_address: 'jelle@fousa.be'
+  last_name: 'Vandebeeck'
 })
 
 # Copyright information.
