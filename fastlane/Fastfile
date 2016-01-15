@@ -1,20 +1,20 @@
-fastlane_version '1.33.6'
+fastlane_version '1.50.0'
 
-lane :sign do
-  # Setup signing.
-  sigh app_identifier: 'be.fousa.metar'
-end
-
-lane :beta do
+lane :deploy do
   # Update build number, tag and commit.
   increment_build_number
-  commit_version_bump
-  add_git_tag prefix: 'v'
-  push_to_git_remote local_branch: 'master'
+
+  # Fetch certificates.
+  match(type: 'appstore')
 
   # Build the application.
   gym(scheme: 'Metar')
 
   # Deploy the application to TestFlight.
-  pilot
+#   pilot
+
+  # Tag and push the version bump.
+#   commit_version_bump
+#   add_git_tag prefix: 'v'
+#   push_to_git_remote
 end
