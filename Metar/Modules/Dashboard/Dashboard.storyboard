@@ -160,6 +160,9 @@ on your dashboard.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="60f-fQ-muf">
+                                <rect key="frame" x="485" y="77" width="85" height="77"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -167,6 +170,8 @@ on your dashboard.</string>
                             <constraint firstItem="hSz-Gh-ru5" firstAttribute="top" secondItem="es0-dK-nxW" secondAttribute="bottom" constant="37" id="JT0-iS-UDJ"/>
                             <constraint firstItem="es0-dK-nxW" firstAttribute="top" secondItem="423-Su-1wO" secondAttribute="bottom" constant="178" id="Ngw-qI-oH3"/>
                             <constraint firstAttribute="trailing" secondItem="es0-dK-nxW" secondAttribute="trailing" constant="70" id="Ons-2O-VgK"/>
+                            <constraint firstAttribute="trailing" secondItem="60f-fQ-muf" secondAttribute="trailing" constant="30" id="WZk-28-Lb0"/>
+                            <constraint firstItem="60f-fQ-muf" firstAttribute="top" secondItem="423-Su-1wO" secondAttribute="bottom" constant="77" id="csW-VA-QTd"/>
                             <constraint firstItem="es0-dK-nxW" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="70" id="hnk-Rp-GDt"/>
                             <constraint firstAttribute="trailing" secondItem="hSz-Gh-ru5" secondAttribute="trailing" constant="70" id="iEY-Vx-bkn"/>
                         </constraints>
@@ -183,6 +188,7 @@ on your dashboard.</string>
     </scenes>
     <resources>
         <image name="Add" width="24" height="24"/>
+        <image name="Arrow" width="85" height="77"/>
         <image name="Background" width="375" height="667"/>
         <image name="Logo" width="237" height="98"/>
         <image name="Plane" width="76" height="72"/>
