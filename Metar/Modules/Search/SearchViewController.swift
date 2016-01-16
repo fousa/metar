@@ -12,6 +12,10 @@ class SearchViewController: UIViewController {
     
     var searchView: SearchView! { return self.view as! SearchView }
     
+    private var timer: NSTimer!
+    private var currentSearchQuery: String?
+    private let service = MetarService()
+    
     // MARK: - View
     
     override func viewDidLoad() {
@@ -21,24 +25,40 @@ class SearchViewController: UIViewController {
         title = NSLocalizedString("search_label_title", comment: "")
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        searchView.resignFirstResponder()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "queryStations", userInfo: nil, repeats: true)
+        
+        searchView.becomeFirstResponder()
     }
     
-    // MARK: - Actions
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        searchView.resignFirstResponder()
+        timer.invalidate()
+    }
     
-    @IBAction func search(sender: AnyObject) {
-        if let stationQuery = searchView.query {
-            print("👀 Search stations with query \(stationQuery)")
+    // MARK: - Searching
+    
+    func queryStations() {
+        if let searchQuery = searchView.query where searchQuery != currentSearchQuery {
+            currentSearchQuery = searchQuery
+            print("👀 Search stations with query \(searchQuery)")
             
-            MetarService().fetchList(station: stationQuery, completion: { (error, data) -> () in
+            service.cancel()
+            if searchQuery.isEmpty {
+                self.searchView.metars = [Metar]()
+                self.searchView.invalidateData()
+                return
+            }
+            
+            service.fetchList(station: searchQuery, completion: { (error, data) -> () in
                 let metars: [Metar]? = MetarXMLParser(data: data)?.parseMetars()
                 self.searchView.metars = metars ?? [Metar]()
                 self.searchView.invalidateData()
             })
-        } else {
-            print("👀 Search no stations")
         }
     }
     

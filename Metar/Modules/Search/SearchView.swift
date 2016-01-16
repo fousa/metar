@@ -77,6 +77,10 @@ class SearchView: UIView {
     
     // MARK: - Responder
     
+    override func becomeFirstResponder() -> Bool {
+        return searchField.becomeFirstResponder()
+    }
+    
     override func resignFirstResponder() -> Bool {
         return searchField.resignFirstResponder()
     }
@@ -96,12 +100,6 @@ class SearchView: UIView {
                 self.layoutIfNeeded()
             }
         }
-    }
-}
-
-extension SearchView: UISearchBarDelegate {
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        delegate?.searchViewWillClear(self)
     }
 }
 
