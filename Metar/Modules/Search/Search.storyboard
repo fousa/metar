@@ -34,31 +34,21 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IdV-c8-6eX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="tintColor" red="0.12941176470588237" green="0.21568627450980393" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="LRL-rn-iNy" id="2mW-Ou-95x"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-9g-6Fw">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="6md-wE-pCo"/>
-                                </constraints>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="search:" destination="GXt-hT-OCr" eventType="touchUpInside" id="cSG-37-3au"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-W9-J1N">
-                                <rect key="frame" x="0.0" y="44" width="600" height="448"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-W9-J1N">
+                                <rect key="frame" x="0.0" y="44" width="600" height="492"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Location" rowHeight="70" id="r7A-1G-2eq">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7A-1G-2eq" id="vtt-3F-xfu">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use current location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62S-ze-Rb3">
@@ -78,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="98" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oUx-O0-kyc" id="I5a-br-i0I">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
@@ -108,21 +98,17 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bhv-W9-J1N" firstAttribute="top" secondItem="IdV-c8-6eX" secondAttribute="bottom" id="6bD-Yb-VgV"/>
-                            <constraint firstItem="H3G-9g-6Fw" firstAttribute="top" secondItem="bhv-W9-J1N" secondAttribute="bottom" id="7dS-xu-wIj"/>
                             <constraint firstItem="IdV-c8-6eX" firstAttribute="top" secondItem="IxO-2u-PB2" secondAttribute="bottom" id="Hbq-sd-OIi"/>
                             <constraint firstItem="IdV-c8-6eX" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="Hzz-hc-LM6"/>
-                            <constraint firstItem="yFp-LG-kZX" firstAttribute="top" secondItem="H3G-9g-6Fw" secondAttribute="bottom" id="IEU-cd-sN6"/>
                             <constraint firstAttribute="trailing" secondItem="IdV-c8-6eX" secondAttribute="trailing" id="J5Y-Zs-jrB"/>
-                            <constraint firstItem="H3G-9g-6Fw" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="J9i-Tv-VsO"/>
-                            <constraint firstAttribute="trailing" secondItem="H3G-9g-6Fw" secondAttribute="trailing" id="gfV-qO-4nz"/>
                             <constraint firstItem="bhv-W9-J1N" firstAttribute="leading" secondItem="LRL-rn-iNy" secondAttribute="leading" id="snC-mr-qFL"/>
                             <constraint firstAttribute="trailing" secondItem="bhv-W9-J1N" secondAttribute="trailing" id="uad-IL-A8a"/>
+                            <constraint firstItem="yFp-LG-kZX" firstAttribute="top" secondItem="bhv-W9-J1N" secondAttribute="bottom" id="zVe-0J-iU6"/>
                         </constraints>
                         <connections>
                             <outlet property="keyboardTapGesture" destination="gSj-Zm-yiH" id="15D-g5-5V9"/>
-                            <outlet property="searchButton" destination="H3G-9g-6Fw" id="531-gf-qv5"/>
-                            <outlet property="searchButtonBottomConstraint" destination="IEU-cd-sN6" id="wA6-fx-a6t"/>
                             <outlet property="searchField" destination="IdV-c8-6eX" id="r9m-7Q-wqs"/>
+                            <outlet property="tableBottomConstraint" destination="zVe-0J-iU6" id="0vH-jJ-5Rk"/>
                             <outlet property="tableView" destination="bhv-W9-J1N" id="gp9-Yd-Ret"/>
                             <outletCollection property="gestureRecognizers" destination="gSj-Zm-yiH" appends="YES" id="DSJ-PY-kFN"/>
                         </connections>

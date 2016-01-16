@@ -21,10 +21,9 @@ class SearchView: UIView {
     @IBOutlet private var keyboardTapGesture: UITapGestureRecognizer!
     
     @IBOutlet private var searchField: UISearchBar!
-    @IBOutlet private var searchButton: UIButton!
     @IBOutlet private var tableView: UITableView!
     
-    @IBOutlet private var searchButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var tableBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Variables
     
@@ -43,6 +42,9 @@ class SearchView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // Set to use the dark keyboard.
+        searchField.keyboardAppearance = .Dark
         
         keyboardShowNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Show keyboard")
@@ -83,10 +85,10 @@ class SearchView: UIView {
     
     private func moveSearch(up up: Bool, notification: NSNotification) {
         if let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue where up {
-            self.searchButtonBottomConstraint.constant = value.CGRectValue().size.height
+            tableBottomConstraint.constant = value.CGRectValue().size.height
             
         } else {
-            self.searchButtonBottomConstraint.constant = 0
+            tableBottomConstraint.constant = 0
         }
         
         if let value = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber {

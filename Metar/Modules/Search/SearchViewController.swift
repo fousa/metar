@@ -68,6 +68,5 @@ extension SearchViewController: SearchViewDelegate {
         print("👀 Clear the text field")
         self.searchView.metars = [Metar]()
         self.searchView.invalidateData()
-
     }
 }
