@@ -1,17 +1,38 @@
 fastlane_version '1.50.0'
 
 lane :deploy do
+  # Prepare the data.
+  last_hash = last_git_tag_hash
+
+  # Run the tests.
+  run_tests
+
+  # Build the application and bump the version number.
+  build
+
+  # Deploy the application to TestFlight.
+  testflight(changelog_begin_tag: last_hash)
+
+  # Cleanup.
+  cleanup
+end
+
+private_lane :last_git_tag_hash do
+  sh("git rev-parse --verify #{last_git_tag}").strip
+end
+
+private_lane :run_tests do
   # Run tests in given simulator
   xctest(
     workspace:   'Metar.xcworkspace',
     scheme:      'Metar',
     clean:       true,
     destination: 'platform=iOS Simulator,name=iPhone 6',
-    reports: [
-      { report: 'html' }
-    ]
+    reports:     [{ report: 'html' }]
   )
+end
 
+private_lane :build do
   # Update build number, tag and commit.
   increment_build_number
 
@@ -24,14 +45,27 @@ lane :deploy do
     clean:  true
   )
 
-  # Deploy the application to TestFlight.
-  pilot
-
   # Tag and push the version bump.
   commit_version_bump
   add_git_tag prefix: 'v'
   push_to_git_remote
+end
 
+private_lane :testflight do |options|
+  # Fetch the changelog.
+  changelog = changelog_from_git_commits(
+    between: [options[:changelog_begin_tag],'HEAD'],
+    pretty: '- %s'
+  )
+
+  # Deploy the application to TestFlight.
+  pilot(
+    distribute_external: true,
+    changelog: changelog
+  )
+end
+
+private_lane :cleanup do
   # Cleanup the workspace.
   clean_build_artifacts
 end
