@@ -79,28 +79,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StX-Uq-qny">
-                                                    <rect key="frame" x="16" y="8" width="568" height="35"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="StX-Uq-qny">
+                                                    <rect key="frame" x="16" y="6" width="568" height="39"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-XA-rQM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="560" height="35"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-XA-rQM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="489" height="39"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="21"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                                     <color key="textColor" red="0.27843137254901962" green="0.81568627450980391" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEURNE AIRPORT ANTWERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kV-hi-P6H">
-                                                                    <rect key="frame" x="0.0" y="20" width="160" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="24" width="160" height="15"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="5 KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjb-vh-8bP" userLabel="5 KM">
+                                                            <rect key="frame" x="505" y="0.0" width="39" height="39"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="rwS-00-AEt">
-                                                            <rect key="frame" x="560" y="0.0" width="8" height="35"/>
+                                                            <rect key="frame" x="560" y="0.0" width="8" height="39"/>
                                                         </imageView>
                                                     </subviews>
                                                 </stackView>
@@ -109,12 +115,13 @@
                                             <constraints>
                                                 <constraint firstItem="StX-Uq-qny" firstAttribute="leading" secondItem="I5a-br-i0I" secondAttribute="leading" constant="16" id="CYQ-Pf-fPk"/>
                                                 <constraint firstAttribute="trailing" secondItem="StX-Uq-qny" secondAttribute="trailing" constant="16" id="L3P-OT-cHV"/>
-                                                <constraint firstAttribute="bottom" secondItem="StX-Uq-qny" secondAttribute="bottom" constant="8" id="ZzB-Ti-nbg"/>
-                                                <constraint firstItem="StX-Uq-qny" firstAttribute="top" secondItem="I5a-br-i0I" secondAttribute="top" constant="8" id="m24-SL-qej"/>
+                                                <constraint firstAttribute="bottom" secondItem="StX-Uq-qny" secondAttribute="bottom" constant="6" id="ZzB-Ti-nbg"/>
+                                                <constraint firstItem="StX-Uq-qny" firstAttribute="top" secondItem="I5a-br-i0I" secondAttribute="top" constant="6" id="m24-SL-qej"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.050980392156862744" green="0.062745098039215685" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="distanceLabel" destination="sjb-vh-8bP" id="klZ-Mg-j8r"/>
                                             <outlet property="stationNameLabel" destination="b3b-lk-AyK" id="6dE-kn-pfh"/>
                                             <outlet property="stationSiteLabel" destination="6kV-hi-P6H" id="h9B-8l-KAp"/>
                                         </connections>

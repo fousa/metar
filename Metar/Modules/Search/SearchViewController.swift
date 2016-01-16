@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SearchViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class SearchViewController: UIViewController {
     private var currentSearchQuery: String?
     private let service = MetarService()
     
+    private var locationManager: CLLocationManager?
+    
     // MARK: - View
     
     override func viewDidLoad() {
@@ -23,6 +26,13 @@ class SearchViewController: UIViewController {
         
         searchView.delegate = self
         title = NSLocalizedString("search_label_title", comment: "")
+        
+        
+        // Setup the location manager.
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startUpdatingLocation()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -55,8 +65,11 @@ class SearchViewController: UIViewController {
             }
             
             service.fetchList(station: searchQuery, completion: { (error, data) -> () in
-                let metars: [Metar]? = MetarXMLParser(data: data)?.parseMetars()
-                self.searchView.metars = metars ?? [Metar]()
+                var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
+                if let location = self.searchView.location {
+                    metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
+                }
+                self.searchView.metars = metars
                 self.searchView.invalidateData()
             })
         }
@@ -76,6 +89,12 @@ class SearchViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+}
+
+extension SearchViewController: CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        searchView.location = newLocation
     }
 }
 

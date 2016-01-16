@@ -42,5 +42,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We can order the search results according to your current location&apos;s proximity.</string>
 </dict>
 </plist>

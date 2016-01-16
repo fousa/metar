@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol SearchViewDelegate: class {
     func searchViewWillUseCurrentLocation(searchView: SearchView)
@@ -30,6 +31,7 @@ class SearchView: UIView {
     weak var delegate: SearchViewDelegate?
     
     var metars = [Metar]()
+    var location: CLLocation?
     
     private var keyboardShowNotification: AnyObject!
     private var keyboardHideNotification: AnyObject!
@@ -128,7 +130,7 @@ extension SearchView: UITableViewDataSource {
     
     private func tableView(tableView: UITableView, metarCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Metar") as! SearchMetarTableViewCell
-        cell.configure(withMetar: metars[indexPath.row])
+        cell.configure(withMetar: metars[indexPath.row], currentLocation: location)
         return cell
     }
 }
