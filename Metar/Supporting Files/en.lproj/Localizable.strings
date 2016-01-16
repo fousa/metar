@@ -10,3 +10,6 @@
 /* dashboard_placeholder_no_data */
 "dashboard_placeholder_no_data" = "You currently have no airports saved to your dashboard.";
 
+/* search_label_title */
+"search_label_title" = "Search for an airport";
+

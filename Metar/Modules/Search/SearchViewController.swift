@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         searchView.delegate = self
+        title = NSLocalizedString("search_label_title", comment: "")
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -49,6 +50,12 @@ class SearchViewController: UIViewController {
     
     @IBAction func hideKeyboard(sender: AnyObject) {
         searchView.resignFirstResponder()
+    }
+    
+    // MARK: - Status bar
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }
 
