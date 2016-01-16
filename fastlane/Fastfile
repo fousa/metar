@@ -11,7 +11,7 @@ lane :deploy do
   build
 
   # Deploy the application to TestFlight.
-  testflight(changelog_begin_tag: last_hash)
+  upload(changelog_begin_tag: last_hash)
 
   # Cleanup.
   cleanup
@@ -51,7 +51,7 @@ private_lane :build do
   push_to_git_remote
 end
 
-private_lane :testflight do |options|
+private_lane :upload do |options|
   # Fetch the changelog.
   changelog = changelog_from_git_commits(
     between: [options[:changelog_begin_tag],'HEAD'],
