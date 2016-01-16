@@ -19,7 +19,13 @@ class DashboardTests: XCTestCase {
         app.launch()
     }
     
+    func testPlaceholderAppearance() {
+        // Is the placeholder element visible.
+        XCTAssert(app.otherElements["placeholder"].hittable)
+    }
+    
     func testEmptyTable() {
+        // Is the airports table empty.
         let table = app.tables.elementBoundByIndex(0)
         XCTAssertEqual(table.cells.count, 0)
     }
