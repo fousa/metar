@@ -28,5 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName : UIFont.systemFontOfSize(18)
         ]
+        
+        // Setup search bar appearance.
+        UISearchBar.appearance().barTintColor = UIColor(red:0, green:0.12, blue:0.2, alpha:1)
     }
 }
