@@ -162,14 +162,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		04361D671C4A8F42000B4721 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				04361D651C4A8F3C000B4721 /* ICAO.plist */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		04361D6A1C4AEAFD000B4721 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +178,14 @@
 				04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */,
 			);
 			path = Placeholder;
+			sourceTree = "<group>";
+		};
+		04361D6C1C4AF265000B4721 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04361D651C4A8F3C000B4721 /* ICAO.plist */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
@@ -298,7 +298,6 @@
 		626D6B711BD689B80042619F /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				04361D671C4A8F42000B4721 /* Data */,
 				626D6B721BD689B80042619F /* MetarParser.swift */,
 				04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */,
 			);
@@ -419,6 +418,7 @@
 		62DD04F81BD635DA00628E9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04361D6C1C4AF265000B4721 /* Data */,
 				62DD04D51BD635C800628E9D /* Info.plist */,
 				047550801C49B49B009DD792 /* Localizable.strings */,
 			);
