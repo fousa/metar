@@ -60,7 +60,7 @@ private_lane :upload do |options|
 
   # Deploy the application to TestFlight.
   pilot(
-    distribute_external: true,
+#     distribute_external: true,
     changelog: changelog
   )
 end
