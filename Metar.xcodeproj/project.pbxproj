@@ -165,7 +165,7 @@
 			children = (
 				04361D651C4A8F3C000B4721 /* ICAO.plist */,
 			);
-			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
