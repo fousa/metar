@@ -10,6 +10,9 @@
 /* dashboard_placeholder_no_data */
 "dashboard_placeholder_no_data" = "You currently have no airports saved to your dashboard.";
 
+/* search_label_current_location */
+"search_label_current_location" = "Search nearby metar stations";
+
 /* search_label_title */
 "search_label_title" = "Search for an airport";
 

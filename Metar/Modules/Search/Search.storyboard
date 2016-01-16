@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="44" width="600" height="492"/>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Location" rowHeight="44" id="r7A-1G-2eq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Location" rowHeight="44" id="r7A-1G-2eq" customClass="CurrentLocationTableViewCell" customModule="Metar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7A-1G-2eq" id="vtt-3F-xfu">
@@ -71,6 +71,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="z3e-dS-L02" secondAttribute="trailing" constant="16" id="wmP-2P-K54"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="62S-ze-Rb3" id="sVZ-6C-AgY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Metar" rowHeight="51" id="oUx-O0-kyc" customClass="SearchMetarTableViewCell" customModule="Metar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="600" height="51"/>

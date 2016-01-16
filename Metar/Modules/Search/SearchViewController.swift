@@ -27,7 +27,6 @@ class SearchViewController: UIViewController {
         searchView.delegate = self
         title = NSLocalizedString("search_label_title", comment: "")
         
-        
         // Setup the location manager.
         locationManager = CLLocationManager()
         locationManager?.delegate = self
