@@ -48,8 +48,6 @@ class DashboardViewController: UIViewController {
         locationManager?.delegate = self
         locationManager?.headingFilter = kCLHeadingFilterNone
         locationManager?.startUpdatingHeading()
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.startUpdatingLocation()
     }
     
     // MARK: - Actions
