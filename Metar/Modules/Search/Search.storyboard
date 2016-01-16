@@ -72,36 +72,45 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Metar" rowHeight="51" id="oUx-O0-kyc" customClass="SearchMetarTableViewCell" customModule="Metar" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Metar" rowHeight="51" id="oUx-O0-kyc" customClass="SearchMetarTableViewCell" customModule="Metar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="600" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oUx-O0-kyc" id="I5a-br-i0I">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-XA-rQM">
-                                                    <rect key="frame" x="16" y="6" width="160" height="37"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StX-Uq-qny">
+                                                    <rect key="frame" x="16" y="8" width="568" height="35"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="38" height="22"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                                            <color key="textColor" red="0.27843137254901962" green="0.81568627450980391" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DEURNE AIRPORT ANTWERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kV-hi-P6H">
-                                                            <rect key="frame" x="0.0" y="22" width="160" height="15"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-XA-rQM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="560" height="35"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                    <color key="textColor" red="0.27843137254901962" green="0.81568627450980391" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEURNE AIRPORT ANTWERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kV-hi-P6H">
+                                                                    <rect key="frame" x="0.0" y="20" width="160" height="15"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="rwS-00-AEt">
+                                                            <rect key="frame" x="560" y="0.0" width="8" height="35"/>
+                                                        </imageView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.054901960784313725" green="0.078431372549019607" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="ai2-XA-rQM" firstAttribute="top" relation="lessThanOrEqual" secondItem="I5a-br-i0I" secondAttribute="top" constant="8" id="Bve-6w-VFf"/>
-                                                <constraint firstItem="ai2-XA-rQM" firstAttribute="leading" secondItem="I5a-br-i0I" secondAttribute="leading" constant="16" id="P3e-hU-BUS"/>
-                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ai2-XA-rQM" secondAttribute="bottom" constant="8" id="ZlX-Bc-LhR"/>
+                                                <constraint firstItem="StX-Uq-qny" firstAttribute="leading" secondItem="I5a-br-i0I" secondAttribute="leading" constant="16" id="CYQ-Pf-fPk"/>
+                                                <constraint firstAttribute="trailing" secondItem="StX-Uq-qny" secondAttribute="trailing" constant="16" id="L3P-OT-cHV"/>
+                                                <constraint firstAttribute="bottom" secondItem="StX-Uq-qny" secondAttribute="bottom" constant="8" id="ZzB-Ti-nbg"/>
+                                                <constraint firstItem="StX-Uq-qny" firstAttribute="top" secondItem="I5a-br-i0I" secondAttribute="top" constant="8" id="m24-SL-qej"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.050980392156862744" green="0.062745098039215685" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chevron" width="8" height="13"/>
         <image name="Location" width="18" height="18"/>
     </resources>
 </document>
