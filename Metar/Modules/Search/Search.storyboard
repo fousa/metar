@@ -72,27 +72,42 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Metar" rowHeight="70" id="oUx-O0-kyc" customClass="SearchMetarTableViewCell" customModule="Metar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Metar" rowHeight="51" id="oUx-O0-kyc" customClass="SearchMetarTableViewCell" customModule="Metar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="600" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oUx-O0-kyc" id="I5a-br-i0I">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
-                                                    <rect key="frame" x="20" y="24" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-XA-rQM">
+                                                    <rect key="frame" x="16" y="6" width="160" height="37"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lk-AyK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="38" height="22"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                            <color key="textColor" red="0.27843137254901962" green="0.81568627450980391" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DEURNE AIRPORT ANTWERP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kV-hi-P6H">
+                                                            <rect key="frame" x="0.0" y="22" width="160" height="15"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.054901960784313725" green="0.078431372549019607" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="b3b-lk-AyK" firstAttribute="leading" secondItem="I5a-br-i0I" secondAttribute="leading" constant="20" id="Wgm-et-K4c"/>
-                                                <constraint firstItem="b3b-lk-AyK" firstAttribute="centerY" secondItem="I5a-br-i0I" secondAttribute="centerY" id="y6w-B4-3cg"/>
+                                                <constraint firstItem="ai2-XA-rQM" firstAttribute="top" relation="lessThanOrEqual" secondItem="I5a-br-i0I" secondAttribute="top" constant="8" id="Bve-6w-VFf"/>
+                                                <constraint firstItem="ai2-XA-rQM" firstAttribute="leading" secondItem="I5a-br-i0I" secondAttribute="leading" constant="16" id="P3e-hU-BUS"/>
+                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ai2-XA-rQM" secondAttribute="bottom" constant="8" id="ZlX-Bc-LhR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.050980392156862744" green="0.062745098039215685" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="stationNameLabel" destination="b3b-lk-AyK" id="6dE-kn-pfh"/>
+                                            <outlet property="stationSiteLabel" destination="6kV-hi-P6H" id="h9B-8l-KAp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

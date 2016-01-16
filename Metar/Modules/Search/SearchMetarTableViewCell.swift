@@ -11,8 +11,10 @@ import UIKit
 class SearchMetarTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stationNameLabel: UILabel!
+    @IBOutlet weak var stationSiteLabel: UILabel!
     
     func configure(withMetar metar: Metar) {
-        stationNameLabel.text = metar.station.name
+        stationNameLabel.text = metar.station.name?.uppercaseString
+        stationSiteLabel.text = metar.station.site?.uppercaseString
     }
 }

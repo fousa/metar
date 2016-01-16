@@ -41,6 +41,7 @@ class MetarXMLParser: NSObject {
                     
                     // Parse the station name.
                     metar.station.name = element.firstChildWithTag("station_id")?.stringValue()
+                    parseStationDataFromFile(metar: metar)
                     
                     // Parse the station location.
                     if let latitude: NSString = element.firstChildWithTag("latitude")?.stringValue(), let longitude: NSString = element.firstChildWithTag("longitude")?.stringValue() {
@@ -65,5 +66,15 @@ class MetarXMLParser: NSObject {
         }
         
         return metars
+    }
+    
+    private func parseStationDataFromFile(metar metar: Metar) {
+        // Parse sitename.
+        metar.station.site = MetarParser.ICAO?[metar.station.name!]?["name"] as? String
+        
+        // Parse country name
+//        if let countryName = MetarParser.ICAO?[metar.station.name!]?["country"] as? String {
+//            metar.station.country = MetarParser.countryNames[countryName.uppercaseString]
+//        }
     }
 }

@@ -109,6 +109,10 @@ extension SearchView: UITableViewDataSource {
         return metars.count > 0 ? metars.count : 1
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return metars.count > 0 ? 44.0 : 51.0
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if metars.count > 0 {
             return self.tableView(tableView, metarCellForRowAtIndexPath: indexPath)
