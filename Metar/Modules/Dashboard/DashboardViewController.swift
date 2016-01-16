@@ -72,7 +72,7 @@ class DashboardViewController: UIViewController {
 
 extension DashboardViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        let angle = CGFloat(-newHeading.magneticHeading / 180.0 * M_PI)
+        let angle = CGFloat(-newHeading.magneticHeading / 135.0 * M_PI)
         dashboardView.rotatePlane(toAngle: angle)
     }
 }
