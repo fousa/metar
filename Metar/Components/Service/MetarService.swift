@@ -54,7 +54,7 @@ class MetarService: NSObject {
     // MARK: List
     
     func fetchList(location location: CLLocation, completion: ServiceCompletionBlock) {
-        let query = NSString(format: "radialDistance=50;%f,%f", location.coordinate.longitude, location.coordinate.latitude) as String
+        let query = NSString(format: "radialDistance=100;%f,%f", location.coordinate.longitude, location.coordinate.latitude) as String
         fetch(query: query, completion: completion)
     }
     

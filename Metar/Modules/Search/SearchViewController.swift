@@ -101,6 +101,15 @@ extension SearchViewController: CLLocationManagerDelegate {
 extension SearchViewController: SearchViewDelegate {
     func searchViewWillUseCurrentLocation(searchView: SearchView) {
         print("👀 Use current location")
+        if let location = searchView.location {
+            service.cancel()
+            service.fetchList(location: location, completion: { (error, data) -> () in
+                var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
+                metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
+                self.searchView.metars = metars
+                self.searchView.invalidateData()
+            })
+        }
     }
     
     func searchViewWillClear(searchView: SearchView) {
