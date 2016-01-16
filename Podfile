@@ -3,7 +3,8 @@ platform :ios, "8.0"
 inhibit_all_warnings!
 use_frameworks!
 
-pod 'Ono', '~> 1.2'
+pod 'Ono',               '~> 1.2'
+pod 'JTMaterialSpinner', '~> 1.0'
 
 def test_pods
     pod 'Mockingjay', '~> 1.1'

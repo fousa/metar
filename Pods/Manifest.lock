@@ -1,4 +1,5 @@
 PODS:
+  - JTMaterialSpinner (1.0.2)
   - Mockingjay (1.1.1):
     - Mockingjay/Core (= 1.1.1)
     - Mockingjay/XCTest (= 1.1.1)
@@ -12,12 +13,14 @@ PODS:
   - URITemplate (1.3.0)
 
 DEPENDENCIES:
+  - JTMaterialSpinner (~> 1.0)
   - Mockingjay (~> 1.1)
   - Nimble (~> 3.0)
   - Ono (~> 1.2)
   - Quick (~> 0.8)
 
 SPEC CHECKSUMS:
+  JTMaterialSpinner: f9e825c80317023f479b7ecc2856785280d8a8c5
   Mockingjay: 757f80abc947b5ec2918b1bb14f3066574720430
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197

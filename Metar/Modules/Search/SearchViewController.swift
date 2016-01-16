@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreLocation
+import JTMaterialSpinner
 
 class SearchViewController: UIViewController {
     
     var searchView: SearchView! { return self.view as! SearchView }
+    var spinner: JTMaterialSpinner!
     
     private var timer: NSTimer!
     private var currentSearchQuery: String?
@@ -32,6 +34,12 @@ class SearchViewController: UIViewController {
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.startUpdatingLocation()
+        
+        // Add loading bar button view.
+        spinner = JTMaterialSpinner(frame: CGRectMake(0.0, 0.0, 20.0, 20.0))
+        spinner.circleLayer.lineWidth = 1.0
+        spinner.circleLayer.strokeColor = UIColor.whiteColor().CGColor
+        navigationItem.leftBarButtonItem =  UIBarButtonItem(customView: spinner)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -59,16 +67,19 @@ class SearchViewController: UIViewController {
             service.cancel()
             if searchQuery.isEmpty {
                 self.searchView.metars = [Metar]()
+                self.spinner.endRefreshing()
                 self.searchView.invalidateData()
                 return
             }
             
+            spinner.beginRefreshing()
             service.fetchList(station: searchQuery, completion: { (error, data) -> () in
                 var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
                 if let location = self.searchView.location {
                     metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
                 }
                 self.searchView.metars = metars
+                dispatch_async_main { self.spinner.endRefreshing() }
                 self.searchView.invalidateData()
             })
         }
@@ -98,10 +109,13 @@ extension SearchViewController: SearchViewDelegate {
         print("👀 Use current location")
         if let location = searchView.location {
             service.cancel()
+            spinner.beginRefreshing()
             service.fetchList(location: location, completion: { (error, data) -> () in
                 var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
                 metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
                 self.searchView.metars = metars
+                dispatch_async_main { self.spinner.endRefreshing() }
+                
                 self.searchView.invalidateData()
             })
         }
@@ -109,7 +123,8 @@ extension SearchViewController: SearchViewDelegate {
     
     func searchViewWillClear(searchView: SearchView) {
         print("👀 Clear the text field")
-        self.searchView.metars = [Metar]()
-        self.searchView.invalidateData()
+        searchView.metars = [Metar]()
+        spinner.endRefreshing()
+        searchView.invalidateData()
     }
 }
