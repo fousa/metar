@@ -165,6 +165,9 @@ on your dashboard.</string>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="placeholder">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="hSz-Gh-ru5" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="70" id="6lY-WH-lkU"/>
                             <constraint firstItem="hSz-Gh-ru5" firstAttribute="top" secondItem="es0-dK-nxW" secondAttribute="bottom" constant="37" id="JT0-iS-UDJ"/>
