@@ -19,8 +19,6 @@ class SearchView: UIView {
     
     // MARK: - Outlets
     
-    @IBOutlet private var keyboardTapGesture: UITapGestureRecognizer!
-    
     @IBOutlet private var searchField: UISearchBar!
     @IBOutlet private var tableView: UITableView!
     
@@ -50,14 +48,10 @@ class SearchView: UIView {
         
         keyboardShowNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Show keyboard")
-            
-            self.keyboardTapGesture.enabled = true
             self.moveSearch(up: true, notification: notification)
         }
         keyboardHideNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
             print("🔑 Hide keyboard")
-            
-            self.keyboardTapGesture.enabled = false
             self.moveSearch(up: false, notification: notification)
         }
     }
@@ -136,6 +130,10 @@ extension SearchView: UITableViewDataSource {
 }
 
 extension SearchView: UITableViewDelegate {
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        searchField.resignFirstResponder()
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         delegate?.searchViewWillUseCurrentLocation(self)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

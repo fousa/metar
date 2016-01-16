@@ -81,10 +81,6 @@ class SearchViewController: UIViewController {
         storyboard?.dismiss()
     }
     
-    @IBAction func hideKeyboard(sender: AnyObject) {
-        searchView.resignFirstResponder()
-    }
-    
     // MARK: - Status bar
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

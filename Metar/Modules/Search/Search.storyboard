@@ -145,11 +145,9 @@
                             <constraint firstItem="yFp-LG-kZX" firstAttribute="top" secondItem="bhv-W9-J1N" secondAttribute="bottom" id="zVe-0J-iU6"/>
                         </constraints>
                         <connections>
-                            <outlet property="keyboardTapGesture" destination="gSj-Zm-yiH" id="15D-g5-5V9"/>
                             <outlet property="searchField" destination="IdV-c8-6eX" id="r9m-7Q-wqs"/>
                             <outlet property="tableBottomConstraint" destination="zVe-0J-iU6" id="0vH-jJ-5Rk"/>
                             <outlet property="tableView" destination="bhv-W9-J1N" id="gp9-Yd-Ret"/>
-                            <outletCollection property="gestureRecognizers" destination="gSj-Zm-yiH" appends="YES" id="DSJ-PY-kFN"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gTf-oO-FOo">
@@ -161,11 +159,6 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09W-J1-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer enabled="NO" id="gSj-Zm-yiH">
-                    <connections>
-                        <action selector="hideKeyboard:" destination="GXt-hT-OCr" id="tFf-DK-nL7"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1163" y="585"/>
         </scene>
