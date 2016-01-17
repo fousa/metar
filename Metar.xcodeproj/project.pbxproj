@@ -78,12 +78,12 @@
 		04361D631C4A814B000B4721 /* DelegatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegatingNavigationController.swift; sourceTree = "<group>"; };
 		04361D651C4A8F3C000B4721 /* ICAO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ICAO.plist; sourceTree = "<group>"; };
 		04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
-		04361D6D1C4B9083000B4721 /* MetarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetarViewController.swift; path = Metar/Modules/Search/MetarViewController.swift; sourceTree = SOURCE_ROOT; };
-		04361D6F1C4B90AA000B4721 /* MetarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetarView.swift; path = Metar/Modules/Search/MetarView.swift; sourceTree = SOURCE_ROOT; };
-		04361D711C4B90BE000B4721 /* Metar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Metar.storyboard; path = Metar/Modules/Search/Metar.storyboard; sourceTree = SOURCE_ROOT; };
+		04361D6D1C4B9083000B4721 /* MetarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarViewController.swift; sourceTree = "<group>"; };
+		04361D6F1C4B90AA000B4721 /* MetarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarView.swift; sourceTree = "<group>"; };
+		04361D711C4B90BE000B4721 /* Metar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metar.storyboard; sourceTree = "<group>"; };
 		043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
-		046C5CCD1C4BA34F0090AD2C /* MetarStationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetarStationDetailViewController.swift; path = Metar/Modules/Search/MetarStationDetailViewController.swift; sourceTree = SOURCE_ROOT; };
-		046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetarStationView.swift; path = Metar/Modules/Search/MetarStationView.swift; sourceTree = SOURCE_ROOT; };
+		046C5CCD1C4BA34F0090AD2C /* MetarStationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationDetailViewController.swift; sourceTree = "<group>"; };
+		046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationView.swift; sourceTree = "<group>"; };
 		0475507B1C49B48B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0475507F1C49B49B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		047550811C49B4F8009DD792 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				046C5CCD1C4BA34F0090AD2C /* MetarStationDetailViewController.swift */,
 				046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */,
 			);
-			name = "Station details";
+			path = "Station details";
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
@@ -213,6 +213,14 @@
 				048863031C4A334E00CD5B26 /* DashboardTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		04D5BCA91C4C4F69004ABF12 /* Metar stations */ = {
+			isa = PBXGroup;
+			children = (
+				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
+			);
+			path = "Metar stations";
 			sourceTree = "<group>";
 		};
 		2C472D1C591E070ED27871C5 /* Frameworks */ = {
@@ -344,11 +352,11 @@
 		626D6B801BD68AD40042619F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				04D5BCA91C4C4F69004ABF12 /* Metar stations */,
 				04361D6B1C4AEB03000B4721 /* Placeholder */,
 				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
 				626D6B871BD68DE20042619F /* DashboardView.swift */,
 				626D6B851BD68B330042619F /* DashboardViewController.swift */,
-				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -356,10 +364,10 @@
 		626D6B811BD68AD40042619F /* Metar */ = {
 			isa = PBXGroup;
 			children = (
+				046C5CD11C4BA3990090AD2C /* Station details */,
 				04361D711C4B90BE000B4721 /* Metar.storyboard */,
 				04361D6F1C4B90AA000B4721 /* MetarView.swift */,
 				04361D6D1C4B9083000B4721 /* MetarViewController.swift */,
-				046C5CD11C4BA3990090AD2C /* Station details */,
 			);
 			path = Metar;
 			sourceTree = "<group>";

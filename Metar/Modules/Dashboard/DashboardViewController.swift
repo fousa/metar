@@ -30,6 +30,7 @@ class DashboardViewController: UIViewController {
         dashboardView.startIntroAnimation {
             self.startUpdatingHeading()
             
+            // When started from the shortcut open the search screen.
             if let shortcutItem = self.shortcutItem {
                 self.addStation(shortcutItem)
                 self.shortcutItem = nil
