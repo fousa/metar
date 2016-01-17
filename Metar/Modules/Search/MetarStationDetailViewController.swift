@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MetarStationDetailViewController: UIViewController {
     
@@ -14,11 +15,16 @@ class MetarStationDetailViewController: UIViewController {
     
     var metar: Metar!
     
+    private var locationManager: CLLocationManager?
+    
     // MARK: - View flow
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        metarStatioView.configure(metar: metar)
+        // Setup the location manager.
+        locationManager = CLLocationManager()
+        
+        metarStatioView.configure(metar: metar, currentLocation: locationManager!.location)
     }
 }
