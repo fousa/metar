@@ -21,7 +21,7 @@ class SearchView: UIView {
     // MARK: - Outlets
     
     @IBOutlet private var searchField: UISearchBar!
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private(set) var tableView: UITableView!
     
     @IBOutlet private var tableBottomConstraint: NSLayoutConstraint!
     

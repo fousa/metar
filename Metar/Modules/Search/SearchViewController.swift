@@ -40,6 +40,10 @@ class SearchViewController: UIViewController {
         spinner.circleLayer.lineWidth = 1.0
         spinner.circleLayer.strokeColor = UIColor.whiteColor().CGColor
         navigationItem.leftBarButtonItem =  UIBarButtonItem(customView: spinner)
+        
+        if traitCollection.forceTouchCapability == .Available {
+            registerForPreviewingWithDelegate(self, sourceView: view)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -95,6 +99,35 @@ class SearchViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+}
+
+extension SearchViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard searchView.metars.count > 0 else {
+            return nil
+        }
+        
+
+        let cellPosition = searchView.tableView.convertPoint(location, fromView: searchView)        
+        guard let indexPath = searchView.tableView.indexPathForRowAtPoint(cellPosition), let cell = searchView.tableView.cellForRowAtIndexPath(indexPath) else {
+            return nil
+        }
+        
+        let metar = searchView.metars[indexPath.row]
+        print("🎯 Peeking at \(metar.station.name)")
+
+        let previewFrame = searchView.tableView.convertRect(cell.frame, toView: searchView)
+        previewingContext.sourceRect = previewFrame
+        
+        let storyboard = UIStoryboard(name: "Metar", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController
+        controller.metar = metar
+        return controller
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: false)
     }
 }
 
