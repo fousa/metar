@@ -23,6 +23,14 @@ class MetarViewController : UIViewController {
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
     }
     
+    // MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? MetarStationDetailViewController {
+            controller.metar = metar
+        }
+    }
+    
     // MARK: - Status bar
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
