@@ -1,14 +1,17 @@
-/* dashboard_placeholder_add_one */
-"dashboard_placeholder_add_one" = "add one";
+/* dashboard_label_add_one */
+"dashboard_label_add_one" = "add one";
 
-/* dashboard_placeholder_add_one_text */
-"dashboard_placeholder_add_one_text" = "Please press {add} to add one";
+/* dashboard_label_add_one_text */
+"dashboard_label_add_one_text" = "Please tap {add} to add one";
 
-/* dashboard_placeholder_no_airports */
-"dashboard_placeholder_no_airports" = "no airports";
+/* dashboard_label_no_airports */
+"dashboard_label_no_airports" = "no airports";
 
-/* dashboard_placeholder_no_data */
-"dashboard_placeholder_no_data" = "You currently have no airports saved to your dashboard.";
+/* dashboard_label_no_data */
+"dashboard_label_no_data" = "You currently have no airports saved to your dashboard.";
+
+/* detail_label_back */
+"detail_label_back" = "Back";
 
 /* search_label_current_location */
 "search_label_current_location" = "Search nearby metar stations";

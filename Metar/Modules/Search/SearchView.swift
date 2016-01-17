@@ -13,6 +13,7 @@ import CoreLocation
 protocol SearchViewDelegate: class {
     func searchViewWillUseCurrentLocation(searchView: SearchView)
     func searchViewWillClear(searchView: SearchView)
+    func searchView(searchView: SearchView, willOpenMetar metar: Metar)
 }
 
 class SearchView: UIView {
@@ -135,7 +136,10 @@ extension SearchView: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.searchViewWillUseCurrentLocation(self)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if metars.count == 0 {
+            delegate?.searchViewWillUseCurrentLocation(self)
+        } else {
+            delegate?.searchView(self, willOpenMetar: metars[indexPath.row])
+        }
     }
 }

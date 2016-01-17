@@ -20,11 +20,11 @@ class PlaceholderView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        noAirportsLabel.text = NSLocalizedString("dashboard_placeholder_no_data", comment: "")
-        noAirportsLabel.boldify(substring: NSLocalizedString("dashboard_placeholder_no_airports", comment: ""))
+        noAirportsLabel.text = NSLocalizedString("dashboard_label_no_data", comment: "")
+        noAirportsLabel.boldify(substring: NSLocalizedString("dashboard_label_no_airports", comment: ""))
         
-        pressLabel.text = NSLocalizedString("dashboard_placeholder_add_one_text", comment: "")
+        pressLabel.text = NSLocalizedString("dashboard_label_add_one_text", comment: "")
         pressLabel.replaceImage(UIImage(named: "Add")!, forPlaceholderText: "{add}")
-        pressLabel.boldify(substring: NSLocalizedString("dashboard_placeholder_add_one", comment: ""))
+        pressLabel.boldify(substring: NSLocalizedString("dashboard_label_add_one", comment: ""))
     }
 }

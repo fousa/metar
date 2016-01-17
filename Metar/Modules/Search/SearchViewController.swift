@@ -105,6 +105,15 @@ extension SearchViewController: CLLocationManagerDelegate {
 }
 
 extension SearchViewController: SearchViewDelegate {
+    func searchView(searchView: SearchView, willOpenMetar metar: Metar) {
+        print("🎯 Open metar detail for \(metar.station.name)")
+        
+        let storyboard = UIStoryboard(name: "Metar", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController
+        controller.metar = metar
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     func searchViewWillUseCurrentLocation(searchView: SearchView) {
         print("👀 Use current location")
         if let location = searchView.location {
