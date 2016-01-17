@@ -21,6 +21,14 @@ class MetarViewController : UIViewController {
         
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
         title = metar.station.name
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "favoriteMetar:")
+    }
+    
+    // MARK: - Actions
+    
+    func favoriteMetar(sender: AnyObject) {
+        print("💾 Favorite metar \(metar.station.name)")
     }
     
     // MARK: - Segue
