@@ -76,7 +76,6 @@ class MetarXMLParser: NSObject {
         
         // Parse elevation.
         metar.station.elevation = rawICAO?["elevation"] as? Int
-        puts("\(metar.station.name) \(metar.station.elevation)")
         
         // Parse country name
         if let countryCode = rawICAO?["country"] as? String {
