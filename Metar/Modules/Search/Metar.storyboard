@@ -147,7 +147,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temperature" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-na-j48">
-                                        <rect key="frame" x="0.0" y="1" width="7" height="15"/>
+                                        <rect key="frame" x="0.0" y="3" width="7" height="15"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -157,7 +157,7 @@
                                     <constraint firstItem="8yY-Kp-pmc" firstAttribute="leading" secondItem="a6p-ax-mv4" secondAttribute="leading" id="DiS-6V-Pox"/>
                                     <constraint firstItem="a6p-ax-mv4" firstAttribute="leading" secondItem="DLF-na-j48" secondAttribute="trailing" constant="6" id="PeV-93-Bkk"/>
                                     <constraint firstItem="8yY-Kp-pmc" firstAttribute="top" secondItem="a6p-ax-mv4" secondAttribute="bottom" id="Pwu-Up-ReT"/>
-                                    <constraint firstItem="DLF-na-j48" firstAttribute="baseline" secondItem="a6p-ax-mv4" secondAttribute="baseline" id="bvD-M7-nQ2"/>
+                                    <constraint firstItem="DLF-na-j48" firstAttribute="baseline" secondItem="a6p-ax-mv4" secondAttribute="baseline" constant="2" id="bvD-M7-nQ2"/>
                                     <constraint firstAttribute="trailing" secondItem="a6p-ax-mv4" secondAttribute="trailing" id="fzE-7h-jP0"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8yY-Kp-pmc" secondAttribute="trailing" id="sJb-fA-ojt"/>
                                     <constraint firstAttribute="bottom" secondItem="8yY-Kp-pmc" secondAttribute="bottom" id="xno-OO-JLR"/>

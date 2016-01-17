@@ -67,5 +67,13 @@ class MetarStationView : UIView {
         } else {
             distanceContainerView.hidden = true
         }
+        
+        // Temperature data
+        if let temperature = metar.temperature {
+            temperatureValueLabel.text = "\(temperature)°"
+        } else {
+            temperatureValueLabel.text = "--"
+        }
+        temperatureUnitLabel.text = NSLocalizedString("metar_unit_celsius", comment: "").uppercaseString
     }
 }
