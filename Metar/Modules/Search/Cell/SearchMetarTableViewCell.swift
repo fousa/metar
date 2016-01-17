@@ -15,6 +15,7 @@ class SearchMetarTableViewCell: UITableViewCell {
     @IBOutlet weak var stationNameLabel: UILabel!
     @IBOutlet weak var stationSiteLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var distanceUnitLabel: UILabel!
     
     // MARK: - Formatter
     
@@ -22,7 +23,7 @@ class SearchMetarTableViewCell: UITableViewCell {
         struct Static {
             static let instance : MKDistanceFormatter = {
                 let formatter = MKDistanceFormatter()
-                formatter.unitStyle = .Abbreviated
+                formatter.unitStyle = .Full
                 return formatter
             }()
         }
@@ -37,7 +38,10 @@ class SearchMetarTableViewCell: UITableViewCell {
         
         if let currentLocation = currentLocation, let location = metar.station.location {
             let distance = currentLocation.distanceFromLocation(location)
-            distanceLabel.text = SearchMetarTableViewCell.distanceFormatter.stringFromDistance(distance)
+            let formattedDistance = SearchMetarTableViewCell.distanceFormatter.stringFromDistance(distance)
+            let components = formattedDistance.characters.split { $0 == " " }.map { String($0) }
+            distanceLabel.text = components.first
+            distanceUnitLabel.text = components.last?.uppercaseString
         } else {
             distanceLabel.text = nil
         }
