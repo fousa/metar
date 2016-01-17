@@ -18,18 +18,19 @@ class MetarParser: NSObject {
             return NSDictionary(contentsOfFile: path)
         }
         return nil
-        }()
+    }()
     
     static var countryNames: [String:String] = {
         let countryCodes = NSLocale.ISOCountryCodes()
+        
         var countries = [String:String]()
         for countryCode in countryCodes {
             let identifier = NSLocale.localeIdentifierFromComponents([NSLocaleCountryCode:countryCode])
-            let countryName = NSLocale(localeIdentifier: "en_UK").displayNameForKey(NSLocaleIdentifier, value: identifier)
-            countries[countryName!.uppercaseString] = countryCode
+            let countryName = NSLocale.currentLocale().displayNameForKey(NSLocaleIdentifier, value: identifier)
+            countries[countryCode] = countryName
         }
         return countries
-        }()
+    }()
     
     // MARK: - Init
     

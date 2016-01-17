@@ -42,9 +42,9 @@ class MetarStationView : UIView {
     // MARK: - Configure
 
     func configure(metar metar: Metar, currentLocation: CLLocation?) {
-        stationNameLabel.text = metar.station.name
-        stationSiteLabel.text = metar.station.site
-        stationCountryLabel.text = metar.station.country
+        stationNameLabel.text = metar.station.name?.uppercaseString
+        stationSiteLabel.text = metar.station.site?.uppercaseString
+        stationCountryLabel.text = metar.station.country?.uppercaseString
         
         if let currentLocation = currentLocation, let location = metar.station.location {
             distanceContainerView.hidden = false

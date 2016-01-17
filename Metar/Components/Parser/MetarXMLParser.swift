@@ -73,8 +73,8 @@ class MetarXMLParser: NSObject {
         metar.station.site = MetarParser.ICAO?[metar.station.name!]?["name"] as? String
         
         // Parse country name
-//        if let countryName = MetarParser.ICAO?[metar.station.name!]?["country"] as? String {
-//            metar.station.country = MetarParser.countryNames[countryName.uppercaseString]
-//        }
+        if let countryCode = MetarParser.ICAO?[metar.station.name!]?["country"] as? String {
+            metar.station.country = MetarParser.countryNames[countryCode.uppercaseString]
+        }
     }
 }
