@@ -14,6 +14,8 @@ class DashboardViewController: UIViewController {
     
     private var locationManager: CLLocationManager?
     
+    var shortcutItem: UIApplicationShortcutItem?
+    
     // MARK: - View
     
     override func viewDidLoad() {
@@ -27,6 +29,11 @@ class DashboardViewController: UIViewController {
         
         dashboardView.startIntroAnimation {
             self.startUpdatingHeading()
+            
+            if let shortcutItem = self.shortcutItem {
+                self.addStation(shortcutItem)
+                self.shortcutItem = nil
+            }
         }
     }
     
