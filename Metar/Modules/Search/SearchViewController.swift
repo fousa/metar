@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
         
         searchView.delegate = self
         title = NSLocalizedString("search_label_title", comment: "")
+        searchView.becomeFirstResponder()
         
         // Setup the location manager.
         locationManager = CLLocationManager()
@@ -50,14 +51,12 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "queryStations", userInfo: nil, repeats: true)
-        
-        searchView.becomeFirstResponder()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        searchView.resignFirstResponder()
+        searchView.endEditing(true)
         timer.invalidate()
     }
     
