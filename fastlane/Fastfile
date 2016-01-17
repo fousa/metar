@@ -1,14 +1,11 @@
 fastlane_version '1.50.0'
 
 lane :deploy do
-  # Prepare the data.
-  last_hash = last_git_tag_hash
-
   # Run the tests.
   # run_tests
 
   # Build the application and bump the version number.
-  build
+  last_hash = build
 
   # Deploy the application to TestFlight.
   upload(changelog_begin_tag: last_hash)
@@ -49,6 +46,8 @@ private_lane :build do
   commit_version_bump
   add_git_tag prefix: 'v'
   push_to_git_remote
+
+  last_git_tag_hash
 end
 
 private_lane :upload do |options|
