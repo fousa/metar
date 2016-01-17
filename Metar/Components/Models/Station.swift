@@ -17,6 +17,7 @@ class Station {
     var site: String?
     var country: String?
     var location: CLLocation?
+    var elevation: Int?
     
     // MARK: - Init
     

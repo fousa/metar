@@ -42,10 +42,20 @@ class MetarStationView : UIView {
     // MARK: - Configure
 
     func configure(metar metar: Metar, currentLocation: CLLocation?) {
+        // Station data
         stationNameLabel.text = metar.station.name?.uppercaseString
-        stationSiteLabel.text = metar.station.site?.uppercaseString
+        stationSiteLabel.text = metar.station.site?.uppercaseString ?? metar.station.name?.uppercaseString
         stationCountryLabel.text = metar.station.country?.uppercaseString
         
+        // Elevation data
+        if let elevation = metar.station.elevation {
+            heightValueLabel.text = String(elevation)
+        } else {
+            heightValueLabel.text = "--"
+        }
+        heightUnitLabel.text = NSLocalizedString("metar_unit_feet", comment: "").uppercaseString
+        
+        // Location data
         if let currentLocation = currentLocation, let location = metar.station.location {
             distanceContainerView.hidden = false
             

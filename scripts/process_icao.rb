@@ -21,7 +21,8 @@ file.each_with_index do |line, index|
   fields = line.split(',')
   stations[clean(fields[1])] = {
     name: clean(fields[3]),
-    country: clean(fields[8])
+    country: clean(fields[8]),
+    elevation: clean(fields[6]).to_i
   }
 end
 

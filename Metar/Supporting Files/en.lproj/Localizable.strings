@@ -13,6 +13,9 @@
 /* detail_label_back */
 "detail_label_back" = "Back";
 
+/* metar_unit_feet */
+"metar_unit_feet" = "Feet";
+
 /* search_label_current_location */
 "search_label_current_location" = "Search nearby metar stations";
 

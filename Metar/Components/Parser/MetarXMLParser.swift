@@ -69,11 +69,17 @@ class MetarXMLParser: NSObject {
     }
     
     private func parseStationDataFromFile(metar metar: Metar) {
+        let rawICAO = MetarParser.ICAO?[metar.station.name!]
+        
         // Parse sitename.
-        metar.station.site = MetarParser.ICAO?[metar.station.name!]?["name"] as? String
+        metar.station.site = rawICAO?["name"] as? String
+        
+        // Parse elevation.
+        metar.station.elevation = rawICAO?["elevation"] as? Int
+        puts("\(metar.station.name) \(metar.station.elevation)")
         
         // Parse country name
-        if let countryCode = MetarParser.ICAO?[metar.station.name!]?["country"] as? String {
+        if let countryCode = rawICAO?["country"] as? String {
             metar.station.country = MetarParser.countryNames[countryCode.uppercaseString]
         }
     }
