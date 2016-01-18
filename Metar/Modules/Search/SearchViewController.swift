@@ -16,7 +16,7 @@ class SearchViewController: UIViewController {
     
     private var timer: NSTimer!
     private var currentSearchQuery: String?
-    private let service = MetarService()
+    private let service = MTRService()
     
     private var locationManager: CLLocationManager?
     

@@ -46,7 +46,7 @@
 		626D6B7B1BD689B80042619F /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6F1BD689B80042619F /* Visibility.swift */; };
 		626D6B7C1BD689B80042619F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B701BD689B80042619F /* Wind.swift */; };
 		626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B721BD689B80042619F /* MetarParser.swift */; };
-		626D6B7E1BD689B80042619F /* MetarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B741BD689B80042619F /* MetarService.swift */; };
+		626D6B7E1BD689B80042619F /* MTRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B741BD689B80042619F /* MTRService.swift */; };
 		626D6B841BD68ADF0042619F /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D6B831BD68ADF0042619F /* Dashboard.storyboard */; };
 		626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B851BD68B330042619F /* DashboardViewController.swift */; };
 		626D6B881BD68DE20042619F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B871BD68DE20042619F /* DashboardView.swift */; };
@@ -113,7 +113,7 @@
 		626D6B6F1BD689B80042619F /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
 		626D6B701BD689B80042619F /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		626D6B721BD689B80042619F /* MetarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
-		626D6B741BD689B80042619F /* MetarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarService.swift; sourceTree = "<group>"; };
+		626D6B741BD689B80042619F /* MTRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRService.swift; sourceTree = "<group>"; };
 		626D6B831BD68ADF0042619F /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		626D6B851BD68B330042619F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		626D6B871BD68DE20042619F /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 		626D6B731BD689B80042619F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				626D6B741BD689B80042619F /* MetarService.swift */,
+				626D6B741BD689B80042619F /* MTRService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -790,7 +790,7 @@
 				626D6B8C1BD69A0D0042619F /* StationsTableViewController.swift in Sources */,
 				626D6B7B1BD689B80042619F /* Visibility.swift in Sources */,
 				626D6B751BD689B80042619F /* String+Formatters.swift in Sources */,
-				626D6B7E1BD689B80042619F /* MetarService.swift in Sources */,
+				626D6B7E1BD689B80042619F /* MTRService.swift in Sources */,
 				043F8FF41C49B9440032A461 /* UILabel+Attributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  MetarService.swift
+//  MTRService.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class MetarService: NSObject {
+class MTRService: NSObject {
     
     // MARK: - Properties
     
