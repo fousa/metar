@@ -2,7 +2,7 @@ fastlane_version '1.50.0'
 
 lane :deploy do
   # Run the tests.
-  # run_tests
+  run_tests
 
   # Build the application and bump the version number.
   last_hash = build
@@ -19,14 +19,8 @@ private_lane :last_git_tag_hash do
 end
 
 private_lane :run_tests do
-  # Run tests in given simulator
-  xctest(
-    workspace:   'Metar.xcworkspace',
-    scheme:      'Metar',
-    clean:       true,
-    destination: 'platform=iOS Simulator,name=iPhone 6',
-    reports:     [{ report: 'html' }]
-  )
+  # Run tests
+  scan(scheme: "Metar")
 end
 
 private_lane :build do
