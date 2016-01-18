@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0422B20E1C4D86C60048DED5 /* MTRDistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */; };
+		0422B2111C4D88530048DED5 /* MTRDistanceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */; };
 		04361D641C4A814B000B4721 /* MTRDelegatingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */; };
 		04361D661C4A8F3C000B4721 /* ICAO.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04361D651C4A8F3C000B4721 /* ICAO.plist */; };
 		04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */; };
@@ -76,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDistanceFormatter.swift; sourceTree = "<group>"; };
+		0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDistanceFormatterTests.swift; sourceTree = "<group>"; };
 		04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDelegatingNavigationController.swift; sourceTree = "<group>"; };
 		04361D651C4A8F3C000B4721 /* ICAO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ICAO.plist; sourceTree = "<group>"; };
 		04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -166,6 +170,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422B20C1C4D86AD0048DED5 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+		0422B20F1C4D883D0048DED5 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
 		04361D621C4A813D000B4721 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +267,7 @@
 		626D6B3C1BD674E60042619F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0422B20F1C4D883D0048DED5 /* Formatters */,
 				626D6B611BD67D7D0042619F /* Parser */,
 				626D6B601BD67D780042619F /* Service */,
 			);
@@ -298,6 +319,7 @@
 		626D6B661BD689B80042619F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0422B20C1C4D86AD0048DED5 /* Formatters */,
 				04361D621C4A813D000B4721 /* Controllers */,
 				626D6B671BD689B80042619F /* Extensions */,
 				626D6B691BD689B80042619F /* Models */,
@@ -768,6 +790,7 @@
 				626D6B7C1BD689B80042619F /* Wind.swift in Sources */,
 				626D6B761BD689B80042619F /* Cloud.swift in Sources */,
 				626D6B881BD68DE20042619F /* DashboardView.swift in Sources */,
+				0422B20E1C4D86C60048DED5 /* MTRDistanceFormatter.swift in Sources */,
 				046C5CCE1C4BA34F0090AD2C /* MetarStationDetailViewController.swift in Sources */,
 				046C5CD01C4BA3820090AD2C /* MetarStationView.swift in Sources */,
 				626D6B7D1BD689B80042619F /* MTRParser.swift in Sources */,
@@ -804,6 +827,7 @@
 				626D6B3E1BD674E60042619F /* MTRServiceTests.swift in Sources */,
 				626D6B651BD67FB00042619F /* MTRParserLBBGTests.swift in Sources */,
 				626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */,
+				0422B2111C4D88530048DED5 /* MTRDistanceFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

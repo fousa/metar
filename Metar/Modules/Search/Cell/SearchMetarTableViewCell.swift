@@ -17,19 +17,6 @@ class SearchMetarTableViewCell: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var distanceUnitLabel: UILabel!
     
-    // MARK: - Formatter
-    
-    private static var distanceFormatter: MKDistanceFormatter {
-        struct Static {
-            static let instance : MKDistanceFormatter = {
-                let formatter = MKDistanceFormatter()
-                formatter.unitStyle = .Full
-                return formatter
-            }()
-        }
-        return Static.instance
-    }
-    
     // MARK: - Configure
     
     func configure(withMetar metar: Metar, currentLocation: CLLocation?) {
@@ -38,10 +25,9 @@ class SearchMetarTableViewCell: UITableViewCell {
         
         if let currentLocation = currentLocation, let location = metar.station.location {
             let distance = currentLocation.distanceFromLocation(location)
-            let formattedDistance = SearchMetarTableViewCell.distanceFormatter.stringFromDistance(distance)
-            let components = formattedDistance.characters.split { $0 == " " }.map { String($0) }
-            distanceLabel.text = components.first
-            distanceUnitLabel.text = components.last?.uppercaseString
+            let (value, unit) = MTRDistanceFormatter.formattedComponents(distance: distance)
+            distanceLabel.text = value
+            distanceUnitLabel.text = unit?.uppercaseString
         } else {
             distanceLabel.text = nil
         }

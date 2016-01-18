@@ -26,19 +26,6 @@ class MetarStationView : UIView {
     @IBOutlet var temperatureValueLabel: UILabel!
     @IBOutlet var temperatureUnitLabel: UILabel!
     
-    // MARK: - Formatter
-    
-    private static var distanceFormatter: MKDistanceFormatter {
-        struct Static {
-            static let instance : MKDistanceFormatter = {
-                let formatter = MKDistanceFormatter()
-                formatter.unitStyle = .Full
-                return formatter
-            }()
-        }
-        return Static.instance
-    }
-    
     // MARK: - Configure
 
     func configure(metar metar: Metar, currentLocation: CLLocation?) {
@@ -60,10 +47,9 @@ class MetarStationView : UIView {
             distanceContainerView.hidden = false
             
             let distance = currentLocation.distanceFromLocation(location)
-            let formattedDistance = MetarStationView.distanceFormatter.stringFromDistance(distance)
-            let components = formattedDistance.characters.split { $0 == " " }.map { String($0) }
-            distanceValueLabel.text = components.first
-            distanceUnitLabel.text = components.last?.uppercaseString
+            let (value, unit) = MTRDistanceFormatter.formattedComponents(distance: distance)
+            distanceValueLabel.text = value
+            distanceUnitLabel.text = unit?.uppercaseString
         } else {
             distanceContainerView.hidden = true
         }
