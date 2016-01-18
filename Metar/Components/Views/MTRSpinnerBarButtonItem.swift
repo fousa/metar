@@ -1,5 +1,5 @@
 //
-//  SpinnerBarButtonItem.swift
+//  MTRSpinnerBarButtonItem.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 17/01/16.
@@ -9,7 +9,7 @@
 import UIKit
 import JTMaterialSpinner
 
-class SpinnerBarButtonItem : UIBarButtonItem {
+class MTRSpinnerBarButtonItem : UIBarButtonItem {
     
     private var spinner: JTMaterialSpinner!
     

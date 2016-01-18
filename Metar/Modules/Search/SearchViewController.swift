@@ -12,7 +12,7 @@ import CoreLocation
 class SearchViewController: UIViewController {
     
     var searchView: SearchView! { return self.view as! SearchView }
-    var spinnerBarButton: SpinnerBarButtonItem! { return self.navigationItem.leftBarButtonItem as! SpinnerBarButtonItem }
+    var spinnerBarButton: MTRSpinnerBarButtonItem! { return self.navigationItem.leftBarButtonItem as! MTRSpinnerBarButtonItem }
     
     private var timer: NSTimer!
     private var currentSearchQuery: String?
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
         locationManager?.startUpdatingLocation()
         
         // Add spinner bar button view.
-        navigationItem.leftBarButtonItem =  SpinnerBarButtonItem(color: UIColor.whiteColor())
+        navigationItem.leftBarButtonItem =  MTRSpinnerBarButtonItem(color: UIColor.whiteColor())
         
         if traitCollection.forceTouchCapability == .Available {
             registerForPreviewingWithDelegate(self, sourceView: view)

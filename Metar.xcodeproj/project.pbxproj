@@ -26,8 +26,8 @@
 		04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */; };
 		04C22BAA1BD6EC4C00175B52 /* MetarXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */; };
 		04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */; };
-		04C22BAE1BD6F0C600175B52 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAD1BD6F0C600175B52 /* Threading.swift */; };
-		04D5BCAC1C4C504B004ABF12 /* SpinnerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5BCAB1C4C504B004ABF12 /* SpinnerBarButtonItem.swift */; };
+		04C22BAE1BD6F0C600175B52 /* MTRThreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */; };
+		04D5BCAC1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */; };
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
 		1DFE268CFCEF2622764714E7 /* Pods_MetarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
@@ -96,8 +96,8 @@
 		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarXMLParser.swift; sourceTree = "<group>"; };
 		04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMetarTableViewCell.swift; sourceTree = "<group>"; };
-		04C22BAD1BD6F0C600175B52 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
-		04D5BCAB1C4C504B004ABF12 /* SpinnerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerBarButtonItem.swift; sourceTree = "<group>"; };
+		04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRThreading.swift; sourceTree = "<group>"; };
+		04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRSpinnerBarButtonItem.swift; sourceTree = "<group>"; };
 		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
 		626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Expectations.swift"; sourceTree = "<group>"; };
 		626D6B561BD67C140042619F /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		04D5BCAA1C4C5038004ABF12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04D5BCAB1C4C504B004ABF12 /* SpinnerBarButtonItem.swift */,
+				04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 				626D6B711BD689B80042619F /* Parser */,
 				626D6B731BD689B80042619F /* Service */,
 				04D5BCAA1C4C5038004ABF12 /* Views */,
-				04C22BAD1BD6F0C600175B52 /* Threading.swift */,
+				04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -764,7 +764,7 @@
 				04361D641C4A814B000B4721 /* DelegatingNavigationController.swift in Sources */,
 				62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */,
 				04361D6E1C4B9083000B4721 /* MetarViewController.swift in Sources */,
-				04D5BCAC1C4C504B004ABF12 /* SpinnerBarButtonItem.swift in Sources */,
+				04D5BCAC1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift in Sources */,
 				626D6B7C1BD689B80042619F /* Wind.swift in Sources */,
 				626D6B761BD689B80042619F /* Cloud.swift in Sources */,
 				626D6B881BD68DE20042619F /* DashboardView.swift in Sources */,
@@ -780,7 +780,7 @@
 				04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */,
 				04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */,
 				04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */,
-				04C22BAE1BD6F0C600175B52 /* Threading.swift in Sources */,
+				04C22BAE1BD6F0C600175B52 /* MTRThreading.swift in Sources */,
 				04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */,
 				04361D701C4B90AA000B4721 /* MetarView.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
