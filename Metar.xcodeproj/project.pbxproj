@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0422B20E1C4D86C60048DED5 /* MTRDistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */; };
 		0422B2111C4D88530048DED5 /* MTRDistanceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */; };
+		0422B2151C4D98FD0048DED5 /* MTRLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */; };
 		04361D641C4A814B000B4721 /* MTRDelegatingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */; };
 		04361D661C4A8F3C000B4721 /* ICAO.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04361D651C4A8F3C000B4721 /* ICAO.plist */; };
 		04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */; };
@@ -80,6 +81,7 @@
 		02CBDA2D172B500695FBB8FE /* Pods-MetarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetarTests/Pods-MetarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDistanceFormatter.swift; sourceTree = "<group>"; };
 		0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDistanceFormatterTests.swift; sourceTree = "<group>"; };
+		0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRLocationManager.swift; sourceTree = "<group>"; };
 		04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDelegatingNavigationController.swift; sourceTree = "<group>"; };
 		04361D651C4A8F3C000B4721 /* ICAO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ICAO.plist; sourceTree = "<group>"; };
 		04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 			children = (
 				0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */,
 			);
-			name = Formatters;
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		0422B20F1C4D883D0048DED5 /* Formatters */ = {
@@ -183,7 +185,25 @@
 			children = (
 				0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */,
 			);
-			name = Formatters;
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		0422B2121C4D98E60048DED5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0422B2131C4D98EF0048DED5 /* Location */,
+				626D6B711BD689B80042619F /* Parser */,
+				626D6B731BD689B80042619F /* Service */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0422B2131C4D98EF0048DED5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		04361D621C4A813D000B4721 /* Controllers */ = {
@@ -319,12 +339,11 @@
 		626D6B661BD689B80042619F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0422B20C1C4D86AD0048DED5 /* Formatters */,
 				04361D621C4A813D000B4721 /* Controllers */,
 				626D6B671BD689B80042619F /* Extensions */,
+				0422B20C1C4D86AD0048DED5 /* Formatters */,
+				0422B2121C4D98E60048DED5 /* Managers */,
 				626D6B691BD689B80042619F /* Models */,
-				626D6B711BD689B80042619F /* Parser */,
-				626D6B731BD689B80042619F /* Service */,
 				04D5BCAA1C4C5038004ABF12 /* Views */,
 				04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */,
 			);
@@ -807,6 +826,7 @@
 				04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */,
 				04361D701C4B90AA000B4721 /* MetarView.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
+				0422B2151C4D98FD0048DED5 /* MTRLocationManager.swift in Sources */,
 				04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */,
 				626D6B771BD689B80042619F /* Metar.swift in Sources */,
 				047550821C49B4F8009DD792 /* PlaceholderView.swift in Sources */,

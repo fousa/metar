@@ -12,8 +12,6 @@ import CoreLocation
 class DashboardViewController: UIViewController {
     var dashboardView: DashboardView! { return self.view as! DashboardView }
     
-    private var locationManager: CLLocationManager?
-    
     var shortcutItem: UIApplicationShortcutItem?
     
     // MARK: - View
@@ -22,13 +20,15 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         dashboardView.dataSource = self
+        
+        MTRLocationManager.sharedInstance.startUpdatingHeading()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         dashboardView.startIntroAnimation {
-            self.startUpdatingHeading()
+            self.observeHeadingUpdating()
             
             // When started from the shortcut open the search screen.
             if let shortcutItem = self.shortcutItem {
@@ -36,6 +36,12 @@ class DashboardViewController: UIViewController {
                 self.shortcutItem = nil
             }
         }
+    }
+    
+    // MARK: - Init
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: - Segue
@@ -48,14 +54,13 @@ class DashboardViewController: UIViewController {
     
     // MARK: - Heading
     
-    private func startUpdatingHeading() {
-        print("🌏 Start updating heading")
-        
-        // Setup the location manager.
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.headingFilter = kCLHeadingFilterNone
-        locationManager?.startUpdatingHeading()
+    private func observeHeadingUpdating() {
+        NSNotificationCenter.defaultCenter().addObserverForName(MTRHeadingUpdatedNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+            if let heading = notification.object as? CLHeading {
+                let angle = CGFloat(-heading.magneticHeading / 135.0 * M_PI)
+                self.dashboardView.rotatePlane(toAngle: angle)
+            }
+        }
     }
     
     // MARK: - Actions
@@ -73,13 +78,6 @@ class DashboardViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
-    }
-}
-
-extension DashboardViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        let angle = CGFloat(-newHeading.magneticHeading / 135.0 * M_PI)
-        dashboardView.rotatePlane(toAngle: angle)
     }
 }
 
