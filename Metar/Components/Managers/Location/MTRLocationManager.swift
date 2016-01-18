@@ -56,4 +56,5 @@ class MTRLocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         NSNotificationCenter.defaultCenter().postNotificationName(MTRLocationUpdatedNotification, object: newLocation)
     }
+
 }

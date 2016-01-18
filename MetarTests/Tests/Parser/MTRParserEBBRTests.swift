@@ -12,6 +12,7 @@ import Quick
 @testable import Metar
 
 class MTRParserEBBRTests: QuickSpec {
+
     override func spec() {
         
         describe("EBBR") {
@@ -116,4 +117,5 @@ class MTRParserEBBRTests: QuickSpec {
             pending("Remarks data", nil)
         }
     }
+
 }

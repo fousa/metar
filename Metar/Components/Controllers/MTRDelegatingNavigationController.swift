@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MTRDelegatingNavigationController : UINavigationController {
-    
+class MTRDelegatingNavigationController: UINavigationController {
+
     // MARK: - Status bar
-    
+
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return topViewController?.preferredStatusBarStyle() ?? .LightContent
     }
+
 }

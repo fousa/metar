@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentLocationTableViewCell : UITableViewCell {
+class CurrentLocationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
@@ -17,4 +17,5 @@ class CurrentLocationTableViewCell : UITableViewCell {
         
         label.text = NSLocalizedString("search_label_current_location", comment: "")
     }
+    
 }

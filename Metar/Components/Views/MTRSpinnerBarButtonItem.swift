@@ -9,7 +9,7 @@
 import UIKit
 import JTMaterialSpinner
 
-class MTRSpinnerBarButtonItem : UIBarButtonItem {
+class MTRSpinnerBarButtonItem: UIBarButtonItem {
     
     private var spinner: JTMaterialSpinner!
     
@@ -34,4 +34,5 @@ class MTRSpinnerBarButtonItem : UIBarButtonItem {
     func stopAnimating() {
         spinner.endRefreshing()
     }
+
 }

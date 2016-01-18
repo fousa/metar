@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MetarViewController : UIViewController {
+class MetarViewController: UIViewController {
     
-    var metarView: MetarView! { return self.view as! MetarView }
+    var metarView: MetarView! { return self.view as! MetarView } // tailor:disable
     
     var metar: Metar!
     
@@ -44,4 +44,5 @@ class MetarViewController : UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
+    
 }

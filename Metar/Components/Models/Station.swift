@@ -21,6 +21,6 @@ class Station {
     
     // MARK: - Init
     
-    init() { }
+    init() {}
     
 }

@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class MetarStationView : UIView {
+class MetarStationView: UIView {
     
     @IBOutlet var stationNameLabel: UILabel!
     @IBOutlet var stationSiteLabel: UILabel!
@@ -62,4 +62,5 @@ class MetarStationView : UIView {
         }
         temperatureUnitLabel.text = NSLocalizedString("metar_unit_celsius", comment: "").uppercaseString
     }
+    
 }

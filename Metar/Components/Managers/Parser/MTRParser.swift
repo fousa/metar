@@ -13,19 +13,19 @@ class MTRParser: NSObject {
     
     private var metar: Metar
     
-    static var ICAO: NSDictionary? = {
+    static var icaoCodes: NSDictionary? = {
         if let path = NSBundle.mainBundle().pathForResource("ICAO", ofType: "plist") {
             return NSDictionary(contentsOfFile: path)
         }
         return nil
     }()
     
-    static var countryNames: [String:String] = {
+    static var countryNames: [String: String] = {
         let countryCodes = NSLocale.ISOCountryCodes()
         
-        var countries = [String:String]()
+        var countries = [String: String]()
         for countryCode in countryCodes {
-            let identifier = NSLocale.localeIdentifierFromComponents([NSLocaleCountryCode:countryCode])
+            let identifier = NSLocale.localeIdentifierFromComponents([NSLocaleCountryCode: countryCode])
             let countryName = NSLocale.currentLocale().displayNameForKey(NSLocaleIdentifier, value: identifier)
             countries[countryCode] = countryName
         }
@@ -61,9 +61,9 @@ class MTRParser: NSObject {
     // MARK: - Name
     
     private func parseStationData() {
-        metar.station.site = MTRParser.ICAO?[metar.station.name!]?["name"] as? String
+        metar.station.site = MTRParser.icaoCodes?[metar.station.name!]?["name"] as? String
         
-        if let countryName = MTRParser.ICAO?[metar.station.name!]?["country"] as? String {
+        if let countryName = MTRParser.icaoCodes?[metar.station.name!]?["country"] as? String {
             metar.station.country = MTRParser.countryNames[countryName.uppercaseString]
         }
     }
@@ -128,7 +128,7 @@ class MTRParser: NSObject {
         if let values = matchMultiple(pattern: "(\(regexCoverages))\\d{3}\\s") {
             for value in values {
                 var cloud = Cloud()
-                cloud.coverage = Cloud.CloudCoverage(rawValue: value.substring(0, length: value.characters.count - 3) as! String)
+                cloud.coverage = Cloud.CloudCoverage(rawValue: value.substring(0, length: value.characters.count - 3) as! String) // tailor:disable
                 cloud.base = (value.substring(value.characters.count - 3, length: 3)?.integerValue ?? 0) * 100
                 metar.clouds.append(cloud)
             }
@@ -201,4 +201,5 @@ class MTRParser: NSObject {
             return metar.raw
         }
     }
+    
 }

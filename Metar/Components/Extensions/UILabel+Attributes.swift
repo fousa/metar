@@ -9,13 +9,14 @@
 import UIKit
 
 extension UILabel {
+
     func boldify(substring substring: String) {
         if let attributedText = attributedText as? NSMutableAttributedString {
             let range = (attributedText.string as NSString).rangeOfString(substring)
             attributedText.addAttribute(NSFontAttributeName, value: UIFont(name: "HelveticaNeue-Medium", size: 18)!, range: range)
         }
     }
-    
+
     func replaceImage(image: UIImage, forPlaceholderText placeholder: String) {
         if let attributedText = attributedText as? NSMutableAttributedString {
             let attachment = NSTextAttachment()
@@ -26,4 +27,5 @@ extension UILabel {
             attributedText.replaceCharactersInRange(range, withAttributedString: imageAttachedString)
         }
     }
+
 }

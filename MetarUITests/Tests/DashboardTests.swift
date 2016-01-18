@@ -29,4 +29,5 @@ class DashboardTests: XCTestCase {
         let table = app.tables.elementBoundByIndex(0)
         XCTAssertEqual(table.cells.count, 0)
     }
+    
 }

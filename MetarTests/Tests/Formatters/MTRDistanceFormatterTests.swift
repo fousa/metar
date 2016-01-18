@@ -14,6 +14,7 @@ import CoreLocation
 @testable import Metar
 
 class MTRDistanceFormatterTests: QuickSpec {
+
     override func spec() {
         it("should format the distance") {
             let formattedDistance = MTRDistanceFormatter.format(distance: 1000)
@@ -26,4 +27,5 @@ class MTRDistanceFormatterTests: QuickSpec {
             expect(formattedDistance.unit) == "miles"
         }
     }
+    
 }

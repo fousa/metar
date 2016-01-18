@@ -32,4 +32,5 @@ class SearchMetarTableViewCell: UITableViewCell {
             distanceLabel.text = nil
         }
     }
+    
 }

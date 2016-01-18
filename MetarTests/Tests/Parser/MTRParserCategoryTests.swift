@@ -12,6 +12,7 @@ import Quick
 @testable import Metar
 
 class MTRParserCategoryTests: QuickSpec {
+
     override func spec() {
         context("Visibility in miles") {
             it("should be VFR when more than 5 miles.") {
@@ -126,6 +127,6 @@ class MTRParserCategoryTests: QuickSpec {
                 expect(MetarCategory(rawValue: metar.cloudBaseCategory.rawValue)) == .LIFR
             }
         }
-        
     }
+
 }

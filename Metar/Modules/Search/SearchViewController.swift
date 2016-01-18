@@ -11,8 +11,8 @@ import CoreLocation
 
 class SearchViewController: UIViewController {
     
-    var searchView: SearchView! { return self.view as! SearchView }
-    var spinnerBarButton: MTRSpinnerBarButtonItem! { return self.navigationItem.leftBarButtonItem as! MTRSpinnerBarButtonItem }
+    var searchView: SearchView! { return self.view as! SearchView } // tailor:disable
+    var spinnerBarButton: MTRSpinnerBarButtonItem! { return self.navigationItem.leftBarButtonItem as! MTRSpinnerBarButtonItem } // tailor:disable
     
     private var timer: NSTimer!
     private var currentSearchQuery: String?
@@ -101,9 +101,11 @@ class SearchViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
+
 }
 
 extension SearchViewController: UIViewControllerPreviewingDelegate {
+
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard searchView.metars.count > 0 else {
             return nil
@@ -122,7 +124,7 @@ extension SearchViewController: UIViewControllerPreviewingDelegate {
         previewingContext.sourceRect = previewFrame
         
         let storyboard = UIStoryboard(name: "Metar", bundle: nil)
-        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController
+        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController // tailor:disable
         controller.metar = metar
         return controller
     }
@@ -130,14 +132,16 @@ extension SearchViewController: UIViewControllerPreviewingDelegate {
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: false)
     }
+
 }
 
 extension SearchViewController: SearchViewDelegate {
+
     func searchView(searchView: SearchView, willOpenMetar metar: Metar) {
         print("🎯 Open metar detail for \(metar.station.name)")
         
         let storyboard = UIStoryboard(name: "Metar", bundle: nil)
-        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController
+        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController // tailor:disable
         controller.metar = metar
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -164,4 +168,5 @@ extension SearchViewController: SearchViewDelegate {
         spinnerBarButton.stopAnimating()
         searchView.invalidateData()
     }
+    
 }

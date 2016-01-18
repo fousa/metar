@@ -9,6 +9,7 @@
 import Quick
 
 extension QuickSpec {
+    
     func fullFillExpectation(name: String, block: (XCTestExpectation) -> ()) {
         let expectation = expectationWithDescription(name)
         
@@ -19,4 +20,5 @@ extension QuickSpec {
             XCTAssertNil(error, "🚓 \(error?.localizedDescription)")
         }
     }
+
 }

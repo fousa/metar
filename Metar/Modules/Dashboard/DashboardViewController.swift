@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class DashboardViewController: UIViewController {
-    var dashboardView: DashboardView! { return self.view as! DashboardView }
+    var dashboardView: DashboardView! { return self.view as! DashboardView } // tailor:disable
     
     var shortcutItem: UIApplicationShortcutItem?
     
@@ -79,22 +79,29 @@ class DashboardViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
+
 }
 
 extension DashboardViewController: DashboardViewDataSource {
+
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int {
         return 0
     }
+
 }
 
 extension DashboardViewController: UIStoryboardDelegate {
+
     func storyboardShouldDismiss(storyboard: UIStoryboard) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+
 }
 
 extension DashboardViewController: PlaceholderViewControllerDelegate {
+
     func placeholderViewControllerWillAddStation(controller: PlaceholderViewController) {
         addStation(controller)
     }
+    
 }

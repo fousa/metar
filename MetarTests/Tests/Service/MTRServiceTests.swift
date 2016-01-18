@@ -15,6 +15,7 @@ import Mockingjay
 @testable import Metar
 
 class MTRServiceTests: QuickSpec {
+
     override func spec() {
         context("Fetch list by station name") {
             it("should return data.") {
@@ -70,4 +71,5 @@ class MTRServiceTests: QuickSpec {
             }
         }
     }
+    
 }

@@ -29,6 +29,7 @@ struct Wind {
             case KilometersPerHour: return "km/h"
             }
         }
+        
     }
     
     var speed: Int?

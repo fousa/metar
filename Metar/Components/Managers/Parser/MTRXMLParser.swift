@@ -69,7 +69,7 @@ class MTRXMLParser: NSObject {
     }
     
     private func parseStationDataFromFile(metar metar: Metar) {
-        let rawICAO = MTRParser.ICAO?[metar.station.name!]
+        let rawICAO = MTRParser.icaoCodes?[metar.station.name!]
         
         // Parse sitename.
         metar.station.site = rawICAO?["name"] as? String
@@ -82,4 +82,5 @@ class MTRXMLParser: NSObject {
             metar.station.country = MTRParser.countryNames[countryCode.uppercaseString]
         }
     }
+    
 }

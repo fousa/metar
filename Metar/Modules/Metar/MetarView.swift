@@ -8,5 +8,5 @@
 
 import UIKit
 
-class MetarView : UIView {
+class MetarView: UIView {
 }

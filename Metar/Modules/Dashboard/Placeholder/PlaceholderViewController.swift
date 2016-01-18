@@ -13,7 +13,7 @@ protocol PlaceholderViewControllerDelegate: class {
 }
 
 class PlaceholderViewController: UIViewController {
-    var placeholderView: PlaceholderView! { return self.view as! PlaceholderView }
+    var placeholderView: PlaceholderView! { return self.view as! PlaceholderView } // tailor:disable
     
     weak var delegate: PlaceholderViewControllerDelegate?
     
@@ -22,4 +22,5 @@ class PlaceholderViewController: UIViewController {
     @IBAction func addStation(sender: AnyObject) {
         delegate?.placeholderViewControllerWillAddStation(self)
     }
+    
 }

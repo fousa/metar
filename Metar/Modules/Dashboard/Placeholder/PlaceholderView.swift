@@ -27,4 +27,5 @@ class PlaceholderView: UIView {
         pressLabel.replaceImage(UIImage(named: "Add")!, forPlaceholderText: "{add}")
         pressLabel.boldify(substring: NSLocalizedString("dashboard_label_add_one", comment: ""))
     }
+    
 }

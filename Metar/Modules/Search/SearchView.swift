@@ -1,4 +1,3 @@
-
 //
 //  SearchView.swift
 //  Metar
@@ -98,9 +97,11 @@ class SearchView: UIView {
             }
         }
     }
+
 }
 
 extension SearchView: UITableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // When no metars are available, show the 'use current location' cell.
         return metars.count > 0 ? metars.count : 1
@@ -124,13 +125,15 @@ extension SearchView: UITableViewDataSource {
     }
     
     private func tableView(tableView: UITableView, metarCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Metar") as! SearchMetarTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Metar") as! SearchMetarTableViewCell // tailor:disable
         cell.configure(withMetar: metars[indexPath.row], currentLocation: location)
         return cell
     }
+
 }
 
 extension SearchView: UITableViewDelegate {
+
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         searchField.resignFirstResponder()
     }
@@ -142,4 +145,5 @@ extension SearchView: UITableViewDelegate {
             delegate?.searchView(self, willOpenMetar: metars[indexPath.row])
         }
     }
+
 }

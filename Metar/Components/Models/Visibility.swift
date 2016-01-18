@@ -19,6 +19,7 @@ struct Visibility {
             case Miles: return "mi"
             }
         }
+        
     }
     
     var value: String?
@@ -54,4 +55,5 @@ struct Visibility {
         }
         return nil
     }
+
 }

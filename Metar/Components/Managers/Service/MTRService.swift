@@ -36,15 +36,15 @@ class MTRService: NSObject {
     // MARK: - Fetching
 
     private func fetch(query query: String, completion: ServiceCompletionBlock) {
-        let URLString = NSString(format: "%@%@", BaseURLString, query)
-        let URL = NSURL(string: URLString as String)
-        let request = NSMutableURLRequest(URL: URL!)
+        let urlString = NSString(format: "%@%@", BaseURLString, query)
+        let url = NSURL(string: urlString as String)
+        let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
         
         session = NSURLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
-        let task = session!.dataTaskWithRequest(request, completionHandler: { (data : NSData?, response : NSURLResponse?, error : NSError?)-> Void in
+        let task = session!.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             if let error = error {
-                print("💣 \(error.localizedDescription)\n🖥 \(URLString)")
+                print("💣 \(error.localizedDescription)\n🖥 \(urlString)")
             }
             completion(error: error, data: data)
         })
@@ -62,4 +62,5 @@ class MTRService: NSObject {
         let query = NSString(format: "stationString=%@", stationString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!) as String
         fetch(query: query, completion: completion)
     }
+    
 }
