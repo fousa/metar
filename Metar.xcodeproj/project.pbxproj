@@ -550,6 +550,7 @@
 				62DD04C41BD635C800628E9D /* Resources */,
 				9EF574769A2573B63F84FD1B /* Embed Pods Frameworks */,
 				01119F8A6E71AB48567D1A8E /* Copy Pods Resources */,
+				120A1957AFEDF5E9A79BB26A /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -704,6 +705,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetarUITests/Pods-MetarUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		120A1957AFEDF5E9A79BB26A /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/tailor --except=trailing-whitespace,terminating-newline";
 		};
 		22B22A8A50857E1FE4A1DFA5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
