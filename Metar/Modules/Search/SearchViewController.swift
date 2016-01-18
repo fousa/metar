@@ -18,8 +18,6 @@ class SearchViewController: UIViewController {
     private var currentSearchQuery: String?
     private let service = MTRService()
     
-    private var locationManager: CLLocationManager?
-    
     // MARK: - View
     
     override func viewDidLoad() {
@@ -30,10 +28,8 @@ class SearchViewController: UIViewController {
         searchView.becomeFirstResponder()
         
         // Setup the location manager.
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.startUpdatingLocation()
+        MTRLocationManager.sharedInstance.startUpdatingLocation()
+        startUpdatingLocation()
         
         // Add spinner bar button view.
         navigationItem.leftBarButtonItem =  MTRSpinnerBarButtonItem(color: UIColor.whiteColor())
@@ -54,6 +50,16 @@ class SearchViewController: UIViewController {
         
         searchView.endEditing(true)
         timer.invalidate()
+    }
+    
+    // MARK: - Location
+    
+    private func startUpdatingLocation() {
+        NSNotificationCenter.defaultCenter().addObserverForName(MTRLocationUpdatedNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+            if let location = notification.object as? CLLocation {
+                self.searchView.location = location
+            }
+        }
     }
     
     // MARK: - Searching
@@ -123,12 +129,6 @@ extension SearchViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: false)
-    }
-}
-
-extension SearchViewController: CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        searchView.location = newLocation
     }
 }
 
