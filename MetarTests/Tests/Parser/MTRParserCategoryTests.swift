@@ -1,5 +1,5 @@
 //
-//  MetarParserCategoryTests.swift
+//  MTRParserCategoryTests.swift
 //  MetarTests
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -11,7 +11,7 @@ import Quick
 
 @testable import Metar
 
-class MetarParserCategoryTests: QuickSpec {
+class MTRParserCategoryTests: QuickSpec {
     override func spec() {
         context("Visibility in miles") {
             it("should be VFR when more than 5 miles.") {

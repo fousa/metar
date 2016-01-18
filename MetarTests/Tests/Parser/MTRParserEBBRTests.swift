@@ -1,5 +1,5 @@
 //
-//  MetarParserLBBGTests.swift
+//  MTRParserEBBRTests.swift
 //  MetarTests
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -11,27 +11,28 @@ import Quick
 
 @testable import Metar
 
-class MetarParserLBBGTests: QuickSpec {
+class MTRParserEBBRTests: QuickSpec {
     override func spec() {
         
-        describe("LBBG") {
+        describe("EBBR") {
+            
             var metar: Metar!
             beforeEach {
-                metar = Metar(raw: "LBBG 041600Z 120103MPS 290V310 1400 R04R/P1600 R22/P1500U -SN BKN022 OVC050 M04/M07 Q1020 NOSIG 9949//91")
-                metar.station.name = "LBBG"
-                MetarParser(metar: metar).parse()
+                metar = Metar(raw: "EBBR 111220Z 23008G30KT CAVOK 24/M10 Q1020 NOSIG")
+                metar.station.name = "EBBR"
+                MTRParser(metar: metar).parse()
             }
             
             context("Common data") {
                 it("should correctly parse the station name.") {
-                    expect(metar.station.name) == "LBBG"
+                    expect(metar.station.name) == "EBBR"
                 }
                 it("should correctly parse the observation time.") {
                     let calendar = NSCalendar.currentCalendar()
                     let components = calendar.componentsInTimeZone(NSTimeZone(abbreviation: "UTC")!, fromDate: NSDate())
-                    components.day = 4
-                    components.hour = 16
-                    components.minute = 0
+                    components.day = 11
+                    components.hour = 12
+                    components.minute = 20
                     components.second = 0
                     let date = calendar.dateFromComponents(components)
                     
@@ -50,22 +51,22 @@ class MetarParserLBBGTests: QuickSpec {
             
             context("Visibility data") {
                 it("should correctly parse the visibility unit.") {
-                    expect(metar.visibility?.unit) == .Meters
+                    expect(metar.visibility?.unit).to(beNil())
                 }
                 it("should correctly parse the visibility value.") {
-                    expect(metar.visibility?.value) == "1400"
+                    expect(metar.visibility?.value).to(beNil())
                 }
                 it("should correctly parse the cavok value.") {
-                    expect(metar.visibility?.cavok) == false
+                    expect(metar.visibility?.cavok) == true
                 }
             }
             
             context("Temperature data") {
                 it("should correctly parse the temperature value.") {
-                    expect(metar.temperature) == -4
+                    expect(metar.temperature) == 24
                 }
                 it("should correctly parse the dewpoint value.") {
-                    expect(metar.dewpoint) == -7
+                    expect(metar.dewpoint) == -10
                 }
             }
             
@@ -77,57 +78,37 @@ class MetarParserLBBGTests: QuickSpec {
             
             context("Cloud data") {
                 it("should correctly parse the cloud count.") {
-                    expect(metar.clouds.count) == 2
-                }
-                it("should correctly parse the cloud coverage.") {
-                    expect(metar.clouds.first!.coverage) == .Broken
-                    expect(metar.clouds.last!.coverage) == .Overcast
-                }
-                it("should correctly parse the cloud base.") {
-                    expect(metar.clouds.first!.base) == 2200
-                    expect(metar.clouds.last!.base) == 5000
+                    expect(metar.clouds.count) == 0
                 }
             }
             
             context("Runway data") {
                 it("should correctly parse the runway count.") {
-                    expect(metar.clouds.count) == 2
-                }
-                it("should correctly parse the runway name.") {
-                    expect(metar.runways.first!.name) == "04R"
-                    expect(metar.runways.last!.name) == "22"
-                }
-                it("should correctly parse the cloud trend.") {
-                    expect(metar.runways.first!.trend) == Runway.RunwayTrend.NoChange
-                    expect(metar.runways.last!.trend) == Runway.RunwayTrend.Upward
-                }
-                it("should correctly parse the runway visual range.") {
-                    expect(metar.runways.first!.visualRange) == 1600
-                    expect(metar.runways.last!.visualRange) == 1500
+                    expect(metar.runways.count) == 0
                 }
             }
             
             context("Wind data") {
                 it("should correctly parse the wind unit.") {
-                    expect(metar.wind?.unit) == .MetersPerSecond
+                    expect(metar.wind?.unit) == .Knots
                 }
                 it("should correctly parse the wind speed.") {
-                    expect(metar.wind?.speed) == 103
+                    expect(metar.wind?.speed) == 8
                 }
                 it("should correctly parse the wind direction.") {
-                    expect(metar.wind?.direction) == 120
+                    expect(metar.wind?.direction) == 230
                 }
                 it("should correctly parse the wind varying.") {
-                    expect(metar.wind?.varying) == true
+                    expect(metar.wind?.varying).to(beFalse())
                 }
                 it("should correctly parse the wind gusts.") {
-                    expect(metar.wind?.gustSpeed).to(beNil())
+                    expect(metar.wind?.gustSpeed) == 30
                 }
                 it("should correctly parse the wind minimum direction.") {
-                    expect(metar.wind?.minimumDirection) == 290
+                    expect(metar.wind?.minimumDirection).to(beNil())
                 }
                 it("should correctly parse the wind maximum direction.") {
-                    expect(metar.wind?.maximumDirection) == 310
+                    expect(metar.wind?.maximumDirection).to(beNil())
                 }
             }
             

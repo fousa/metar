@@ -31,12 +31,12 @@
 		0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA920EAA2B82E22FA60EBF63 /* Pods.framework */; };
 		1DFE268CFCEF2622764714E7 /* Pods_MetarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811BF88276D7793E66C7A6F1 /* Pods_MetarUITests.framework */; };
 		3CD8EEDFF6A710F500E85F72 /* Pods_MetarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */; };
-		626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MetarServiceTests.swift */; };
+		626D6B3E1BD674E60042619F /* MTRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B3D1BD674E60042619F /* MTRServiceTests.swift */; };
 		626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */; };
 		626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B561BD67C140042619F /* SwiftRegex.swift */; };
-		626D6B5C1BD67D740042619F /* MetarParserCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B581BD67D740042619F /* MetarParserCategoryTests.swift */; };
-		626D6B641BD67FB00042619F /* MetarParserEBBRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B621BD67FB00042619F /* MetarParserEBBRTests.swift */; };
-		626D6B651BD67FB00042619F /* MetarParserLBBGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B631BD67FB00042619F /* MetarParserLBBGTests.swift */; };
+		626D6B5C1BD67D740042619F /* MTRParserCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B581BD67D740042619F /* MTRParserCategoryTests.swift */; };
+		626D6B641BD67FB00042619F /* MTRParserEBBRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B621BD67FB00042619F /* MTRParserEBBRTests.swift */; };
+		626D6B651BD67FB00042619F /* MTRParserLBBGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B631BD67FB00042619F /* MTRParserLBBGTests.swift */; };
 		626D6B751BD689B80042619F /* String+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B681BD689B80042619F /* String+Formatters.swift */; };
 		626D6B761BD689B80042619F /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6A1BD689B80042619F /* Cloud.swift */; };
 		626D6B771BD689B80042619F /* Metar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6B1BD689B80042619F /* Metar.swift */; };
@@ -98,12 +98,12 @@
 		04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMetarTableViewCell.swift; sourceTree = "<group>"; };
 		04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRThreading.swift; sourceTree = "<group>"; };
 		04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRSpinnerBarButtonItem.swift; sourceTree = "<group>"; };
-		626D6B3D1BD674E60042619F /* MetarServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarServiceTests.swift; sourceTree = "<group>"; };
+		626D6B3D1BD674E60042619F /* MTRServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRServiceTests.swift; sourceTree = "<group>"; };
 		626D6B401BD675AC0042619F /* QuickSpec+Expectations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Expectations.swift"; sourceTree = "<group>"; };
 		626D6B561BD67C140042619F /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
-		626D6B581BD67D740042619F /* MetarParserCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserCategoryTests.swift; sourceTree = "<group>"; };
-		626D6B621BD67FB00042619F /* MetarParserEBBRTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserEBBRTests.swift; sourceTree = "<group>"; };
-		626D6B631BD67FB00042619F /* MetarParserLBBGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParserLBBGTests.swift; sourceTree = "<group>"; };
+		626D6B581BD67D740042619F /* MTRParserCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserCategoryTests.swift; sourceTree = "<group>"; };
+		626D6B621BD67FB00042619F /* MTRParserEBBRTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserEBBRTests.swift; sourceTree = "<group>"; };
+		626D6B631BD67FB00042619F /* MTRParserLBBGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserLBBGTests.swift; sourceTree = "<group>"; };
 		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatters.swift"; sourceTree = "<group>"; };
 		626D6B6A1BD689B80042619F /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		626D6B6B1BD689B80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		626D6B601BD67D780042619F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				626D6B3D1BD674E60042619F /* MetarServiceTests.swift */,
+				626D6B3D1BD674E60042619F /* MTRServiceTests.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -288,9 +288,9 @@
 		626D6B611BD67D7D0042619F /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				626D6B581BD67D740042619F /* MetarParserCategoryTests.swift */,
-				626D6B621BD67FB00042619F /* MetarParserEBBRTests.swift */,
-				626D6B631BD67FB00042619F /* MetarParserLBBGTests.swift */,
+				626D6B581BD67D740042619F /* MTRParserCategoryTests.swift */,
+				626D6B621BD67FB00042619F /* MTRParserEBBRTests.swift */,
+				626D6B631BD67FB00042619F /* MTRParserLBBGTests.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -799,10 +799,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				626D6B5C1BD67D740042619F /* MetarParserCategoryTests.swift in Sources */,
-				626D6B641BD67FB00042619F /* MetarParserEBBRTests.swift in Sources */,
-				626D6B3E1BD674E60042619F /* MetarServiceTests.swift in Sources */,
-				626D6B651BD67FB00042619F /* MetarParserLBBGTests.swift in Sources */,
+				626D6B5C1BD67D740042619F /* MTRParserCategoryTests.swift in Sources */,
+				626D6B641BD67FB00042619F /* MTRParserEBBRTests.swift in Sources */,
+				626D6B3E1BD674E60042619F /* MTRServiceTests.swift in Sources */,
+				626D6B651BD67FB00042619F /* MTRParserLBBGTests.swift in Sources */,
 				626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
