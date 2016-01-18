@@ -24,7 +24,7 @@
 		04C22BA41BD6A90E00175B52 /* UIStoryboard+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */; };
 		04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA51BD6AA5C00175B52 /* SearchView.swift */; };
 		04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */; };
-		04C22BAA1BD6EC4C00175B52 /* MetarXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */; };
+		04C22BAA1BD6EC4C00175B52 /* MTRXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */; };
 		04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */; };
 		04C22BAE1BD6F0C600175B52 /* MTRThreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */; };
 		04D5BCAC1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */; };
@@ -45,7 +45,7 @@
 		626D6B7A1BD689B80042619F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6E1BD689B80042619F /* Station.swift */; };
 		626D6B7B1BD689B80042619F /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B6F1BD689B80042619F /* Visibility.swift */; };
 		626D6B7C1BD689B80042619F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B701BD689B80042619F /* Wind.swift */; };
-		626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B721BD689B80042619F /* MetarParser.swift */; };
+		626D6B7D1BD689B80042619F /* MTRParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B721BD689B80042619F /* MTRParser.swift */; };
 		626D6B7E1BD689B80042619F /* MTRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B741BD689B80042619F /* MTRService.swift */; };
 		626D6B841BD68ADF0042619F /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D6B831BD68ADF0042619F /* Dashboard.storyboard */; };
 		626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D6B851BD68B330042619F /* DashboardViewController.swift */; };
@@ -94,7 +94,7 @@
 		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
 		04C22BA51BD6AA5C00175B52 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
-		04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarXMLParser.swift; sourceTree = "<group>"; };
+		04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRXMLParser.swift; sourceTree = "<group>"; };
 		04C22BAB1BD6EF7400175B52 /* SearchMetarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMetarTableViewCell.swift; sourceTree = "<group>"; };
 		04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRThreading.swift; sourceTree = "<group>"; };
 		04D5BCAB1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRSpinnerBarButtonItem.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		626D6B6E1BD689B80042619F /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		626D6B6F1BD689B80042619F /* Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
 		626D6B701BD689B80042619F /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
-		626D6B721BD689B80042619F /* MetarParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarParser.swift; sourceTree = "<group>"; };
+		626D6B721BD689B80042619F /* MTRParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParser.swift; sourceTree = "<group>"; };
 		626D6B741BD689B80042619F /* MTRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRService.swift; sourceTree = "<group>"; };
 		626D6B831BD68ADF0042619F /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		626D6B851BD68B330042619F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -336,8 +336,8 @@
 		626D6B711BD689B80042619F /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				626D6B721BD689B80042619F /* MetarParser.swift */,
-				04C22BA91BD6EC4C00175B52 /* MetarXMLParser.swift */,
+				626D6B721BD689B80042619F /* MTRParser.swift */,
+				04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -770,13 +770,13 @@
 				626D6B881BD68DE20042619F /* DashboardView.swift in Sources */,
 				046C5CCE1C4BA34F0090AD2C /* MetarStationDetailViewController.swift in Sources */,
 				046C5CD01C4BA3820090AD2C /* MetarStationView.swift in Sources */,
-				626D6B7D1BD689B80042619F /* MetarParser.swift in Sources */,
+				626D6B7D1BD689B80042619F /* MTRParser.swift in Sources */,
 				626D6B7A1BD689B80042619F /* Station.swift in Sources */,
 				626D6B781BD689B80042619F /* Pressure.swift in Sources */,
 				04C22BA41BD6A90E00175B52 /* UIStoryboard+Dismiss.swift in Sources */,
 				626D6B571BD67C140042619F /* SwiftRegex.swift in Sources */,
 				626D6B861BD68B330042619F /* DashboardViewController.swift in Sources */,
-				04C22BAA1BD6EC4C00175B52 /* MetarXMLParser.swift in Sources */,
+				04C22BAA1BD6EC4C00175B52 /* MTRXMLParser.swift in Sources */,
 				04C22BA61BD6AA5C00175B52 /* SearchView.swift in Sources */,
 				04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */,
 				04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */,

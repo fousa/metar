@@ -1,5 +1,5 @@
 //
-//  MetarParser.swift
+//  MTRParser.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MetarParser: NSObject {
+class MTRParser: NSObject {
     // MARK: - Properties
     
     private var metar: Metar
@@ -61,10 +61,10 @@ class MetarParser: NSObject {
     // MARK: - Name
     
     private func parseStationData() {
-        metar.station.site = MetarParser.ICAO?[metar.station.name!]?["name"] as? String
+        metar.station.site = MTRParser.ICAO?[metar.station.name!]?["name"] as? String
         
-        if let countryName = MetarParser.ICAO?[metar.station.name!]?["country"] as? String {
-            metar.station.country = MetarParser.countryNames[countryName.uppercaseString]
+        if let countryName = MTRParser.ICAO?[metar.station.name!]?["country"] as? String {
+            metar.station.country = MTRParser.countryNames[countryName.uppercaseString]
         }
     }
     

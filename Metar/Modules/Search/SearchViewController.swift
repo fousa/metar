@@ -73,7 +73,7 @@ class SearchViewController: UIViewController {
             
             spinnerBarButton.startAnimating()
             service.fetchList(station: searchQuery, completion: { (error, data) -> () in
-                var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
+                var metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
                 if let location = self.searchView.location {
                     metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
                 }
@@ -148,7 +148,7 @@ extension SearchViewController: SearchViewDelegate {
             service.cancel()
             spinnerBarButton.startAnimating()
             service.fetchList(location: location, completion: { (error, data) -> () in
-                var metars: [Metar] = MetarXMLParser(data: data)?.parseMetars() ?? [Metar]()
+                var metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
                 metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
                 self.searchView.metars = metars
                 dispatch_async_main { self.spinnerBarButton.stopAnimating() }

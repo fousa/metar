@@ -1,5 +1,5 @@
 //
-//  MetarXMLParser.swift
+//  MTRXMLParser.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -11,7 +11,7 @@ import CoreLocation
 import Ono
 import ObjectiveC
 
-class MetarXMLParser: NSObject {
+class MTRXMLParser: NSObject {
     
     // MARK: - Properties
     
@@ -53,7 +53,7 @@ class MetarXMLParser: NSObject {
                     }
                     
                     // Parse the metar data.
-                    MetarParser(metar: metar).parse()
+                    MTRParser(metar: metar).parse()
                     
                     metars.append(metar)
                 }
@@ -69,7 +69,7 @@ class MetarXMLParser: NSObject {
     }
     
     private func parseStationDataFromFile(metar metar: Metar) {
-        let rawICAO = MetarParser.ICAO?[metar.station.name!]
+        let rawICAO = MTRParser.ICAO?[metar.station.name!]
         
         // Parse sitename.
         metar.station.site = rawICAO?["name"] as? String
@@ -79,7 +79,7 @@ class MetarXMLParser: NSObject {
         
         // Parse country name
         if let countryCode = rawICAO?["country"] as? String {
-            metar.station.country = MetarParser.countryNames[countryCode.uppercaseString]
+            metar.station.country = MTRParser.countryNames[countryCode.uppercaseString]
         }
     }
 }
