@@ -7,7 +7,7 @@
         <!--Delegating Navigation Controller-->
         <scene sceneID="aBh-me-K2I">
             <objects>
-                <navigationController id="DJK-hi-GP9" customClass="DelegatingNavigationController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="DJK-hi-GP9" customClass="MTRDelegatingNavigationController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ctd-IM-P2s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

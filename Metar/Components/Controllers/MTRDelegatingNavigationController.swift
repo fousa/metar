@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DelegatingNavigationController : UINavigationController {
+class MTRDelegatingNavigationController : UINavigationController {
     
     // MARK: - Status bar
     
