@@ -49,3 +49,4 @@ fastlane/.env
 .rvmrc
 report
 .translations
+fastlane/test_output
