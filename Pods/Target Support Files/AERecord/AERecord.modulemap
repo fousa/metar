@@ -1,0 +1,6 @@
+framework module AERecord {
+  umbrella header "AERecord-umbrella.h"
+
+  export *
+  module * { export * }
+}

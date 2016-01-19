@@ -1,4 +1,5 @@
 PODS:
+  - AERecord (2.0.0)
   - JTMaterialSpinner (1.0.2)
   - Mockingjay (1.1.1):
     - Mockingjay/Core (= 1.1.1)
@@ -13,6 +14,7 @@ PODS:
   - URITemplate (1.3.0)
 
 DEPENDENCIES:
+  - AERecord (~> 2.0)
   - JTMaterialSpinner (~> 1.0)
   - Mockingjay (~> 1.1)
   - Nimble (~> 3.0)
@@ -20,6 +22,7 @@ DEPENDENCIES:
   - Quick (~> 0.8)
 
 SPEC CHECKSUMS:
+  AERecord: 63313541906da457a51d808c1e0244b494dbb59f
   JTMaterialSpinner: f9e825c80317023f479b7ecc2856785280d8a8c5
   Mockingjay: 757f80abc947b5ec2918b1bb14f3066574720430
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
