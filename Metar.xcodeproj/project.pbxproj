@@ -92,7 +92,7 @@
 		04361D6D1C4B9083000B4721 /* MetarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarViewController.swift; sourceTree = "<group>"; };
 		04361D6F1C4B90AA000B4721 /* MetarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarView.swift; sourceTree = "<group>"; };
 		04361D711C4B90BE000B4721 /* Metar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metar.storyboard; sourceTree = "<group>"; };
-		043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Attributes.swift"; path = "../Extensions/UILabel+Attributes.swift"; sourceTree = "<group>"; };
+		043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
 		046C5CCD1C4BA34F0090AD2C /* MetarStationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationDetailViewController.swift; sourceTree = "<group>"; };
 		046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationView.swift; sourceTree = "<group>"; };
 		0475507B1C49B48B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Dismiss.swift"; path = "../Extensions/UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
+		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
 		04C22BA51BD6AA5C00175B52 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRXMLParser.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		626D6B581BD67D740042619F /* MTRParserCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserCategoryTests.swift; sourceTree = "<group>"; };
 		626D6B621BD67FB00042619F /* MTRParserEBBRTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserEBBRTests.swift; sourceTree = "<group>"; };
 		626D6B631BD67FB00042619F /* MTRParserLBBGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserLBBGTests.swift; sourceTree = "<group>"; };
-		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Formatters.swift"; path = "../Extensions/String+Formatters.swift"; sourceTree = "<group>"; };
+		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatters.swift"; sourceTree = "<group>"; };
 		626D6B6A1BD689B80042619F /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		626D6B6B1BD689B80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
 		626D6B6C1BD689B80042619F /* Pressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
@@ -184,9 +184,9 @@
 		0422B20C1C4D86AD0048DED5 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */,
-				626D6B681BD689B80042619F /* String+Formatters.swift */,
 				0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */,
+				626D6B681BD689B80042619F /* String+Formatters.swift */,
+				043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				047687EF1C4ED8B70064FA85 /* Data */,
-				047687EC1C4ECC160064FA85 /* Notifications */,
 				0422B2131C4D98EF0048DED5 /* Location */,
+				047687EC1C4ECC160064FA85 /* Notifications */,
 				626D6B711BD689B80042619F /* Parser */,
 				626D6B731BD689B80042619F /* Service */,
 			);
@@ -225,8 +225,7 @@
 				04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */,
 				04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */,
 			);
-			name = Navigation;
-			path = Controllers;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		04361D6A1C4AEAFD000B4721 /* Cell */ = {
@@ -269,16 +268,16 @@
 			children = (
 				047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */,
 			);
-			name = Notifications;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		047687EF1C4ED8B70064FA85 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */,
 				047687F31C4ED97F0064FA85 /* MTRAirport.swift */,
+				047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */,
 			);
-			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
@@ -294,8 +293,7 @@
 			children = (
 				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
 			);
-			name = Stations;
-			path = "Metar stations";
+			path = Stations;
 			sourceTree = "<group>";
 		};
 		04D5BCAA1C4C5038004ABF12 /* Views */ = {
@@ -373,9 +371,9 @@
 		626D6B661BD689B80042619F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				04361D621C4A813D000B4721 /* Navigation */,
 				0422B20C1C4D86AD0048DED5 /* Formatters */,
 				0422B2121C4D98E60048DED5 /* Managers */,
+				04361D621C4A813D000B4721 /* Navigation */,
 				04D5BCAA1C4C5038004ABF12 /* Views */,
 				04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */,
 			);
@@ -393,16 +391,15 @@
 				626D6B6F1BD689B80042619F /* Visibility.swift */,
 				626D6B701BD689B80042619F /* Wind.swift */,
 			);
-			name = Models;
-			path = ../../Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		626D6B711BD689B80042619F /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				626D6B691BD689B80042619F /* Models */,
 				626D6B721BD689B80042619F /* MTRParser.swift */,
 				04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */,
-				626D6B691BD689B80042619F /* Models */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -428,8 +425,8 @@
 		626D6B801BD68AD40042619F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				04D5BCA91C4C4F69004ABF12 /* Stations */,
 				04361D6B1C4AEB03000B4721 /* Placeholder */,
+				04D5BCA91C4C4F69004ABF12 /* Stations */,
 				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
 				626D6B871BD68DE20042619F /* DashboardView.swift */,
 				626D6B851BD68B330042619F /* DashboardViewController.swift */,
@@ -526,8 +523,8 @@
 			isa = PBXGroup;
 			children = (
 				04361D6C1C4AF265000B4721 /* Data */,
-				62DD04D51BD635C800628E9D /* Info.plist */,
 				62F699881C4E6611002DE2A4 /* Localizations */,
+				62DD04D51BD635C800628E9D /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -553,7 +550,7 @@
 			children = (
 				047550801C49B49B009DD792 /* Localizable.strings */,
 			);
-			name = Localizations;
+			path = Localizations;
 			sourceTree = "<group>";
 		};
 		B2779EAC3ECEBB4B5D5458EE /* Pods */ = {
