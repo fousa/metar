@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
     private var timer: NSTimer!
     private var currentSearchQuery: String?
     private let service = MTRService()
+    private let notificationManager = MTRNotificationManager()
     
     // MARK: - View
     
@@ -55,7 +56,7 @@ class SearchViewController: UIViewController {
     // MARK: - Location
     
     private func startUpdatingLocation() {
-        NSNotificationCenter.defaultCenter().addObserverForName(MTRLocationUpdatedNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+        notificationManager.observeNotification(withName: MTRLocationUpdatedNotification) { notification in
             if let location = notification.object as? CLLocation {
                 self.searchView.location = location
             }

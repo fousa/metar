@@ -21,6 +21,7 @@
 		046C5CD01C4BA3820090AD2C /* MetarStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */; };
 		0475507E1C49B49B009DD792 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047550801C49B49B009DD792 /* Localizable.strings */; };
 		047550821C49B4F8009DD792 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047550811C49B4F8009DD792 /* PlaceholderView.swift */; };
+		047687EE1C4ECC300064FA85 /* MTRNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */; };
 		048863041C4A334E00CD5B26 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863031C4A334E00CD5B26 /* DashboardTests.swift */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
@@ -94,6 +95,7 @@
 		0475507B1C49B48B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0475507F1C49B49B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		047550811C49B4F8009DD792 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRNotificationManager.swift; sourceTree = "<group>"; };
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		0422B2121C4D98E60048DED5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				047687EC1C4ECC160064FA85 /* Notifications */,
 				0422B2131C4D98EF0048DED5 /* Location */,
 				626D6B711BD689B80042619F /* Parser */,
 				626D6B731BD689B80042619F /* Service */,
@@ -251,6 +254,14 @@
 				046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */,
 			);
 			path = "Station details";
+			sourceTree = "<group>";
+		};
+		047687EC1C4ECC160064FA85 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
@@ -821,6 +832,7 @@
 			files = (
 				04361D641C4A814B000B4721 /* MTRDelegatingNavigationController.swift in Sources */,
 				62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */,
+				047687EE1C4ECC300064FA85 /* MTRNotificationManager.swift in Sources */,
 				04361D6E1C4B9083000B4721 /* MetarViewController.swift in Sources */,
 				04D5BCAC1C4C504B004ABF12 /* MTRSpinnerBarButtonItem.swift in Sources */,
 				626D6B7C1BD689B80042619F /* Wind.swift in Sources */,

@@ -30,9 +30,8 @@ class SearchView: UIView {
     
     var metars = [Metar]()
     var location: CLLocation?
-    
-    private var keyboardShowNotification: AnyObject!
-    private var keyboardHideNotification: AnyObject!
+
+    private let notificationManager = MTRNotificationManager()
     
     var query: String? {
         return searchField.text
@@ -45,20 +44,16 @@ class SearchView: UIView {
         
         // Set to use the dark keyboard.
         searchField.keyboardAppearance = .Dark
-        
-        keyboardShowNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillShowNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
+
+        notificationManager.observeNotification(withName: UIKeyboardWillShowNotification) { notification in
             print("🔑 Show keyboard")
             self.moveSearch(up: true, notification: notification)
         }
-        keyboardHideNotification = NSNotificationCenter.defaultCenter().addObserverForName(UIKeyboardWillHideNotification, object: nil, queue: NSOperationQueue.mainQueue()) { [unowned self] notification in
+
+        notificationManager.observeNotification(withName: UIKeyboardWillHideNotification) { notification in
             print("🔑 Hide keyboard")
             self.moveSearch(up: false, notification: notification)
         }
-    }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(keyboardShowNotification)
-        NSNotificationCenter.defaultCenter().removeObserver(keyboardHideNotification)
     }
     
     // MARK: - Data

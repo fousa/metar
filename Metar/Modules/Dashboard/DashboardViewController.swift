@@ -13,6 +13,8 @@ class DashboardViewController: UIViewController {
     var dashboardView: DashboardView! { return self.view as! DashboardView } // tailor:disable
     
     var shortcutItem: UIApplicationShortcutItem?
+
+    private let notificationManager = MTRNotificationManager()
     
     // MARK: - View
     
@@ -38,12 +40,6 @@ class DashboardViewController: UIViewController {
         }
     }
     
-    // MARK: - Init
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
     // MARK: - Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -55,7 +51,7 @@ class DashboardViewController: UIViewController {
     // MARK: - Heading
     
     private func observeHeadingUpdating() {
-        NSNotificationCenter.defaultCenter().addObserverForName(MTRHeadingUpdatedNotification, object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+        notificationManager.observeNotification(withName: MTRHeadingUpdatedNotification) { notification in
             if let heading = notification.object as? CLHeading {
                 let angle = CGFloat(-heading.magneticHeading / 135.0 * M_PI)
                 self.dashboardView.rotatePlane(toAngle: angle)
