@@ -14,7 +14,7 @@ class MTRParser: NSObject {
     private var metar: Metar
     
     static var icaoCodes: NSDictionary? = {
-        if let path = NSBundle.mainBundle().pathForResource("ICAO", ofType: "plist") {
+        if let path = NSBundle.mainBundle().pathForResource("icao", ofType: "plist") {
             return NSDictionary(contentsOfFile: path)
         }
         return nil

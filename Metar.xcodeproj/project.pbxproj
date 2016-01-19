@@ -11,7 +11,7 @@
 		0422B2111C4D88530048DED5 /* MTRDistanceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */; };
 		0422B2151C4D98FD0048DED5 /* MTRLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */; };
 		04361D641C4A814B000B4721 /* MTRDelegatingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */; };
-		04361D661C4A8F3C000B4721 /* ICAO.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04361D651C4A8F3C000B4721 /* ICAO.plist */; };
+		04361D661C4A8F3C000B4721 /* icao.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04361D651C4A8F3C000B4721 /* icao.plist */; };
 		04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */; };
 		04361D6E1C4B9083000B4721 /* MetarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D6D1C4B9083000B4721 /* MetarViewController.swift */; };
 		04361D701C4B90AA000B4721 /* MetarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04361D6F1C4B90AA000B4721 /* MetarView.swift */; };
@@ -83,12 +83,12 @@
 		0422B2101C4D88530048DED5 /* MTRDistanceFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDistanceFormatterTests.swift; sourceTree = "<group>"; };
 		0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRLocationManager.swift; sourceTree = "<group>"; };
 		04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDelegatingNavigationController.swift; sourceTree = "<group>"; };
-		04361D651C4A8F3C000B4721 /* ICAO.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ICAO.plist; sourceTree = "<group>"; };
+		04361D651C4A8F3C000B4721 /* icao.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = icao.plist; sourceTree = "<group>"; };
 		04361D681C4AEACA000B4721 /* CurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
 		04361D6D1C4B9083000B4721 /* MetarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarViewController.swift; sourceTree = "<group>"; };
 		04361D6F1C4B90AA000B4721 /* MetarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarView.swift; sourceTree = "<group>"; };
 		04361D711C4B90BE000B4721 /* Metar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Metar.storyboard; sourceTree = "<group>"; };
-		043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
+		043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Attributes.swift"; path = "../Extensions/UILabel+Attributes.swift"; sourceTree = "<group>"; };
 		046C5CCD1C4BA34F0090AD2C /* MetarStationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationDetailViewController.swift; sourceTree = "<group>"; };
 		046C5CCF1C4BA3820090AD2C /* MetarStationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarStationView.swift; sourceTree = "<group>"; };
 		0475507B1C49B48B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
+		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Dismiss.swift"; path = "../Extensions/UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
 		04C22BA51BD6AA5C00175B52 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		04C22BA71BD6B25C00175B52 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRXMLParser.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		626D6B581BD67D740042619F /* MTRParserCategoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserCategoryTests.swift; sourceTree = "<group>"; };
 		626D6B621BD67FB00042619F /* MTRParserEBBRTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserEBBRTests.swift; sourceTree = "<group>"; };
 		626D6B631BD67FB00042619F /* MTRParserLBBGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRParserLBBGTests.swift; sourceTree = "<group>"; };
-		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatters.swift"; sourceTree = "<group>"; };
+		626D6B681BD689B80042619F /* String+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Formatters.swift"; path = "../Extensions/String+Formatters.swift"; sourceTree = "<group>"; };
 		626D6B6A1BD689B80042619F /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		626D6B6B1BD689B80042619F /* Metar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metar.swift; sourceTree = "<group>"; };
 		626D6B6C1BD689B80042619F /* Pressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
@@ -175,6 +175,8 @@
 		0422B20C1C4D86AD0048DED5 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */,
+				626D6B681BD689B80042619F /* String+Formatters.swift */,
 				0422B20D1C4D86C60048DED5 /* MTRDistanceFormatter.swift */,
 			);
 			path = Formatters;
@@ -206,11 +208,13 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		04361D621C4A813D000B4721 /* Controllers */ = {
+		04361D621C4A813D000B4721 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				04361D631C4A814B000B4721 /* MTRDelegatingNavigationController.swift */,
+				04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */,
 			);
+			name = Navigation;
 			path = Controllers;
 			sourceTree = "<group>";
 		};
@@ -235,7 +239,7 @@
 		04361D6C1C4AF265000B4721 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				04361D651C4A8F3C000B4721 /* ICAO.plist */,
+				04361D651C4A8F3C000B4721 /* icao.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -257,11 +261,12 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		04D5BCA91C4C4F69004ABF12 /* Metar stations */ = {
+		04D5BCA91C4C4F69004ABF12 /* Stations */ = {
 			isa = PBXGroup;
 			children = (
 				626D6B8B1BD69A0D0042619F /* StationsTableViewController.swift */,
 			);
+			name = Stations;
 			path = "Metar stations";
 			sourceTree = "<group>";
 		};
@@ -339,8 +344,7 @@
 		626D6B661BD689B80042619F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				04361D621C4A813D000B4721 /* Controllers */,
-				626D6B671BD689B80042619F /* Extensions */,
+				04361D621C4A813D000B4721 /* Navigation */,
 				0422B20C1C4D86AD0048DED5 /* Formatters */,
 				0422B2121C4D98E60048DED5 /* Managers */,
 				626D6B691BD689B80042619F /* Models */,
@@ -348,16 +352,6 @@
 				04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		626D6B671BD689B80042619F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				626D6B681BD689B80042619F /* String+Formatters.swift */,
-				043F8FF31C49B9440032A461 /* UILabel+Attributes.swift */,
-				04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		626D6B691BD689B80042619F /* Models */ = {
@@ -404,7 +398,7 @@
 		626D6B801BD68AD40042619F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				04D5BCA91C4C4F69004ABF12 /* Metar stations */,
+				04D5BCA91C4C4F69004ABF12 /* Stations */,
 				04361D6B1C4AEB03000B4721 /* Placeholder */,
 				626D6B831BD68ADF0042619F /* Dashboard.storyboard */,
 				626D6B871BD68DE20042619F /* DashboardView.swift */,
@@ -503,7 +497,7 @@
 			children = (
 				04361D6C1C4AF265000B4721 /* Data */,
 				62DD04D51BD635C800628E9D /* Info.plist */,
-				047550801C49B49B009DD792 /* Localizable.strings */,
+				62F699881C4E6611002DE2A4 /* Localizations */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -522,6 +516,14 @@
 				62DD04EB1BD635C800628E9D /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62F699881C4E6611002DE2A4 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				047550801C49B49B009DD792 /* Localizable.strings */,
+			);
+			name = Localizations;
 			sourceTree = "<group>";
 		};
 		B2779EAC3ECEBB4B5D5458EE /* Pods */ = {
@@ -649,7 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04361D661C4A8F3C000B4721 /* ICAO.plist in Resources */,
+				04361D661C4A8F3C000B4721 /* icao.plist in Resources */,
 				0475507E1C49B49B009DD792 /* Localizable.strings in Resources */,
 				62DD04D41BD635C800628E9D /* LaunchScreen.storyboard in Resources */,
 				04361D721C4B90BE000B4721 /* Metar.storyboard in Resources */,
