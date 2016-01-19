@@ -22,6 +22,9 @@
 		0475507E1C49B49B009DD792 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047550801C49B49B009DD792 /* Localizable.strings */; };
 		047550821C49B4F8009DD792 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047550811C49B4F8009DD792 /* PlaceholderView.swift */; };
 		047687EE1C4ECC300064FA85 /* MTRNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */; };
+		047687F21C4ED8CA0064FA85 /* Metar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */; };
+		047687F41C4ED97F0064FA85 /* MTRAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687F31C4ED97F0064FA85 /* MTRAirport.swift */; };
+		047687F61C4ED98E0064FA85 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047687F51C4ED98E0064FA85 /* CoreData.framework */; };
 		048863041C4A334E00CD5B26 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863031C4A334E00CD5B26 /* DashboardTests.swift */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
@@ -96,6 +99,9 @@
 		0475507F1C49B49B009DD792 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		047550811C49B4F8009DD792 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRNotificationManager.swift; sourceTree = "<group>"; };
+		047687F11C4ED8CA0064FA85 /* Metar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metar.xcdatamodel; sourceTree = "<group>"; };
+		047687F31C4ED97F0064FA85 /* MTRAirport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRAirport.swift; sourceTree = "<group>"; };
+		047687F51C4ED98E0064FA85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047687F61C4ED98E0064FA85 /* CoreData.framework in Frameworks */,
 				626D6B8A1BD68EE50042619F /* CoreLocation.framework in Frameworks */,
 				0A502B4F6AD00F5F41D8045A /* Pods.framework in Frameworks */,
 			);
@@ -195,6 +202,7 @@
 		0422B2121C4D98E60048DED5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				047687EF1C4ED8B70064FA85 /* Data */,
 				047687EC1C4ECC160064FA85 /* Notifications */,
 				0422B2131C4D98EF0048DED5 /* Location */,
 				626D6B711BD689B80042619F /* Parser */,
@@ -264,6 +272,15 @@
 			name = Notifications;
 			sourceTree = "<group>";
 		};
+		047687EF1C4ED8B70064FA85 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */,
+				047687F31C4ED97F0064FA85 /* MTRAirport.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		048863051C4A335700CD5B26 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +309,7 @@
 		2C472D1C591E070ED27871C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047687F51C4ED98E0064FA85 /* CoreData.framework */,
 				626D6B891BD68EE50042619F /* CoreLocation.framework */,
 				FA920EAA2B82E22FA60EBF63 /* Pods.framework */,
 				8EDCA50F1620BB7C697F32C7 /* Pods_MetarTests.framework */,
@@ -358,7 +376,6 @@
 				04361D621C4A813D000B4721 /* Navigation */,
 				0422B20C1C4D86AD0048DED5 /* Formatters */,
 				0422B2121C4D98E60048DED5 /* Managers */,
-				626D6B691BD689B80042619F /* Models */,
 				04D5BCAA1C4C5038004ABF12 /* Views */,
 				04C22BAD1BD6F0C600175B52 /* MTRThreading.swift */,
 			);
@@ -376,7 +393,8 @@
 				626D6B6F1BD689B80042619F /* Visibility.swift */,
 				626D6B701BD689B80042619F /* Wind.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = ../../Models;
 			sourceTree = "<group>";
 		};
 		626D6B711BD689B80042619F /* Parser */ = {
@@ -384,6 +402,7 @@
 			children = (
 				626D6B721BD689B80042619F /* MTRParser.swift */,
 				04C22BA91BD6EC4C00175B52 /* MTRXMLParser.swift */,
+				626D6B691BD689B80042619F /* Models */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -839,6 +858,7 @@
 				626D6B761BD689B80042619F /* Cloud.swift in Sources */,
 				626D6B881BD68DE20042619F /* DashboardView.swift in Sources */,
 				0422B20E1C4D86C60048DED5 /* MTRDistanceFormatter.swift in Sources */,
+				047687F21C4ED8CA0064FA85 /* Metar.xcdatamodeld in Sources */,
 				046C5CCE1C4BA34F0090AD2C /* MetarStationDetailViewController.swift in Sources */,
 				046C5CD01C4BA3820090AD2C /* MetarStationView.swift in Sources */,
 				626D6B7D1BD689B80042619F /* MTRParser.swift in Sources */,
@@ -852,6 +872,7 @@
 				04C22BAC1BD6EF7400175B52 /* SearchMetarTableViewCell.swift in Sources */,
 				04C22BA81BD6B25C00175B52 /* PlaceholderViewController.swift in Sources */,
 				04C22BAE1BD6F0C600175B52 /* MTRThreading.swift in Sources */,
+				047687F41C4ED97F0064FA85 /* MTRAirport.swift in Sources */,
 				04361D691C4AEACA000B4721 /* CurrentLocationTableViewCell.swift in Sources */,
 				04361D701C4B90AA000B4721 /* MetarView.swift in Sources */,
 				626D6B791BD689B80042619F /* Runway.swift in Sources */,
@@ -1129,6 +1150,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				047687F11C4ED8CA0064FA85 /* Metar.xcdatamodel */,
+			);
+			currentVersion = 047687F11C4ED8CA0064FA85 /* Metar.xcdatamodel */;
+			path = Metar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 62DD04BE1BD635C800628E9D /* Project object */;
 }
