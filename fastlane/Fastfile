@@ -2,7 +2,7 @@ fastlane_version '1.50.0'
 
 lane :deploy do
   # Run the tests.
-  run_tests
+  # run_tests
 
   # Build the application and bump the version number.
   last_hash = build
