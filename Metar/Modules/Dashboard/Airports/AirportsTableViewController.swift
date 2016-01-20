@@ -12,6 +12,9 @@ class AirportsTableViewController: UITableViewController {
 
     var airports = [MTRAirport]() {
         didSet {
+            if airports.count > 0 {
+                MTRLocationManager.sharedInstance.startUpdatingLocation()
+            }
             tableView.reloadData()
         }
     }
@@ -34,7 +37,7 @@ class AirportsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Airport") as! AirportsTableViewCell // tailor:disable
-//        cell.configure(withMetar: metars[indexPath.row], currentLocation: location)
+        cell.configure(withAirport: airports[indexPath.row], currentLocation: MTRLocationManager.sharedInstance.currentLocation)
         return cell
     }
 

@@ -16,8 +16,8 @@ class AirportsTableViewCell: UITableViewCell {
 
     // MARK: - Configure
 
-    func configure(metar metar: Metar, currentLocation: CLLocation?) {
-        metarStationView.configure(metar: metar, currentLocation: currentLocation)
+    func configure(withAirport airport: MTRAirport, currentLocation: CLLocation?) {
+        metarStationView.configure(airport, currentLocation: currentLocation)
     }
     
 }

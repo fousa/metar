@@ -10,7 +10,7 @@ import UIKit
 
 class MetarStationDetailViewController: UIViewController {
     
-    var metarStatioView: MTRStationView! { return self.view as! MTRStationView } // tailor:disable
+    var metarStationView: MTRStationView! { return self.view as! MTRStationView } // tailor:disable
     
     var metar: Metar!
     
@@ -19,7 +19,7 @@ class MetarStationDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        metarStatioView.configure(metar: metar, currentLocation: MTRLocationManager.sharedInstance.currentLocation)
+        metarStationView.configure(metar, currentLocation: MTRLocationManager.sharedInstance.currentLocation)
     }
     
 }

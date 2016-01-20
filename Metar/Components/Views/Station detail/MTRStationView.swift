@@ -28,14 +28,14 @@ class MTRStationView: UIView {
     
     // MARK: - Configure
 
-    func configure(metar metar: Metar, currentLocation: CLLocation?) {
+    func configure(viewModel: MTRStationViewModel, currentLocation: CLLocation?) {
         // Station data
-        stationNameLabel.text = metar.station.name?.uppercaseString
-        stationSiteLabel.text = metar.station.site?.uppercaseString ?? metar.station.name?.uppercaseString
-        stationCountryLabel.text = metar.station.country?.uppercaseString
+        stationNameLabel.text = viewModel.stationName?.uppercaseString
+        stationSiteLabel.text = viewModel.stationSite?.uppercaseString ?? viewModel.stationName?.uppercaseString
+        stationCountryLabel.text = viewModel.stationCountry?.uppercaseString
         
         // Elevation data
-        if let elevation = metar.station.elevation {
+        if let elevation = viewModel.stationElevation {
             heightValueLabel.text = String(elevation)
         } else {
             heightValueLabel.text = "--"
@@ -43,19 +43,18 @@ class MTRStationView: UIView {
         heightUnitLabel.text = NSLocalizedString("metar_unit_feet", comment: "").uppercaseString
         
         // Location data
-        if let currentLocation = currentLocation, let location = metar.station.location {
-            distanceContainerView.hidden = false
-            
+        if let currentLocation = currentLocation, let location = viewModel.stationLocation {
             let distance = currentLocation.distanceFromLocation(location)
             let (value, unit) = MTRDistanceFormatter.formattedComponents(distance: distance)
             distanceValueLabel.text = value
             distanceUnitLabel.text = unit?.uppercaseString
         } else {
-            distanceContainerView.hidden = true
+            distanceValueLabel.text = "--"
+            distanceUnitLabel.text = "KM"
         }
         
         // Temperature data
-        if let temperature = metar.temperature {
+        if let temperature = viewModel.temperature {
             temperatureValueLabel.text = "\(temperature)°"
         } else {
             temperatureValueLabel.text = "--"

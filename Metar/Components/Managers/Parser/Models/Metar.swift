@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum MetarCategory: Int {
     case LIFR = 0
@@ -94,4 +95,28 @@ class Metar {
         self.raw = raw
         station = Station()
     }
+}
+
+extension Metar: MTRStationViewModel {
+
+    var stationName: String? {
+        return station.name
+    }
+
+    var stationSite: String? {
+        return station.site
+    }
+
+    var stationCountry: String? {
+        return station.country
+    }
+
+    var stationLocation: CLLocation? {
+        return station.location
+    }
+
+    var stationElevation: Int? {
+        return station.elevation
+    }
+
 }
