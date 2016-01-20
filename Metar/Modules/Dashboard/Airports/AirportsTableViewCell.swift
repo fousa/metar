@@ -1,5 +1,5 @@
 //
-//  StationsTableViewCell.swift
+//  AirportsTableViewCell.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 20/01/16.
@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class StationsTableViewCell: UITableViewCell {
+class AirportsTableViewCell: UITableViewCell {
 
     @IBOutlet var metarStationView: MetarStationView!
 

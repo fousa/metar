@@ -1,5 +1,5 @@
 //
-//  StationsTableViewController.swift
+//  AirportsTableViewController.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 20/10/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StationsTableViewController: UITableViewController {
+class AirportsTableViewController: UITableViewController {
 
     var airports = [MTRAirport]() {
         didSet {
@@ -33,7 +33,7 @@ class StationsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Airport") as! StationsTableViewCell // tailor:disables
+        let cell = tableView.dequeueReusableCellWithIdentifier("Airport") as! AirportsTableViewCell // tailor:disable
 //        cell.configure(withMetar: metars[indexPath.row], currentLocation: location)
         return cell
     }
