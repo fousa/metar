@@ -29,6 +29,7 @@ class MetarViewController: UIViewController {
     
     func favoriteMetar(sender: AnyObject) {
         print("💾 Favorite metar \(metar.station.name)")
+        MTRDataManager.sharedInstance.create(withMetar: metar)
     }
     
     // MARK: - Segue

@@ -207,21 +207,21 @@
 		0422B2121C4D98E60048DED5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0422B2131C4D98EF0048DED5 /* Application Services */,
 				047687EF1C4ED8B70064FA85 /* Data */,
-				0422B2131C4D98EF0048DED5 /* Location */,
-				047687EC1C4ECC160064FA85 /* Notifications */,
 				626D6B711BD689B80042619F /* Parser */,
 				626D6B731BD689B80042619F /* Service */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		0422B2131C4D98EF0048DED5 /* Location */ = {
+		0422B2131C4D98EF0048DED5 /* Application Services */ = {
 			isa = PBXGroup;
 			children = (
 				0422B2141C4D98FD0048DED5 /* MTRLocationManager.swift */,
+				047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */,
 			);
-			path = Location;
+			path = "Application Services";
 			sourceTree = "<group>";
 		};
 		04361D621C4A813D000B4721 /* Navigation */ = {
@@ -268,14 +268,6 @@
 			path = "Station details";
 			sourceTree = "<group>";
 		};
-		047687EC1C4ECC160064FA85 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				047687ED1C4ECC300064FA85 /* MTRNotificationManager.swift */,
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
 		047687EF1C4ED8B70064FA85 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +283,7 @@
 			children = (
 				047687FB1C5013780064FA85 /* MTRDataManagerTests.swift */,
 			);
-			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		048863051C4A335700CD5B26 /* Tests */ = {
