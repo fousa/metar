@@ -46,7 +46,7 @@
                         <viewControllerLayoutGuide type="top" id="i5i-uy-q7r"/>
                         <viewControllerLayoutGuide type="bottom" id="YlL-O6-YgW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0FZ-8M-edt" customClass="MetarStationView" customModule="Metar" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="0FZ-8M-edt" customClass="MTRStationView" customModule="Metar" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

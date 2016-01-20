@@ -12,7 +12,7 @@ import MapKit
 
 class AirportsTableViewCell: UITableViewCell {
 
-    @IBOutlet var metarStationView: MetarStationView!
+    @IBOutlet var metarStationView: MTRStationView!
 
     // MARK: - Configure
 

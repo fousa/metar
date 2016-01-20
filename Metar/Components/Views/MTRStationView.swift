@@ -1,5 +1,5 @@
 //
-//  MetarStationView.swift
+//  MTRStationView.swift
 //  Metar
 //
 //  Created by Jelle Vandebeeck on 17/01/16.
@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class MetarStationView: UIView {
+class MTRStationView: UIView {
     
     @IBOutlet var stationNameLabel: UILabel!
     @IBOutlet var stationSiteLabel: UILabel!
