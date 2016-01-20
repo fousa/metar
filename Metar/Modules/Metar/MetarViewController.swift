@@ -13,16 +13,32 @@ class MetarViewController: UIViewController {
     var metarView: MetarView! { return self.view as! MetarView } // tailor:disable
     
     var metar: Metar!
+    var airport: MTRAirport? {
+        didSet {
+            let metar = Metar(raw: airport?.rawMetarData ?? "")
+            metar.station.name = airport?.name
+            metar.station.site = airport?.site
+            metar.station.country = airport?.country
+            metar.station.elevation = airport?.elevation?.integerValue
+            metar.station.location = airport?.location
+            self.metar = MTRParser(metar: metar).parse()
+        }
+    }
     
     // MARK: - View flow
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
+
         title = metar.station.name
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "favoriteMetar:")
+
+        if let _ = airport {
+            navigationController?.navigationBar.translucent = false
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismiss:")
+        } else {
+            navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "favoriteMetar:")
+        }
     }
     
     // MARK: - Actions
@@ -31,6 +47,10 @@ class MetarViewController: UIViewController {
         print("💾 Favorite metar \(metar.station.name)")
         MTRDataManager.sharedInstance.create(withMetar: metar)
         MTRShortcutManager.sharedInstance.reloadShortcuts()
+    }
+
+    func dismiss(sender: AnyObject) {
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - Segue

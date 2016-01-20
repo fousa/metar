@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol AirportsTableViewControllerDelegate {
+    func airportsTableViewController(controller: AirportsTableViewController, shouldOpenAirport airport: MTRAirport)
+}
+
 class AirportsTableViewController: UITableViewController {
+
+    var delegate: AirportsTableViewControllerDelegate?
 
     var airports = [MTRAirport]() {
         didSet {
@@ -44,6 +50,8 @@ class AirportsTableViewController: UITableViewController {
     // MARK: - Delegate
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let airport = airports[indexPath.row]
+        delegate?.airportsTableViewController(self, shouldOpenAirport: airport)
     }
 
 }

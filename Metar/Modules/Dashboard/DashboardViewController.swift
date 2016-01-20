@@ -50,6 +50,8 @@ class DashboardViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let controller = segue.destinationViewController as? PlaceholderViewController {
             controller.delegate = self
+        } else if let controller = segue.destinationViewController as? AirportsTableViewController {
+            controller.delegate = self
         }
     }
     
@@ -79,6 +81,20 @@ class DashboardViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+
+}
+
+extension DashboardViewController: AirportsTableViewControllerDelegate {
+
+    func airportsTableViewController(controller: AirportsTableViewController, shouldOpenAirport airport: MTRAirport) {
+        print("🎯 Open airport detail for \(airport.stationName)")
+
+        let storyboard = UIStoryboard(name: "Metar", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController()! as! MetarViewController // tailor:disable
+        controller.airport = airport
+        let navigationController = MTRDelegatingNavigationController(rootViewController: controller)
+        presentViewController(navigationController, animated: true, completion: nil)
     }
 
 }
