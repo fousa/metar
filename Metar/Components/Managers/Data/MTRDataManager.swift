@@ -16,7 +16,7 @@ class MTRDataManager {
 
     // MARK: - Init
 
-    private init() {
+    init() {
         let containerPath = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.fousa.metar")
         let storeURL = containerPath?.URLByAppendingPathComponent("Metar.sqlite")
         do {
@@ -28,8 +28,13 @@ class MTRDataManager {
 
     // MARK: - Create
 
-    func create(withMetar metar: Metar, context: NSManagedObjectContext = AERecord.defaultContext) {
+    func create(withMetar metar: Metar, context: NSManagedObjectContext = AERecord.defaultContext) -> MTRAirport? {
+        guard let name = metar.station.name else {
+            // When name can not be found.
+            return nil
+        }
 
+        return MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
     }
 
     // MARK: - Remove
@@ -45,10 +50,15 @@ class MTRDataManager {
         AERecord.saveContextAndWait(context)
     }
 
-    // MARK: - Checks
+    // MARK: - Finders
+
+    func airports(context context: NSManagedObjectContext = AERecord.defaultContext) -> [MTRAirport] {
+        let descriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        return MTRAirport.all(descriptors, context: context) as? [MTRAirport] ?? [MTRAirport]()
+    }
 
     func exists(metar metar: Metar, context: NSManagedObjectContext = AERecord.defaultContext) -> Bool {
-        return true
+        return airport(forMetar: metar, context: context) != nil
     }
 
     func airport(forMetar metar: Metar, context: NSManagedObjectContext = AERecord.defaultContext) -> MTRAirport? {

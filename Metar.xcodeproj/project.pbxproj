@@ -26,6 +26,7 @@
 		047687F41C4ED97F0064FA85 /* MTRAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687F31C4ED97F0064FA85 /* MTRAirport.swift */; };
 		047687F61C4ED98E0064FA85 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047687F51C4ED98E0064FA85 /* CoreData.framework */; };
 		047687F81C4EDAB00064FA85 /* MTRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687F71C4EDAB00064FA85 /* MTRDataManager.swift */; };
+		047687FC1C5013780064FA85 /* MTRDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687FB1C5013780064FA85 /* MTRDataManagerTests.swift */; };
 		048863041C4A334E00CD5B26 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863031C4A334E00CD5B26 /* DashboardTests.swift */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
@@ -105,6 +106,7 @@
 		047687F51C4ED98E0064FA85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		047687F71C4EDAB00064FA85 /* MTRDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDataManager.swift; sourceTree = "<group>"; };
 		047687F91C4EDB030064FA85 /* Metar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Metar.entitlements; sourceTree = "<group>"; };
+		047687FB1C5013780064FA85 /* MTRDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDataManagerTests.swift; sourceTree = "<group>"; };
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +286,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		047687FA1C5013580064FA85 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				047687FB1C5013780064FA85 /* MTRDataManagerTests.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		048863051C4A335700CD5B26 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +333,7 @@
 		626D6B3C1BD674E60042619F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				047687FA1C5013580064FA85 /* Data */,
 				0422B20F1C4D883D0048DED5 /* Formatters */,
 				626D6B611BD67D7D0042619F /* Parser */,
 				626D6B601BD67D780042619F /* Service */,
@@ -903,6 +914,7 @@
 				626D6B5C1BD67D740042619F /* MTRParserCategoryTests.swift in Sources */,
 				626D6B641BD67FB00042619F /* MTRParserEBBRTests.swift in Sources */,
 				626D6B3E1BD674E60042619F /* MTRServiceTests.swift in Sources */,
+				047687FC1C5013780064FA85 /* MTRDataManagerTests.swift in Sources */,
 				626D6B651BD67FB00042619F /* MTRParserLBBGTests.swift in Sources */,
 				626D6B411BD675AC0042619F /* QuickSpec+Expectations.swift in Sources */,
 				0422B2111C4D88530048DED5 /* MTRDistanceFormatterTests.swift in Sources */,
