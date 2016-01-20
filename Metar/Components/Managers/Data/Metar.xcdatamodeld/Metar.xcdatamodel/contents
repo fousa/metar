@@ -5,7 +5,7 @@
         <attribute name="elevation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="rawMetarData" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="site" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

@@ -11,7 +11,7 @@ import CoreData
 @objc(MTRAirport)
 class MTRAirport: NSManagedObject {
 
-    @NSManaged var name: String?
+    @NSManaged var name: String
     @NSManaged var country: String?
     @NSManaged var site: String?
     @NSManaged var longitude: NSNumber?
