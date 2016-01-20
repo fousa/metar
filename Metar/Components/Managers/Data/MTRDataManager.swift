@@ -34,7 +34,10 @@ class MTRDataManager {
             return nil
         }
 
-        return MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
+        let airport = MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
+        AERecord.saveContextAndWait(context)
+
+        return airport
     }
 
     // MARK: - Remove
