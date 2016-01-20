@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum ShortcutType: String {
-    case Search = "search"
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Application flow
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        setupData()
         setupAppearance()
         setupShortcutItems()
 
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
-            handle(shortcutItem: shortcutItem, fromLaunch: true)
+            MTRShortcutManager.sharedInstance.handle(shortcutItem: shortcutItem, onRootViewController: self.window?.rootViewController, fromLaunch: true)
             return false
         }
 
@@ -32,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
-        handle(shortcutItem: shortcutItem)
+        MTRShortcutManager.sharedInstance.handle(shortcutItem: shortcutItem, onRootViewController: self.window?.rootViewController)
     }
 
     // MARK: - Data
@@ -58,27 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Shortcut
 
-    private func handle(shortcutItem shortcutItem: UIApplicationShortcutItem, fromLaunch: Bool = false) {
-        print("🖕 Handle action \(shortcutItem.type)")
-
-        let type = ShortcutType(rawValue: shortcutItem.type)
-        if type == .Search {
-            guard let controller = self.window!.rootViewController as? DashboardViewController else {
-                return
-            }
-
-            if fromLaunch {
-                controller.shortcutItem = shortcutItem
-            } else {
-                controller.addStation(shortcutItem)
-            }
-        }
-    }
-
     private func setupShortcutItems() {
-        let searchIcon = UIApplicationShortcutIcon(type: .Search)
-        let searchItem = UIApplicationShortcutItem(type: ShortcutType.Search.rawValue, localizedTitle: "Search for metars", localizedSubtitle: nil, icon: searchIcon, userInfo: nil)
-        UIApplication.sharedApplication().shortcutItems = [searchItem]
+        MTRShortcutManager.sharedInstance.reloadShortcuts()
     }
 
 }
