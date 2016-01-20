@@ -35,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handle(shortcutItem: shortcutItem)
     }
 
+    // MARK: - Data
+
+    private func setupData() {
+        MTRDataManager.sharedInstance
+    }
+
     // MARK: - Layout
 
     private func setupAppearance() {

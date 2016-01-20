@@ -25,6 +25,7 @@
 		047687F21C4ED8CA0064FA85 /* Metar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */; };
 		047687F41C4ED97F0064FA85 /* MTRAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687F31C4ED97F0064FA85 /* MTRAirport.swift */; };
 		047687F61C4ED98E0064FA85 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047687F51C4ED98E0064FA85 /* CoreData.framework */; };
+		047687F81C4EDAB00064FA85 /* MTRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047687F71C4EDAB00064FA85 /* MTRDataManager.swift */; };
 		048863041C4A334E00CD5B26 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863031C4A334E00CD5B26 /* DashboardTests.swift */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
@@ -102,6 +103,8 @@
 		047687F11C4ED8CA0064FA85 /* Metar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Metar.xcdatamodel; sourceTree = "<group>"; };
 		047687F31C4ED97F0064FA85 /* MTRAirport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRAirport.swift; sourceTree = "<group>"; };
 		047687F51C4ED98E0064FA85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		047687F71C4EDAB00064FA85 /* MTRDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRDataManager.swift; sourceTree = "<group>"; };
+		047687F91C4EDB030064FA85 /* Metar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Metar.entitlements; sourceTree = "<group>"; };
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				047687F31C4ED97F0064FA85 /* MTRAirport.swift */,
+				047687F71C4EDAB00064FA85 /* MTRDataManager.swift */,
 				047687F01C4ED8CA0064FA85 /* Metar.xcdatamodeld */,
 			);
 			path = Data;
@@ -487,6 +491,7 @@
 				62DD04F71BD635D700628E9D /* UI */,
 				626D6B541BD67C140042619F /* Vendor */,
 				62DD04C91BD635C800628E9D /* AppDelegate.swift */,
+				047687F91C4EDB030064FA85 /* Metar.entitlements */,
 			);
 			path = Metar;
 			sourceTree = "<group>";
@@ -643,6 +648,11 @@
 					62DD04C51BD635C800628E9D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 743AM63YFU;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					62DD04D91BD635C800628E9D = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -881,6 +891,7 @@
 				626D6B7B1BD689B80042619F /* Visibility.swift in Sources */,
 				626D6B751BD689B80042619F /* String+Formatters.swift in Sources */,
 				626D6B7E1BD689B80042619F /* MTRService.swift in Sources */,
+				047687F81C4EDAB00064FA85 /* MTRDataManager.swift in Sources */,
 				043F8FF41C49B9440032A461 /* UILabel+Attributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1029,6 +1040,7 @@
 			baseConfigurationReference = 90728424445FD54E398F4BB6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Metar/Metar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 41;
@@ -1045,6 +1057,7 @@
 			baseConfigurationReference = F1C42FAD29132B037F942857 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Metar/Metar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 41;
 				INFOPLIST_FILE = "Metar/Supporting Files/Info.plist";
