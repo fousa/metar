@@ -14,6 +14,9 @@ class MTRDataManager {
 
     static let sharedInstance = MTRDataManager()
 
+    typealias ObserverCallbackType = [MTRAirport] -> ()
+    private var observers = [NSObject: ObserverCallbackType]()
+
     // MARK: - Init
 
     init() {
@@ -23,6 +26,24 @@ class MTRDataManager {
             try AERecord.loadCoreDataStack(storeURL: storeURL!)
         } catch _ {
             print("💣 Initializing data store failed.")
+        }
+    }
+
+    // MARK: - Observers
+
+    func observeAirportUpdates(observer: NSObject, block: ([MTRAirport] -> Void)) {
+        observers[observer] = block
+        block(airports())
+    }
+
+    func removeAirportUpdatesObserver(observer: NSObject) {
+        observers[observer] = nil
+    }
+
+    private func postAirportUpdates() {
+        let fetchedAirports = airports()
+        for (_, callback) in observers {
+            callback(fetchedAirports)
         }
     }
 
@@ -36,6 +57,7 @@ class MTRDataManager {
 
         let airport = MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
         AERecord.saveContextAndWait(context)
+        postAirportUpdates()
 
         return airport
     }
@@ -51,6 +73,7 @@ class MTRDataManager {
     func remove(airport airport: MTRAirport, context: NSManagedObjectContext = AERecord.defaultContext) {
         airport.deleteFromContext(context)
         AERecord.saveContextAndWait(context)
+        postAirportUpdates()
     }
 
     // MARK: - Finders

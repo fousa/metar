@@ -15,6 +15,7 @@ class DashboardViewController: UIViewController {
     var shortcutItem: UIApplicationShortcutItem?
 
     private let notificationManager = MTRNotificationManager()
+    private var airports = [MTRAirport]()
     
     // MARK: - View
     
@@ -22,7 +23,11 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         dashboardView.dataSource = self
-        
+
+        MTRDataManager.sharedInstance.observeAirportUpdates(self) { airports in
+            print("🗼 Airports fetched \(airports.count)")
+            self.airports = airports
+        }
         MTRLocationManager.sharedInstance.startUpdatingHeading()
     }
     
@@ -81,7 +86,7 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController: DashboardViewDataSource {
 
     func numberOfStationsInDashboardView(dashboardView: DashboardView) -> Int {
-        return 0
+        return airports.count
     }
 
 }
