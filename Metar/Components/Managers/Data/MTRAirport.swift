@@ -31,6 +31,17 @@ class MTRAirport: NSManagedObject {
         return nil
     }
 
+    // MARK: - Parser
+
+    func update(fromMetar metar: Metar) {
+        site = metar.station.site
+        country = metar.station.country
+        elevation = metar.station.location?.altitude
+        latitude = metar.station.location?.coordinate.latitude
+        longitude = metar.station.location?.coordinate.longitude
+        rawMetarData = metar.raw
+    }
+
 }
 
 extension MTRAirport: MTRStationViewModel {
