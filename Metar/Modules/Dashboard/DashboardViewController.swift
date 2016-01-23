@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
     var dashboardView: DashboardView! { return self.view as! DashboardView } // tailor:disable
     
     var shortcutItem: UIApplicationShortcutItem?
+    var shouldShowNavigationBar: Bool = false
 
     private let notificationManager = MTRNotificationManager()
     private var airports = [MTRAirport]()
@@ -30,6 +31,13 @@ class DashboardViewController: UIViewController {
         }
         MTRLocationManager.sharedInstance.startUpdatingHeading()
     }
+
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        shouldShowNavigationBar = false
+
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -44,7 +52,17 @@ class DashboardViewController: UIViewController {
             }
         }
     }
-    
+
+    override func viewWillDisappear(animated: Bool) {
+        // We do not want the navigation bar to disappear when a modal controller
+        // is presented.
+        if shouldShowNavigationBar {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+
+        super.viewWillAppear(animated)
+    }
+
     // MARK: - Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -89,6 +107,9 @@ extension DashboardViewController: AirportsTableViewControllerDelegate {
 
     func airportsTableViewController(controller: AirportsTableViewController, shouldOpenAirport airport: MTRAirport) {
         print("🎯 Open airport detail for \(airport.stationName)")
+
+        // Make sure that the navigation bar is shown after the push navigation.
+        shouldShowNavigationBar = true
 
         let storyboard = UIStoryboard(name: "Metar", bundle: nil)
         let controller = storyboard.instantiateInitialViewController()! as! MetarViewController // tailor:disable

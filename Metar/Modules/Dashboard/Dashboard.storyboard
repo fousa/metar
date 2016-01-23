@@ -378,10 +378,10 @@ on your dashboard.</string>
             </objects>
             <point key="canvasLocation" x="593" y="1279"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Delegating Navigation Controller-->
         <scene sceneID="rfe-Gm-ejP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ge2-nj-wTF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ge2-nj-wTF" customClass="MTRDelegatingNavigationController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMR-6V-KoY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
