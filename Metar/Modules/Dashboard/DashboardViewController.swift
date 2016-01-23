@@ -93,8 +93,7 @@ extension DashboardViewController: AirportsTableViewControllerDelegate {
         let storyboard = UIStoryboard(name: "Metar", bundle: nil)
         let controller = storyboard.instantiateInitialViewController()! as! MetarViewController // tailor:disable
         controller.airport = airport
-        let navigationController = MTRDelegatingNavigationController(rootViewController: controller)
-        presentViewController(navigationController, animated: true, completion: nil)
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

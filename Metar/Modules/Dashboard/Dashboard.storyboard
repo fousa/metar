@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U0B-vT-6CS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ge2-nj-wTF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -99,11 +99,12 @@
                             <outlet property="tableContainerView" destination="nc7-16-fnv" id="Gxc-82-2CY"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="0tY-DI-v1G"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9h-NC-Tbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="501"/>
+            <point key="canvasLocation" x="261" y="501"/>
         </scene>
         <!--Airports Table View Controller-->
         <scene sceneID="Rnb-33-V28">
@@ -376,6 +377,24 @@ on your dashboard.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bS-r3-IWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="593" y="1279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rfe-Gm-ejP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ge2-nj-wTF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMR-6V-KoY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U0B-vT-6CS" kind="relationship" relationship="rootViewController" id="m8v-y1-Pm3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbZ-C3-Zzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="501"/>
         </scene>
     </scenes>
     <resources>
