@@ -31,20 +31,17 @@ class MetarViewController: UIViewController {
         super.viewWillAppear(animated)
 
         title = metar.station.name
+        navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
 
-        if let _ = airport {
-            navigationController?.navigationBar.translucent = false
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismiss:")
-        } else {
-            navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "favoriteMetar:")
+        if airport == nil {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveMetar:")
         }
     }
     
     // MARK: - Actions
     
-    func favoriteMetar(sender: AnyObject) {
-        print("💾 Favorite metar \(metar.station.name)")
+    func saveMetar(sender: AnyObject) {
+        print("💾 Save metar \(metar.station.name)")
         MTRDataManager.sharedInstance.create(withMetar: metar)
         MTRShortcutManager.sharedInstance.reloadShortcuts()
     }

@@ -13,20 +13,20 @@
                         <viewControllerLayoutGuide type="bottom" id="bV3-AF-Kbh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yL7-O5-1EO" customClass="DashboardView" customModule="Metar" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-kP-kgh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwv-vt-Izk" userLabel="Placeholder Container">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <connections>
                                     <segue destination="eQ5-p5-bYg" kind="embed" id="utk-jz-sSB"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plane" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Vi-bz4">
-                                <rect key="frame" x="100" y="378" width="76" height="72"/>
+                                <rect key="frame" x="100" y="314" width="76" height="72"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="26" id="L4h-Hf-gyS"/>
@@ -34,14 +34,14 @@
                                 </constraints>
                             </imageView>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-16-fnv">
-                                <rect key="frame" x="0.0" y="470" width="600" height="500"/>
+                                <rect key="frame" x="0.0" y="406" width="600" height="436"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="t7n-hP-bXE" kind="embed" id="PrQ-88-uHQ"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-dy-mPV">
-                                <rect key="frame" x="182" y="140" width="237" height="98"/>
+                                <rect key="frame" x="182" y="76" width="237" height="98"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ij-IjE">
                                 <rect key="frame" x="549" y="27" width="40" height="40"/>
@@ -111,7 +111,7 @@
             <objects>
                 <tableViewController id="t7n-hP-bXE" customClass="AirportsTableViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="x0B-7a-Csp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -333,7 +333,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zzH-CM-Dn9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gNB-Da-NwF" customClass="PlaceholderView" customModule="Metar" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es0-dK-nxW">
@@ -383,7 +383,7 @@ on your dashboard.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ge2-nj-wTF" customClass="MTRDelegatingNavigationController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMR-6V-KoY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RMR-6V-KoY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
