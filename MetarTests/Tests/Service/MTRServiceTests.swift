@@ -22,7 +22,7 @@ class MTRServiceTests: QuickSpec {
                 self.fullFillExpectation("GET by station name") { expectation in
                     self.stub(everything, builder: http(200, headers: nil, data: NSData()))
                     
-                    MTRService().fetchList(station: "EBAW") { (error, data) -> () in
+                    MTRService().fetchMetars(station: "EBAW") { (error, data) -> () in
                         expect(error).to(beNil())
                         expect(data).toNot(beNil())
                         expectation.fulfill()
@@ -35,7 +35,7 @@ class MTRServiceTests: QuickSpec {
                     let stubbedError = NSError(domain: "Some error", code: 0, userInfo: nil)
                     self.stub(everything, builder: failure(stubbedError))
                     
-                    MTRService().fetchList(station: "EBBT") { (error, data) -> () in
+                    MTRService().fetchMetars(station: "EBBT") { (error, data) -> () in
                         expect(error).toNot(beNil())
                         expect(data).to(beNil())
                         expectation.fulfill()
@@ -49,7 +49,7 @@ class MTRServiceTests: QuickSpec {
                 self.fullFillExpectation("GET by location") { expectation in
                     self.stub(everything, builder: http(200, headers: nil, data: NSData()))
                     
-                    MTRService().fetchList(location: CLLocation()) { (error, data) -> () in
+                    MTRService().fetchMetars(location: CLLocation()) { (error, data) -> () in
                         expect(error).to(beNil())
                         expect(data).toNot(beNil())
                         expectation.fulfill()
@@ -62,7 +62,34 @@ class MTRServiceTests: QuickSpec {
                     let stubbedError = NSError(domain: "Some error", code: 0, userInfo: nil)
                     self.stub(everything, builder: failure(stubbedError))
                     
-                    MTRService().fetchList(location: CLLocation()) { (error, data) -> () in
+                    MTRService().fetchMetars(location: CLLocation()) { (error, data) -> () in
+                        expect(error).toNot(beNil())
+                        expect(data).to(beNil())
+                        expectation.fulfill()
+                    }
+                }
+            }
+        }
+
+        context("Fetch list of multiple stations") {
+            it("should return data.") {
+                self.fullFillExpectation("GET by multiple station names") { expectation in
+                    self.stub(everything, builder: http(200, headers: nil, data: NSData()))
+
+                    MTRService().fetchMetars(stations: ["EBBT", "EBAW"]) { (error, data) -> () in
+                        expect(error).to(beNil())
+                        expect(data).toNot(beNil())
+                        expectation.fulfill()
+                    }
+                }
+            }
+
+            it("should return an error.") {
+                self.fullFillExpectation("GET by station name with error") { expectation in
+                    let stubbedError = NSError(domain: "Some error", code: 0, userInfo: nil)
+                    self.stub(everything, builder: failure(stubbedError))
+
+                    MTRService().fetchMetars(stations: ["EBBT", "EBAW"]) { (error, data) -> () in
                         expect(error).toNot(beNil())
                         expect(data).to(beNil())
                         expectation.fulfill()

@@ -53,13 +53,20 @@ class MTRService: NSObject {
     
     // MARK: List
     
-    func fetchList(location location: CLLocation, completion: ServiceCompletionBlock) {
+    func fetchMetars(location location: CLLocation, completion: ServiceCompletionBlock) {
         let query = NSString(format: "radialDistance=100;%f,%f", location.coordinate.longitude, location.coordinate.latitude) as String
         fetch(query: query, completion: completion)
     }
     
-    func fetchList(station stationString: String, completion: ServiceCompletionBlock) {
+    func fetchMetars(station stationString: String, completion: ServiceCompletionBlock) {
         let query = NSString(format: "stationString=%@", stationString.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!) as String
+        fetch(query: query, completion: completion)
+    }
+
+    func fetchMetars(stations stationStrings: [String], completion: ServiceCompletionBlock) {
+        let stations = stationStrings.map { $0.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())! }
+
+        let query = NSString(format: "stationString=%@", stations.joinWithSeparator(",")) as String
         fetch(query: query, completion: completion)
     }
     
