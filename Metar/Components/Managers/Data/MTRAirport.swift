@@ -20,6 +20,12 @@ class MTRAirport: NSManagedObject {
     @NSManaged var elevation: NSNumber?
     @NSManaged var rawMetarData: String?
 
+    var parsedMetar: Metar? {
+        let metar = Metar(raw: rawMetarData ?? "")
+        metar.station.name = name
+        return MTRParser(metar: metar).parse()
+    }
+
     var location: CLLocation? {
         if let latitude = latitude?.doubleValue, let longitude = longitude?.doubleValue where latitude != 0.0 && longitude != 0.0 {
             if let elevation = elevation?.doubleValue {
@@ -67,7 +73,7 @@ extension MTRAirport: MTRStationViewModel {
     }
 
     var temperature: Int? {
-        return 0
+        return parsedMetar?.temperature
     }
     
 }
