@@ -10,8 +10,20 @@
 /* dashboard_label_no_data */
 "dashboard_label_no_data" = "You currently have no airports saved to your dashboard.";
 
+/* detail_actions_label_cancel */
+"detail_actions_label_cancel" = "Cancel";
+
+/* detail_actions_label_remove */
+"detail_actions_label_remove" = "Remove from dashboard";
+
+/* detail_actions_label_share */
+"detail_actions_label_share" = "Share";
+
 /* detail_label_back */
 "detail_label_back" = "Back";
+
+/* detail_label_save */
+"detail_label_save" = "Save";
 
 /* metar_unit_celsius */
 "metar_unit_celsius" = "Celsius";
