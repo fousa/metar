@@ -53,7 +53,10 @@ class MetarViewController: UIViewController {
     
     func save(sender: AnyObject) {
         print("💾 Save metar \(metar.station.name)")
-        MTRDataManager.sharedInstance.create(withMetar: metar)
+
+        airport = MTRDataManager.sharedInstance.create(withMetar: metar)
+        reloadBarButtonItems()
+
         MTRShortcutManager.sharedInstance.reloadShortcuts()
     }
 
