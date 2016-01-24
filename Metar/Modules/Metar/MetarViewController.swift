@@ -60,10 +60,15 @@ class MetarViewController: UIViewController {
 
     func actions(actions: AnyObject) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-        alertController.addAction(UIAlertAction(title: "Remove from dashboard", style: .Destructive) { action in
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("detail_actions_label_remove", comment: ""), style: .Destructive) { action in
             print("💾 Remove metar \(self.airport!.stationName)")
+            MTRDataManager.sharedInstance.remove(airport: self.airport!)
+            self.airport = nil
+            self.reloadBarButtonItems()
+
+            MTRShortcutManager.sharedInstance.reloadShortcuts()
         })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("detail_actions_label_cancel", comment: ""), style: .Cancel, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
     }
     
