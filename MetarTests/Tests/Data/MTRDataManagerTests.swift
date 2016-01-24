@@ -37,8 +37,10 @@ class MTRDataManagerTests: QuickSpec {
 
     override func spec() {
         var dataManager: MTRFakeDataManager!
+        
         beforeEach {
             dataManager = MTRFakeDataManager()
+            MTRAirport.deleteAll()
         }
 
         context("Creation") {
