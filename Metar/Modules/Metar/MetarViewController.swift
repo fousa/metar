@@ -59,6 +59,12 @@ class MetarViewController: UIViewController {
     // MARK: - Actions
 
     func actions(actions: AnyObject) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        alertController.addAction(UIAlertAction(title: "Remove from dashboard", style: .Destructive) { action in
+            print("💾 Remove metar \(self.airport!.stationName)")
+        })
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     func save(sender: AnyObject) {
