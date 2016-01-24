@@ -15,17 +15,27 @@ class MetarViewController: UIViewController {
     var metar: Metar!
     var airport: MTRAirport? {
         didSet {
-            let metar = Metar(raw: airport?.rawMetarData ?? "")
-            metar.station.name = airport?.name
-            metar.station.site = airport?.site
-            metar.station.country = airport?.country
-            metar.station.elevation = airport?.elevation?.integerValue
-            metar.station.location = airport?.location
-            self.metar = MTRParser(metar: metar).parse()
+            if let airport = self.airport {
+                let metar = Metar(raw: airport.rawMetarData ?? "")
+                metar.station.name = airport.name
+                metar.station.site = airport.site
+                metar.station.country = airport.country
+                metar.station.elevation = airport.elevation?.integerValue
+                metar.station.location = airport.location
+                self.metar = MTRParser(metar: metar).parse()
+            }
         }
     }
     
     // MARK: - View flow
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if airport == nil {
+            airport = MTRDataManager.sharedInstance.airport(forMetar: metar)
+        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
