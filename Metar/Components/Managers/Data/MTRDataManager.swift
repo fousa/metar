@@ -57,6 +57,7 @@ class MTRDataManager {
 
         let airport = MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
         update(airport: airport!, withMetar: metar, context: context)
+        postAirportUpdates()
 
         return airport
     }
@@ -64,7 +65,6 @@ class MTRDataManager {
     func update(airport airport: MTRAirport, withMetar metar: Metar, context: NSManagedObjectContext = AERecord.defaultContext) -> MTRAirport {
         airport.update(fromMetar: metar)
         AERecord.saveContextAndWait(context)
-        postAirportUpdates()
 
         return airport
     }

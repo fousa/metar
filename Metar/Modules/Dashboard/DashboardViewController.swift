@@ -13,10 +13,17 @@ class DashboardViewController: UIViewController {
     var dashboardView: DashboardView! { return self.view as! DashboardView } // tailor:disable
     
     var shortcutItem: UIApplicationShortcutItem?
-    var shouldShowNavigationBar: Bool = false
+
+    private var shouldShowNavigationBar: Bool = false
 
     private let notificationManager = MTRNotificationManager()
     private var airports = [MTRAirport]()
+
+    // MARK: - Init
+
+    deinit {
+        MTRDataManager.sharedInstance.removeAirportUpdatesObserver(self)
+    }
     
     // MARK: - View
     

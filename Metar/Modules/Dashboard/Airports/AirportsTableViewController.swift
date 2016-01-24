@@ -13,6 +13,10 @@ protocol AirportsTableViewControllerDelegate {
 }
 
 class AirportsTableViewController: UITableViewController {
+    
+    private var initialFetch: Bool = true
+    private let service = MTRService()
+    private let notificationManager = MTRNotificationManager()
 
     var delegate: AirportsTableViewControllerDelegate?
 
@@ -25,6 +29,12 @@ class AirportsTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Init
+
+    deinit {
+        MTRDataManager.sharedInstance.removeAirportUpdatesObserver(self)
+    }
+
     // MARK: - View flow
 
     override func viewDidLoad() {
@@ -32,6 +42,43 @@ class AirportsTableViewController: UITableViewController {
 
         MTRDataManager.sharedInstance.observeAirportUpdates(self) { airports in
             self.airports = airports
+            if self.initialFetch {
+                self.initialFetch = false
+                self.fetchMetarData()
+            }
+        }
+
+        notificationManager.observeNotification(withName: UIApplicationWillEnterForegroundNotification) { notification in
+            self.fetchMetarData()
+        }
+    }
+
+    // MARK: - Service
+
+    private func fetchMetarData() {
+        let airports = self.airports.map { $0.stationName! }
+        guard airports.count > 0 else {
+            return
+        }
+
+        service.fetchMetars(stations: airports) { error, data in
+            let metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
+
+            for airport in self.airports {
+                if let metar = metars.filter({ $0.station.name == airport.stationName }).first {
+                    MTRDataManager.sharedInstance.update(airport: airport, withMetar: metar)
+                }
+            }
+
+            dispatch_async_main {
+                self.refreshCells()
+            }
+        }
+    }
+
+    private func refreshCells() {
+        if let indexPaths = tableView.indexPathsForVisibleRows {
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
         }
     }
 

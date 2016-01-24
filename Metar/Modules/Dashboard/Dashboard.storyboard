@@ -322,7 +322,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSG-RM-fON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62" y="1229"/>
+            <point key="canvasLocation" x="-63" y="1201"/>
         </scene>
         <!--Placeholder View Controller-->
         <scene sceneID="ady-1w-lsW">
@@ -376,7 +376,7 @@ on your dashboard.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bS-r3-IWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="1279"/>
+            <point key="canvasLocation" x="591" y="1251"/>
         </scene>
         <!--Delegating Navigation Controller-->
         <scene sceneID="rfe-Gm-ejP">
