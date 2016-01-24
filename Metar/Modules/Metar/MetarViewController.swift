@@ -33,14 +33,25 @@ class MetarViewController: UIViewController {
         title = metar.station.name
         navigationController?.navigationBar.topItem?.title = NSLocalizedString("detail_label_back", comment: "")
 
-        if airport == nil {
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "saveMetar:")
+        reloadBarButtonItems()
+    }
+
+    // MARK: - Bar buttons
+
+    private func reloadBarButtonItems() {
+        if let _ = airport {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "actions:")
+        } else {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save:")
         }
     }
     
     // MARK: - Actions
+
+    func actions(actions: AnyObject) {
+    }
     
-    func saveMetar(sender: AnyObject) {
+    func save(sender: AnyObject) {
         print("💾 Save metar \(metar.station.name)")
         MTRDataManager.sharedInstance.create(withMetar: metar)
         MTRShortcutManager.sharedInstance.reloadShortcuts()
