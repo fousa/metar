@@ -71,15 +71,10 @@ class MetarViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: NSLocalizedString("detail_actions_label_share", comment: ""), style: .Default) { action in
             print("💾 Share metar \(self.airport!.stationName)")
 
-            let captureBounds = self.view.bounds
-            UIGraphicsBeginImageContextWithOptions(captureBounds.size, true, 0.0)
-            self.view.drawViewHierarchyInRect(captureBounds, afterScreenUpdates: false)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-
-            let name = self.airport!.stationName!
-            let metar = self.airport!.rawMetarData!
-            let items = [name, metar, image]
+            let items = [
+                self.airport!.stationName!,
+                self.airport!.rawMetarData!,
+                self.view.snapshot()]
             let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
             self.presentViewController(activityViewController, animated: true, completion: nil)
         })
