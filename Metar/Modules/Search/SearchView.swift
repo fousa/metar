@@ -59,9 +59,10 @@ class SearchView: UIView {
     // MARK: - Data
     
     func invalidateData() {
-        print("📕 Found \(self.metars.count) metar(s)")
+        print("📕 Found \(metars.count) metar(s)")
         
         dispatch_async_main {
+            self.tableView.hidden = self.metars.isEmpty
             self.tableView.reloadData()
         }
     }
@@ -93,33 +94,21 @@ class SearchView: UIView {
         }
     }
 
+    // MARK: - Actions
+
+    @IBAction func searchByLocation(sender: AnyObject) {
+        delegate?.searchViewWillUseCurrentLocation(self)
+    }
+
 }
 
 extension SearchView: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // When no metars are available, show the 'use current location' cell.
-        return metars.count > 0 ? metars.count : 1
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return metars.count > 0 ? 52.0 : 44.0
+        return metars.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if metars.count > 0 {
-            return self.tableView(tableView, metarCellForRowAtIndexPath: indexPath)
-        } else {
-            return self.tableView(tableView, locationCellForRowAtIndexPath: indexPath)
-        }
-    }
-    
-    private func tableView(tableView: UITableView, locationCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Location") as UITableViewCell!
-        return cell
-    }
-    
-    private func tableView(tableView: UITableView, metarCellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Metar") as! SearchMetarTableViewCell // tailor:disable
         cell.configure(withMetar: metars[indexPath.row], currentLocation: location)
         return cell
@@ -134,11 +123,7 @@ extension SearchView: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if metars.count == 0 {
-            delegate?.searchViewWillUseCurrentLocation(self)
-        } else {
-            delegate?.searchView(self, willOpenMetar: metars[indexPath.row])
-        }
+        delegate?.searchView(self, willOpenMetar: metars[indexPath.row])
     }
 
 }
