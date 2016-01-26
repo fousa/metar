@@ -8,6 +8,9 @@ pod 'AERecord',          '~> 2.0'
 pod 'PureLayout',        '~> 3.0'
 pod 'JTMaterialSpinner', '~> 1.0'
 
+pod 'Fabric',       '~> 1.6'
+pod 'Crashlytics',  '~> 3.6'
+
 def test_pods
     pod 'Mockingjay', '~> 1.1'
     pod 'Nimble',     '~> 3.0'

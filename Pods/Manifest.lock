@@ -1,5 +1,8 @@
 PODS:
   - AERecord (2.0.0)
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.4)
   - JTMaterialSpinner (1.0.2)
   - Mockingjay (1.1.1):
     - Mockingjay/Core (= 1.1.1)
@@ -16,6 +19,8 @@ PODS:
 
 DEPENDENCIES:
   - AERecord (~> 2.0)
+  - Crashlytics (~> 3.6)
+  - Fabric (~> 1.6)
   - JTMaterialSpinner (~> 1.0)
   - Mockingjay (~> 1.1)
   - Nimble (~> 3.0)
@@ -25,6 +30,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AERecord: 63313541906da457a51d808c1e0244b494dbb59f
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
   JTMaterialSpinner: f9e825c80317023f479b7ecc2856785280d8a8c5
   Mockingjay: 757f80abc947b5ec2918b1bb14f3066574720430
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
