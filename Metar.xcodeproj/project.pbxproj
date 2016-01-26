@@ -611,6 +611,8 @@
 				9EF574769A2573B63F84FD1B /* Embed Pods Frameworks */,
 				01119F8A6E71AB48567D1A8E /* Copy Pods Resources */,
 				120A1957AFEDF5E9A79BB26A /* Tailor */,
+				04D8840B1C582D8A003B9DE8 /* Load environment variables */,
+				04D8840A1C582C05003B9DE8 /* Load Fabric */,
 			);
 			buildRules = (
 			);
@@ -755,6 +757,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		04D8840A1C582C05003B9DE8 /* Load Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Load Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/load_fabric.rb;
+		};
+		04D8840B1C582D8A003B9DE8 /* Load environment variables */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Load environment variables";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/load_env.rb;
 		};
 		06FBFCB5C09D74FDAF29665C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

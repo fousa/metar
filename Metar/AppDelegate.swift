@@ -8,6 +8,9 @@
 
 import UIKit
 
+import Fabric
+import Crashlytics
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Application flow
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        setupFabric()
         setupData()
         setupAppearance()
         setupShortcutItems()
@@ -30,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         MTRShortcutManager.sharedInstance.handle(shortcutItem: shortcutItem, onRootViewController: self.window?.rootViewController)
+    }
+
+    // MARK: - Fabric
+
+    private func setupFabric() {
+        Fabric.with([Crashlytics.self])
     }
 
     // MARK: - Data

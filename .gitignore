@@ -50,3 +50,4 @@ fastlane/.env
 report
 .translations
 fastlane/test_output
+.env
