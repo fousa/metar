@@ -51,8 +51,20 @@ class AirportsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshUpdatedAtLabel()
+
         MTRDataManager.sharedInstance.observeAirportUpdates(self) { airports in
             self.airports = airports
+
+            // When there are airports and the updatedAt is nil, we want to initialize
+            // the updated at value.
+            if !airports.isEmpty && MTRDefaults.updatedAt == nil {
+                MTRDefaults.updatedAt = NSDate()
+                self.refreshUpdatedAtLabel()
+            }
+
+            // We only want to go fetch from the webservice during application
+            // launch.
             if self.initialFetch {
                 self.initialFetch = false
                 self.fetchMetarData()
@@ -62,6 +74,12 @@ class AirportsViewController: UIViewController {
         notificationManager.observeNotification(withName: UIApplicationWillEnterForegroundNotification) { notification in
             self.fetchMetarData()
         }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        refreshUpdatedAtLabel()
     }
 
     override func viewDidLayoutSubviews() {
@@ -82,6 +100,11 @@ class AirportsViewController: UIViewController {
         service.fetchMetars(stations: airports) { error, data in
             let metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
 
+            if error == nil {
+                // When no error occures we set the updated at date.
+                MTRDefaults.updatedAt = NSDate()
+            }
+
             for airport in self.airports {
                 if let metar = metars.filter({ $0.station.name == airport.stationName }).first {
                     MTRDataManager.sharedInstance.update(airport: airport, withMetar: metar)
@@ -89,6 +112,7 @@ class AirportsViewController: UIViewController {
             }
 
             dispatch_async_main {
+                self.refreshUpdatedAtLabel()
                 self.refreshCells()
             }
         }
@@ -98,6 +122,10 @@ class AirportsViewController: UIViewController {
         if let indexPaths = tableView.indexPathsForVisibleRows {
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
         }
+    }
+
+    private func refreshUpdatedAtLabel() {
+        lastUpdatedLabel.text = MTRDefaults.updatedAt?.description
     }
 
 }
