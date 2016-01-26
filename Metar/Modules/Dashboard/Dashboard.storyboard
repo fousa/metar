@@ -365,7 +365,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es0-dK-nxW">
-                                <rect key="frame" x="70" y="178" width="460" height="43"/>
+                                <rect key="frame" x="40" y="178" width="520" height="43"/>
                                 <string key="text">you currently have no airports 
 on your dashboard.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
@@ -373,7 +373,7 @@ on your dashboard.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press add to search one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSz-Gh-ru5">
-                                <rect key="frame" x="70" y="258" width="460" height="22"/>
+                                <rect key="frame" x="40" y="258" width="520" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -387,14 +387,14 @@ on your dashboard.</string>
                             <bool key="isElement" value="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="hSz-Gh-ru5" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="70" id="6lY-WH-lkU"/>
+                            <constraint firstItem="hSz-Gh-ru5" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="40" id="6lY-WH-lkU"/>
                             <constraint firstItem="hSz-Gh-ru5" firstAttribute="top" secondItem="es0-dK-nxW" secondAttribute="bottom" constant="37" id="JT0-iS-UDJ"/>
                             <constraint firstItem="es0-dK-nxW" firstAttribute="top" secondItem="423-Su-1wO" secondAttribute="bottom" constant="178" id="Ngw-qI-oH3"/>
-                            <constraint firstAttribute="trailing" secondItem="es0-dK-nxW" secondAttribute="trailing" constant="70" id="Ons-2O-VgK"/>
+                            <constraint firstAttribute="trailing" secondItem="es0-dK-nxW" secondAttribute="trailing" constant="40" id="Ons-2O-VgK"/>
                             <constraint firstAttribute="trailing" secondItem="60f-fQ-muf" secondAttribute="trailing" constant="30" id="WZk-28-Lb0"/>
                             <constraint firstItem="60f-fQ-muf" firstAttribute="top" secondItem="423-Su-1wO" secondAttribute="bottom" constant="77" id="csW-VA-QTd"/>
-                            <constraint firstItem="es0-dK-nxW" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="70" id="hnk-Rp-GDt"/>
-                            <constraint firstAttribute="trailing" secondItem="hSz-Gh-ru5" secondAttribute="trailing" constant="70" id="iEY-Vx-bkn"/>
+                            <constraint firstItem="es0-dK-nxW" firstAttribute="leading" secondItem="gNB-Da-NwF" secondAttribute="leading" constant="40" id="hnk-Rp-GDt"/>
+                            <constraint firstAttribute="trailing" secondItem="hSz-Gh-ru5" secondAttribute="trailing" constant="40" id="iEY-Vx-bkn"/>
                         </constraints>
                         <connections>
                             <outlet property="noAirportsLabel" destination="es0-dK-nxW" id="tQK-Us-Ous"/>
