@@ -150,12 +150,12 @@ extension SearchViewController: SearchViewDelegate {
         print("👀 Use current location")
         if let location = searchView.location {
             service.cancel()
-            spinnerBarButton.startAnimating()
+            searchView.startAnimatingLocation()
             service.fetchMetars(location: location, completion: { (error, data) -> () in
                 var metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
                 metars.sortInPlace({ $0.station.location?.distanceFromLocation(location) < $1.station.location?.distanceFromLocation(location) })
                 self.searchView.metars = metars
-                dispatch_async_main { self.spinnerBarButton.stopAnimating() }
+                dispatch_async_main { self.searchView.stopAnimatingLocation() }
                 
                 self.searchView.invalidateData()
             })

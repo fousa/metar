@@ -20,6 +20,7 @@ class SearchView: UIView {
     // MARK: - Outlets
     
     @IBOutlet private var searchField: UISearchBar!
+    @IBOutlet private var locationButton: MTRLocationButton!
     @IBOutlet private(set) var tableView: UITableView!
     
     @IBOutlet private var tableBottomConstraint: NSLayoutConstraint!
@@ -92,6 +93,16 @@ class SearchView: UIView {
                 self.layoutIfNeeded()
             }
         }
+    }
+
+    // MARK: - Current location animation
+
+    func startAnimatingLocation() {
+        locationButton.startAnimating()
+    }
+
+    func stopAnimatingLocation() {
+        locationButton.stopAnimating()
     }
 
     // MARK: - Actions

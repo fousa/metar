@@ -129,6 +129,7 @@
                             <constraint firstItem="yFp-LG-kZX" firstAttribute="top" secondItem="bhv-W9-J1N" secondAttribute="bottom" id="zVe-0J-iU6"/>
                         </constraints>
                         <connections>
+                            <outlet property="locationButton" destination="nsl-Pf-TQR" id="hg0-fa-QLI"/>
                             <outlet property="searchField" destination="IdV-c8-6eX" id="r9m-7Q-wqs"/>
                             <outlet property="tableBottomConstraint" destination="zVe-0J-iU6" id="0vH-jJ-5Rk"/>
                             <outlet property="tableView" destination="bhv-W9-J1N" id="gp9-Yd-Ret"/>
