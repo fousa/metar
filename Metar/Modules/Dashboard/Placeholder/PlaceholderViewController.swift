@@ -16,6 +16,14 @@ class PlaceholderViewController: UIViewController {
     var placeholderView: PlaceholderView! { return self.view as! PlaceholderView } // tailor:disable
     
     weak var delegate: PlaceholderViewControllerDelegate?
+
+    // MARK: - View flow
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        placeholderView.delegate = self
+    }
     
     // MARK: - Actions
     
@@ -23,4 +31,12 @@ class PlaceholderViewController: UIViewController {
         delegate?.placeholderViewControllerWillAddStation(self)
     }
     
+}
+
+extension PlaceholderViewController: PlaceholderViewDelegate {
+
+    func placeholderViewDidTapAdd(view: PlaceholderView) {
+        delegate?.placeholderViewControllerWillAddStation(self)
+    }
+
 }

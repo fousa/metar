@@ -17,7 +17,7 @@ extension UILabel {
         }
     }
 
-    func replaceImage(image: UIImage, forPlaceholderText placeholder: String) {
+    func replaceImage(image: UIImage, forPlaceholderText placeholder: String) -> NSRange? {
         if let attributedText = attributedText as? NSMutableAttributedString {
             let attachment = NSTextAttachment()
             attachment.image = image
@@ -25,7 +25,12 @@ extension UILabel {
             let imageAttachedString = NSAttributedString(attachment: attachment)
             let range = (attributedText.string as NSString).rangeOfString("{add}")
             attributedText.replaceCharactersInRange(range, withAttributedString: imageAttachedString)
+
+            // Return the range on which the image is replaced.
+            return range
         }
+
+        return nil
     }
 
 }
