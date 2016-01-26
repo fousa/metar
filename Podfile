@@ -5,6 +5,7 @@ use_frameworks!
 
 pod 'Ono',               '~> 1.2'
 pod 'AERecord',          '~> 2.0'
+pod 'PureLayout',        '~> 3.0'
 pod 'JTMaterialSpinner', '~> 1.0'
 
 def test_pods

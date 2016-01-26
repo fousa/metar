@@ -10,6 +10,7 @@ PODS:
     - Mockingjay/Core
   - Nimble (3.0.0)
   - Ono (1.2.2)
+  - PureLayout (3.0.1)
   - Quick (0.8.0)
   - URITemplate (1.3.0)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Mockingjay (~> 1.1)
   - Nimble (~> 3.0)
   - Ono (~> 1.2)
+  - PureLayout (~> 3.0)
   - Quick (~> 0.8)
 
 SPEC CHECKSUMS:
@@ -27,6 +29,7 @@ SPEC CHECKSUMS:
   Mockingjay: 757f80abc947b5ec2918b1bb14f3066574720430
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
   URITemplate: 0ebbec80d1eb59a89e29db9b14c99d5908d3e574
 
