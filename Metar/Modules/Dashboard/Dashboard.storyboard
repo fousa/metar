@@ -118,7 +118,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lkt-bm-PHi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST UPDATE: TODAY 20:33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY7-io-x8Z">
+                                <rect key="frame" x="20" y="10" width="560" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lkt-bm-PHi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -129,11 +135,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0L-YI-oTD" customClass="MTRStationView" customModule="Metar" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0L-YI-oTD" customClass="MTRStationView" customModule="Metar" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-aK-usp">
-                                                            <rect key="frame" x="16" y="44" width="68" height="41"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-aK-usp">
+                                                            <rect key="frame" x="16" y="45" width="68" height="41"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
                                                             <color key="textColor" red="0.2784313725" green="0.81568627449999997" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -170,8 +176,8 @@
                                                                 <constraint firstItem="eIu-HY-a12" firstAttribute="leading" secondItem="E2g-ep-4nS" secondAttribute="leading" id="zhW-Gv-g1s"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-gf-i0S">
-                                                            <rect key="frame" x="147" y="74" width="392" height="35"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-gf-i0S">
+                                                            <rect key="frame" x="147" y="75" width="392" height="35"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-1g-Qfw">
                                                                     <rect key="frame" x="174" y="0.0" width="45" height="35"/>
@@ -213,8 +219,8 @@
                                                                 <constraint firstItem="bA5-1g-Qfw" firstAttribute="centerX" secondItem="bcQ-gf-i0S" secondAttribute="centerX" id="xcL-oU-I9j"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-eW-zqi">
-                                                            <rect key="frame" x="539" y="74" width="41" height="35"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-eW-zqi">
+                                                            <rect key="frame" x="539" y="75" width="41" height="35"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-kx-Q3G">
                                                                     <rect key="frame" x="13" y="0.0" width="28" height="20"/>
@@ -245,8 +251,8 @@
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uZD-2c-UHX" secondAttribute="trailing" id="qW2-wA-0sc"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDp-rc-XxR">
-                                                            <rect key="frame" x="100" y="74" width="47" height="35"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDp-rc-XxR">
+                                                            <rect key="frame" x="100" y="75" width="47" height="35"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Height" translatesAutoresizingMaskIntoConstraints="NO" id="Yzp-yc-zge">
                                                                     <rect key="frame" x="0.0" y="7" width="13" height="9"/>
@@ -329,12 +335,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lXP-Gl-vR6" firstAttribute="top" secondItem="lkt-bm-PHi" secondAttribute="bottom" id="3hL-ma-DJ3"/>
+                            <constraint firstItem="MY7-io-x8Z" firstAttribute="top" secondItem="dni-Lr-m25" secondAttribute="bottom" constant="10" id="4fe-OM-6mh"/>
+                            <constraint firstItem="MY7-io-x8Z" firstAttribute="leading" secondItem="Rdx-iW-1VH" secondAttribute="leading" constant="20" id="89T-wF-6O1"/>
                             <constraint firstItem="lkt-bm-PHi" firstAttribute="leading" secondItem="Rdx-iW-1VH" secondAttribute="leading" id="PPK-fy-yDt"/>
+                            <constraint firstAttribute="trailing" secondItem="MY7-io-x8Z" secondAttribute="trailing" constant="20" id="egb-km-Qek"/>
                             <constraint firstAttribute="trailing" secondItem="lkt-bm-PHi" secondAttribute="trailing" id="fiB-Sb-f19"/>
                             <constraint firstItem="lkt-bm-PHi" firstAttribute="top" secondItem="Rdx-iW-1VH" secondAttribute="top" id="nhN-76-0qX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lastUpdatedLabel" destination="MY7-io-x8Z" id="f4V-l7-7QB"/>
                         <outlet property="tableView" destination="lkt-bm-PHi" id="2Mi-m5-MQU"/>
                     </connections>
                 </viewController>

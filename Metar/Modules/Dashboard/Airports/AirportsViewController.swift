@@ -14,13 +14,22 @@ protocol AirportsViewControllerDelegate {
 
 class AirportsViewController: UIViewController {
 
+    // MARK: - Privates
+
     private var initialFetch: Bool = true
     private let service = MTRService()
     private let notificationManager = MTRNotificationManager()
 
+    // MARK: - Delegate
+
     var delegate: AirportsViewControllerDelegate?
 
+    // MARK: - Outlets
+
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var lastUpdatedLabel: UILabel!
+
+    // MARK: - Callbacks
 
     var airports = [MTRAirport]() {
         didSet {
@@ -53,6 +62,13 @@ class AirportsViewController: UIViewController {
         notificationManager.observeNotification(withName: UIApplicationWillEnterForegroundNotification) { notification in
             self.fetchMetarData()
         }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let top = CGRectGetMaxY(lastUpdatedLabel.frame) + 20.0
+        tableView.contentInset = UIEdgeInsetsMake(top, 0.0, 0.0, 0.0)
     }
 
     // MARK: - Service
