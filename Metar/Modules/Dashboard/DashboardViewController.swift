@@ -75,7 +75,7 @@ class DashboardViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let controller = segue.destinationViewController as? PlaceholderViewController {
             controller.delegate = self
-        } else if let controller = segue.destinationViewController as? AirportsTableViewController {
+        } else if let controller = segue.destinationViewController as? AirportsViewController {
             controller.delegate = self
         }
     }
@@ -110,9 +110,9 @@ class DashboardViewController: UIViewController {
 
 }
 
-extension DashboardViewController: AirportsTableViewControllerDelegate {
+extension DashboardViewController: AirportsViewControllerDelegate {
 
-    func airportsTableViewController(controller: AirportsTableViewController, shouldOpenAirport airport: MTRAirport) {
+    func airportsViewController(controller: AirportsViewController, shouldOpenAirport airport: MTRAirport) {
         print("🎯 Open airport detail for \(airport.stationName)")
 
         // Make sure that the navigation bar is shown after the push navigation.

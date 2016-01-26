@@ -8,17 +8,19 @@
 
 import UIKit
 
-protocol AirportsTableViewControllerDelegate {
-    func airportsTableViewController(controller: AirportsTableViewController, shouldOpenAirport airport: MTRAirport)
+protocol AirportsViewControllerDelegate {
+    func airportsViewController(controller: AirportsViewController, shouldOpenAirport airport: MTRAirport)
 }
 
-class AirportsTableViewController: UITableViewController {
-    
+class AirportsViewController: UIViewController {
+
     private var initialFetch: Bool = true
     private let service = MTRService()
     private let notificationManager = MTRNotificationManager()
 
-    var delegate: AirportsTableViewControllerDelegate?
+    var delegate: AirportsViewControllerDelegate?
+
+    @IBOutlet var tableView: UITableView!
 
     var airports = [MTRAirport]() {
         didSet {
@@ -82,23 +84,27 @@ class AirportsTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - DataSource
+}
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension AirportsViewController: UITableViewDataSource {
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return airports.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Airport") as! AirportsTableViewCell // tailor:disable
         cell.configure(withAirport: airports[indexPath.row], currentLocation: MTRLocationManager.sharedInstance.currentLocation)
         return cell
     }
 
-    // MARK: - Delegate
+}
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+extension AirportsViewController: UITableViewDelegate {
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let airport = airports[indexPath.row]
-        delegate?.airportsTableViewController(self, shouldOpenAirport: airport)
+        delegate?.airportsViewController(self, shouldOpenAirport: airport)
     }
 
 }
