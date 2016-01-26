@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-16-fnv">
-                                <rect key="frame" x="0.0" y="406" width="600" height="436"/>
+                                <rect key="frame" x="0.0" y="406" width="600" height="450"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="SCX-Fd-i4v" kind="embed" id="x5H-8U-Sdi"/>
@@ -76,7 +76,7 @@
                             <constraint firstItem="bV3-AF-Kbh" firstAttribute="top" secondItem="SZw-kP-kgh" secondAttribute="bottom" id="iPT-Os-dvK"/>
                             <constraint firstItem="Kwv-vt-Izk" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="kVd-tu-0AU"/>
                             <constraint firstItem="Kwv-vt-Izk" firstAttribute="top" secondItem="yL7-O5-1EO" secondAttribute="top" id="lxa-pe-tWW"/>
-                            <constraint firstItem="nc7-16-fnv" firstAttribute="height" secondItem="yL7-O5-1EO" secondAttribute="height" constant="-100" id="pZM-QI-Xkm"/>
+                            <constraint firstItem="nc7-16-fnv" firstAttribute="height" secondItem="yL7-O5-1EO" secondAttribute="height" constant="-86" id="pZM-QI-Xkm"/>
                             <constraint firstAttribute="trailing" secondItem="fYI-Ij-IjE" secondAttribute="trailing" constant="11" id="rfH-8i-I62"/>
                             <constraint firstItem="nc7-16-fnv" firstAttribute="width" secondItem="yL7-O5-1EO" secondAttribute="width" id="scK-ey-fi5"/>
                             <constraint firstItem="SZw-kP-kgh" firstAttribute="leading" secondItem="yL7-O5-1EO" secondAttribute="leading" id="xjD-Up-Roo"/>
@@ -115,7 +115,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lXP-Gl-vR6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rdx-iW-1VH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST UPDATE: TODAY 20:33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY7-io-x8Z">
@@ -125,7 +125,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lkt-bm-PHi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Airport" id="qyH-Du-d5e" customClass="AirportsTableViewCell" customModule="Metar" customModuleProvider="target">
@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WD-Q7-3L9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="1201"/>
+            <point key="canvasLocation" x="-65" y="1203"/>
         </scene>
         <!--Placeholder View Controller-->
         <scene sceneID="ady-1w-lsW">
@@ -404,7 +404,7 @@ on your dashboard.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bS-r3-IWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="1251"/>
+            <point key="canvasLocation" x="587" y="1247"/>
         </scene>
         <!--Delegating Navigation Controller-->
         <scene sceneID="rfe-Gm-ejP">
