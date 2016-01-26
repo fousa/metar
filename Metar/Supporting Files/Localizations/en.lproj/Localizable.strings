@@ -31,6 +31,12 @@
 /* metar_unit_feet */
 "metar_unit_feet" = "Feet";
 
+/* search_actions_label_add */
+"search_actions_label_add" = "Add to dashboard";
+
+/* search_actions_label_remove */
+"search_actions_label_remove" = "Remove from dashboard";
+
 /* search_label_current_location */
 "search_label_current_location" = "Search nearby metar stations";
 

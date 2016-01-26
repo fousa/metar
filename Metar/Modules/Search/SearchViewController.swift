@@ -128,7 +128,7 @@ extension SearchViewController: UIViewControllerPreviewingDelegate {
         controller.metar = metar
         return controller
     }
-    
+
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: false)
     }

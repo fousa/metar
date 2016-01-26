@@ -108,5 +108,27 @@ class MetarViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
+
+    // MARK: - Preview
+
+    override func previewActionItems() -> [UIPreviewActionItem] {
+        var actions = [UIPreviewAction]()
+        if let _ = airport {
+            actions.append(UIPreviewAction(title: NSLocalizedString("search_actions_label_remove", comment: ""), style: UIPreviewActionStyle.Destructive) { action, controller in
+                print("💾 Remove metar \(self.airport!.stationName) from 3D action")
+
+                MTRDataManager.sharedInstance.remove(airport: self.airport!)
+                MTRShortcutManager.sharedInstance.reloadShortcuts()
+            })
+        } else {
+            actions.append(UIPreviewAction(title: NSLocalizedString("search_actions_label_add", comment: ""), style: UIPreviewActionStyle.Default) { action, controller in
+                print("💾 Save metar \(self.metar.station.name) from 3D action")
+
+                MTRDataManager.sharedInstance.create(withMetar: self.metar)
+                MTRShortcutManager.sharedInstance.reloadShortcuts()
+            })
+        }
+        return actions
+    }
     
 }
