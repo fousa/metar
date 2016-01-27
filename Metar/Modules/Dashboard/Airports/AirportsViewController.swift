@@ -8,6 +8,8 @@
 
 import UIKit
 
+import SwiftDate
+
 protocol AirportsViewControllerDelegate {
     func airportsViewController(controller: AirportsViewController, shouldOpenAirport airport: MTRAirport)
 }
@@ -19,6 +21,7 @@ class AirportsViewController: UIViewController {
     private var initialFetch: Bool = true
     private let service = MTRService()
     private let notificationManager = MTRNotificationManager()
+    private var timer: NSTimer!
 
     // MARK: - Delegate
 
@@ -60,7 +63,6 @@ class AirportsViewController: UIViewController {
             // the updated at value.
             if !airports.isEmpty && MTRDefaults.updatedAt == nil {
                 MTRDefaults.updatedAt = NSDate()
-                self.refreshUpdatedAtLabel()
             }
 
             // We only want to go fetch from the webservice during application
@@ -79,7 +81,14 @@ class AirportsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        refreshUpdatedAtLabel()
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "refreshUpdatedAtLabel", userInfo: nil, repeats: true)
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        timer.invalidate()
+        timer = nil
     }
 
     override func viewDidLayoutSubviews() {
@@ -124,8 +133,10 @@ class AirportsViewController: UIViewController {
         }
     }
 
-    private func refreshUpdatedAtLabel() {
-        lastUpdatedLabel.text = MTRDefaults.updatedAt?.description
+    // MARK: - Updated at
+
+    func refreshUpdatedAtLabel() {
+        lastUpdatedLabel.text = MTRDefaults.updatedAt?.toNaturalString(NSDate(), style: FormatterStyle(style: .Full, units: nil, max: 2))
     }
 
 }
