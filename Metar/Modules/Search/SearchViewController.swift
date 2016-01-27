@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+import Crashlytics
+
 class SearchViewController: UIViewController {
     
     var searchView: SearchView! { return self.view as! SearchView } // tailor:disable
@@ -77,6 +79,9 @@ class SearchViewController: UIViewController {
                 self.searchView.invalidateData()
                 return
             }
+
+            // Log the search query.
+            Answers.logSearchWithQuery("search station", customAttributes: ["query": searchQuery])
             
             spinnerBarButton.startAnimating()
             service.fetchMetars(station: searchQuery, completion: { (error, data) -> () in
@@ -150,6 +155,10 @@ extension SearchViewController: SearchViewDelegate {
         print("👀 Use current location")
         if let location = searchView.location {
             service.cancel()
+
+            // Log the search query.
+            Answers.logSearchWithQuery("search station by location", customAttributes: nil)
+
             searchView.startAnimatingLocation()
             service.fetchMetars(location: location, completion: { (error, data) -> () in
                 var metars: [Metar] = MTRXMLParser(data: data)?.parseMetars() ?? [Metar]()
