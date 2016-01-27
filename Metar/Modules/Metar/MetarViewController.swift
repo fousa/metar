@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Crashlytics
+
 class MetarViewController: UIViewController {
     
     var metarView: MetarView! { return self.view as! MetarView } // tailor:disable
@@ -35,6 +37,9 @@ class MetarViewController: UIViewController {
         if airport == nil {
             airport = MTRDataManager.sharedInstance.airport(forMetar: metar)
         }
+
+        // Log the view event.
+        Answers.logContentViewWithName("Detail", contentType: "controller", contentId: metar.station.name, customAttributes: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
