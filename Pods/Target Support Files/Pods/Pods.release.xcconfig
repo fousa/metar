@@ -3,8 +3,8 @@ FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Crashlytics/iOS" "${PODS_ROO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2 $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AERecord.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/JTMaterialSpinner.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Ono.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/PureLayout.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "AERecord" -framework "Crashlytics" -framework "Fabric" -framework "JTMaterialSpinner" -framework "Ono" -framework "PureLayout" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/AERecord.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/JTMaterialSpinner.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Ono.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/PureLayout.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftDate.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "AERecord" -framework "Crashlytics" -framework "Fabric" -framework "JTMaterialSpinner" -framework "Ono" -framework "PureLayout" -framework "Security" -framework "SwiftDate" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods
 PODS_ROOT = ${SRCROOT}/Pods

@@ -6,6 +6,7 @@ use_frameworks!
 pod 'Ono',               '~> 1.2'
 pod 'AERecord',          '~> 2.0'
 pod 'PureLayout',        '~> 3.0'
+pod 'SwiftDate',         '~> 3.0'
 pod 'JTMaterialSpinner', '~> 1.0'
 
 pod 'Fabric',       '~> 1.6'
