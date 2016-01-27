@@ -40,6 +40,9 @@ class SearchViewController: UIViewController {
         if traitCollection.forceTouchCapability == .Available {
             registerForPreviewingWithDelegate(self, sourceView: view)
         }
+
+        // Log the view event.
+        Answers.logContentViewWithName("Search", contentType: "controller", contentId: nil, customAttributes: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
