@@ -7,8 +7,10 @@
 //
 
 import Foundation
-import AERecord
 import CoreData
+
+import AERecord
+import Crashlytics
 
 class MTRDataManager {
 
@@ -58,6 +60,9 @@ class MTRDataManager {
         let airport = MTRAirport.firstOrCreateWithAttribute("name", value: name, context: context) as? MTRAirport
         update(airport: airport!, withMetar: metar, context: context)
         postAirportUpdates()
+
+        // Log the view event.
+        Answers.logContentViewWithName("Save", contentType: "data", contentId: metar.station.name, customAttributes: nil)
 
         return airport
     }
