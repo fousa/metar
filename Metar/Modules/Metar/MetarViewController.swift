@@ -76,6 +76,9 @@ class MetarViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: NSLocalizedString("detail_actions_label_share", comment: ""), style: .Default) { action in
             print("💾 Share metar \(self.airport!.stationName)")
 
+            // Log the view event.
+            Answers.logContentViewWithName("Share", contentType: "action", contentId: self.airport!.stationName, customAttributes: nil)
+
             let items = [
                 self.airport!.stationName!,
                 self.airport!.rawMetarData!,
