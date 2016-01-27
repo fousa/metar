@@ -30,6 +30,8 @@ class DashboardView: UIView {
     // MARK: - Variables
     
     weak var dataSource: DashboardViewDataSource?
+
+    private var animationFinished = false
     
     // MARK: - View
     
@@ -55,6 +57,7 @@ class DashboardView: UIView {
             self.logoImageView.alpha = 0.0
             self.layoutIfNeeded()
         }, completion: { finished in
+            self.animationFinished = true
             completion()
         })
     }
@@ -64,7 +67,19 @@ class DashboardView: UIView {
             self.planeImageView.transform = CGAffineTransformMakeRotation(angle)
         }
     }
-    
+
+    // MARK: - Views
+
+    func reloadContainerViewsIfNeeded() {
+        // Only make the containers visible when the animation is finished.
+        guard animationFinished else  {
+            return
+        }
+
+        self.tableContainerView.alpha = self.numberOfStations() > 0 ? 1.0 : 0.0
+        self.placeholderContainerView.alpha = self.tableContainerView.alpha == 1.0 ? 0.0 : 1.0
+    }
+
     // MARK: - Data Source
     
     func numberOfStations() -> Int {

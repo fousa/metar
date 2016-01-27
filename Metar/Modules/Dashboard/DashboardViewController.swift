@@ -44,6 +44,8 @@ class DashboardViewController: UIViewController {
         shouldShowNavigationBar = false
 
         super.viewWillAppear(animated)
+
+        dashboardView.reloadContainerViewsIfNeeded()
     }
     
     override func viewDidAppear(animated: Bool) {
