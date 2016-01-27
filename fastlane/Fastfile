@@ -51,6 +51,13 @@ private_lane :upload do |options|
     pretty: '- %s'
   )
 
+  # Upload to Fabric
+  crashlytics(
+    api_token:    ENV['FABRIC_API_KEY'],
+    build_secret: ENV['FABRIC_BUILD_SECRET'],
+    ipa_path:     'Metar.ipa',
+  )
+
   # Deploy the application to TestFlight.
   pilot(
 #     distribute_external: true,
