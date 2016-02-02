@@ -74,4 +74,5 @@ class MTRAttributedLabel: UILabel {
             block?()
         }
     }
+    
 }
