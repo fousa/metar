@@ -4,6 +4,9 @@ lane :deploy do
   # Run the tests.
   # run_tests
 
+  # Fetch the translations.
+  update_translations
+
   # Build the application and bump the version number.
   last_hash = build
 
@@ -14,15 +17,22 @@ lane :deploy do
   cleanup
 end
 
+####################
+### PRIVATE LANE ###
+####################
+
+# Fetch the latest tagged commit hash.
 private_lane :last_git_tag_hash do
   sh("git rev-parse --verify #{last_git_tag}").strip
 end
 
+# Run the tests.
 private_lane :run_tests do
   # Run tests
   scan(scheme: "Metar")
 end
 
+# Build and upload the application.
 private_lane :build do
   # Update build number, tag and commit.
   increment_build_number
@@ -44,6 +54,7 @@ private_lane :build do
   last_git_tag_hash
 end
 
+# Upload the application to TestFlight.
 private_lane :upload do |options|
   # Fetch the changelog.
   changelog = changelog_from_git_commits(
@@ -65,7 +76,7 @@ private_lane :upload do |options|
   )
 end
 
+# Cleanup the workspace.
 private_lane :cleanup do
-  # Cleanup the workspace.
   clean_build_artifacts
 end
