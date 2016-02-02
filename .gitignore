@@ -51,3 +51,4 @@ report
 .translations
 fastlane/test_output
 .env
+.ruby-version
