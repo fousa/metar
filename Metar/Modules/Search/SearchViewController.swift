@@ -119,8 +119,6 @@ extension SearchViewController: UIViewControllerPreviewingDelegate {
         guard searchView.metars.count > 0 else {
             return nil
         }
-        
-        Crashlytics.sharedInstance().crash()
 
         let cellPosition = searchView.tableView.convertPoint(location, fromView: searchView)        
         guard let indexPath = searchView.tableView.indexPathForRowAtPoint(cellPosition), let cell = searchView.tableView.cellForRowAtIndexPath(indexPath) else {
