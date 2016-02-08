@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="Hhn-Jc-DQP"/>
                         <viewControllerLayoutGuide type="bottom" id="lg7-7n-7O6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MwN-po-X7k" customClass="MetarView" customModule="Metar" customModuleProvider="target">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="MwN-po-X7k" customClass="MetarView" customModule="Metar" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -35,17 +35,39 @@
                                     <action selector="switchedSegment:" destination="MwN-po-X7k" eventType="valueChanged" id="leF-F9-cOW"/>
                                 </connections>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjQ-46-j8l" userLabel="Map Container View">
+                                <rect key="frame" x="600" y="194" width="600" height="406"/>
+                                <connections>
+                                    <segue destination="YAc-ZM-iSo" kind="embed" id="SI9-hw-sBz"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-CV-VzJ" userLabel="Metar Container View">
+                                <rect key="frame" x="0.0" y="194" width="600" height="406"/>
+                                <connections>
+                                    <segue destination="XuX-DU-BVt" kind="embed" id="NRD-HO-lwS"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.039215686274509803" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QxI-UT-fA1" firstAttribute="top" secondItem="MwN-po-X7k" secondAttribute="top" id="6m5-Xb-0yE"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="top" secondItem="LGa-CV-VzJ" secondAttribute="top" id="Crq-8p-2sn"/>
                             <constraint firstItem="7XA-Gy-fds" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" constant="10" id="GgP-ES-FyS"/>
                             <constraint firstItem="7XA-Gy-fds" firstAttribute="top" secondItem="QxI-UT-fA1" secondAttribute="bottom" constant="10" id="RSM-cv-KVk"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" priority="600" id="WsL-79-UvW"/>
+                            <constraint firstItem="LGa-CV-VzJ" firstAttribute="width" secondItem="MwN-po-X7k" secondAttribute="width" id="Z3a-gg-xHV"/>
+                            <constraint firstItem="LGa-CV-VzJ" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" priority="750" id="bUn-vI-XPJ"/>
+                            <constraint firstItem="lg7-7n-7O6" firstAttribute="top" secondItem="LGa-CV-VzJ" secondAttribute="bottom" id="dgH-XR-yZd"/>
                             <constraint firstAttribute="trailing" secondItem="QxI-UT-fA1" secondAttribute="trailing" id="fCk-kQ-f7T"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="bottom" secondItem="LGa-CV-VzJ" secondAttribute="bottom" priority="750" id="huj-eY-fni"/>
                             <constraint firstAttribute="trailing" secondItem="7XA-Gy-fds" secondAttribute="trailing" constant="10" id="jWP-Ov-St7"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="width" secondItem="LGa-CV-VzJ" secondAttribute="width" id="nGI-wY-yc3"/>
                             <constraint firstItem="QxI-UT-fA1" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" id="pyZ-h8-ouM"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="leading" secondItem="LGa-CV-VzJ" secondAttribute="trailing" id="rDY-yb-H2t"/>
+                            <constraint firstItem="LGa-CV-VzJ" firstAttribute="top" secondItem="7XA-Gy-fds" secondAttribute="bottom" constant="10" id="uz7-dQ-Bou"/>
                         </constraints>
                         <connections>
+                            <outlet property="leadingMapConstraint" destination="WsL-79-UvW" id="88Y-tZ-EfA"/>
                             <outlet property="segmentedSwitch" destination="7XA-Gy-fds" id="Bqb-nZ-LsG"/>
                         </connections>
                     </view>
@@ -245,6 +267,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPp-Sr-OGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="890" y="1091"/>
+        </scene>
+        <!--Metar Details View Controller-->
+        <scene sceneID="MFX-YX-Rh7">
+            <objects>
+                <viewController id="XuX-DU-BVt" customClass="MetarDetailsViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAY-s0-8cc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nm-Jk-r73" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="378"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="cey-H4-Gkk">
+            <objects>
+                <viewController id="YAc-ZM-iSo" customClass="MapViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3rq-aV-wrH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-aP-sXl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fd6-aP-sXl" firstAttribute="leading" secondItem="3rq-aV-wrH" secondAttribute="leading" id="663-5y-9qy"/>
+                            <constraint firstAttribute="trailing" secondItem="fd6-aP-sXl" secondAttribute="trailing" id="JZA-s1-OrF"/>
+                            <constraint firstItem="fd6-aP-sXl" firstAttribute="top" secondItem="3rq-aV-wrH" secondAttribute="top" id="kJc-d1-ijb"/>
+                            <constraint firstAttribute="bottom" secondItem="fd6-aP-sXl" secondAttribute="bottom" id="t8N-eF-dhJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="fd6-aP-sXl" id="5Mv-5f-n9f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlF-CI-dGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="874"/>
         </scene>
     </scenes>
     <resources>

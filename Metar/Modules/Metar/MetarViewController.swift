@@ -108,6 +108,8 @@ class MetarViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let controller = segue.destinationViewController as? MetarStationDetailViewController {
             controller.metar = metar
+        } else if let controller = segue.destinationViewController as? MapViewController {
+            controller.metar = metar
         }
     }
     
