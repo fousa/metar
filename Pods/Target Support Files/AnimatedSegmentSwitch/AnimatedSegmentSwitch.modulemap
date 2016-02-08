@@ -1,0 +1,6 @@
+framework module AnimatedSegmentSwitch {
+  umbrella header "AnimatedSegmentSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

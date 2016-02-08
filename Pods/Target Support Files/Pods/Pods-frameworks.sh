@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AERecord.framework"
+  install_framework "Pods/AnimatedSegmentSwitch.framework"
   install_framework "Pods/JTMaterialSpinner.framework"
   install_framework "Pods/Ono.framework"
   install_framework "Pods/PureLayout.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AERecord.framework"
+  install_framework "Pods/AnimatedSegmentSwitch.framework"
   install_framework "Pods/JTMaterialSpinner.framework"
   install_framework "Pods/Ono.framework"
   install_framework "Pods/PureLayout.framework"

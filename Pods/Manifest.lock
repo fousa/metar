@@ -1,5 +1,6 @@
 PODS:
   - AERecord (2.0.0)
+  - AnimatedSegmentSwitch (0.1.0)
   - Crashlytics (3.6.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.4)
@@ -20,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - AERecord (~> 2.0)
+  - AnimatedSegmentSwitch (~> 0.1)
   - Crashlytics (~> 3.6)
   - Fabric (~> 1.6)
   - JTMaterialSpinner (~> 1.0)
@@ -32,6 +34,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AERecord: 63313541906da457a51d808c1e0244b494dbb59f
+  AnimatedSegmentSwitch: 7bc126b7b433f4a1b4fb6546abe405cd4b5163ae
   Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
   JTMaterialSpinner: f9e825c80317023f479b7ecc2856785280d8a8c5

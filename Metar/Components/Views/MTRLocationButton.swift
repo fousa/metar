@@ -39,7 +39,7 @@ class MTRLocationButton: UIButton {
     private func configureSpinner() {
         locationSpinner = JTMaterialSpinner.newAutoLayoutView()
         locationSpinner.circleLayer.lineWidth = 1.0
-        locationSpinner.circleLayer.strokeColor = UIColor.mtrRobinsEggColor().CGColor
+        locationSpinner.circleLayer.strokeColor = UIColor.mtrBlueColor().CGColor
         addSubview(locationSpinner)
 
         let padding = CGFloat(5.0)
@@ -53,7 +53,7 @@ class MTRLocationButton: UIButton {
         locationLabel = UILabel()
         locationLabel.font = UIFont.systemFontOfSize(16.0, weight: UIFontWeightLight)
         locationLabel.text = NSLocalizedString("search_label_current_location", comment: "")
-        locationLabel.textColor = UIColor.mtrRobinsEggColor()
+        locationLabel.textColor = UIColor.mtrBlueColor()
         addSubview(locationLabel)
         locationLabel.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero, excludingEdge: .Left)
         locationLabel.autoPinEdge(.Left, toEdge: .Right, ofView: locationImageView, withOffset: 16.0)

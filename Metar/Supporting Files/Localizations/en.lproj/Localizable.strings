@@ -25,6 +25,12 @@
 /* detail_label_save */
 "detail_label_save" = "Save";
 
+/* detail_segment_label_map */
+"detail_segment_label_map" = "Map";
+
+/* detail_segment_label_metar */
+"detail_segment_label_metar" = "Metar";
+
 /* metar_unit_celsius */
 "metar_unit_celsius" = "Celsius";
 

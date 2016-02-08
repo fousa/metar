@@ -3,11 +3,13 @@ platform :ios, "8.0"
 inhibit_all_warnings!
 use_frameworks!
 
-pod 'Ono',               '~> 1.2'
-pod 'AERecord',          '~> 2.0'
-pod 'PureLayout',        '~> 3.0'
-pod 'SwiftDate',         '~> 3.0'
-pod 'JTMaterialSpinner', '~> 1.0'
+pod 'Ono',        '~> 1.2'
+pod 'AERecord',   '~> 2.0'
+pod 'PureLayout', '~> 3.0'
+pod 'SwiftDate',  '~> 3.0'
+
+pod 'JTMaterialSpinner',     '~> 1.0'
+pod 'AnimatedSegmentSwitch', '~> 0.1'
 
 pod 'Fabric',       '~> 1.6'
 pod 'Crashlytics',  '~> 3.6'
