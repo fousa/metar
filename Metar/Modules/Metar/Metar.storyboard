@@ -36,13 +36,13 @@
                                 </connections>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjQ-46-j8l" userLabel="Map Container View">
-                                <rect key="frame" x="0.0" y="194" width="600" height="406"/>
+                                <rect key="frame" x="600" y="194" width="600" height="406"/>
                                 <connections>
                                     <segue destination="YAc-ZM-iSo" kind="embed" id="SI9-hw-sBz"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-CV-VzJ" userLabel="Metar Container View">
-                                <rect key="frame" x="-600" y="194" width="600" height="406"/>
+                                <rect key="frame" x="0.0" y="194" width="600" height="406"/>
                                 <connections>
                                     <segue destination="XuX-DU-BVt" kind="embed" id="NRD-HO-lwS"/>
                                 </connections>
@@ -54,7 +54,7 @@
                             <constraint firstItem="UjQ-46-j8l" firstAttribute="top" secondItem="LGa-CV-VzJ" secondAttribute="top" id="Crq-8p-2sn"/>
                             <constraint firstItem="7XA-Gy-fds" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" constant="10" id="GgP-ES-FyS"/>
                             <constraint firstItem="7XA-Gy-fds" firstAttribute="top" secondItem="QxI-UT-fA1" secondAttribute="bottom" constant="10" id="RSM-cv-KVk"/>
-                            <constraint firstItem="UjQ-46-j8l" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" priority="800" id="WsL-79-UvW"/>
+                            <constraint firstItem="UjQ-46-j8l" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" priority="600" id="WsL-79-UvW"/>
                             <constraint firstItem="LGa-CV-VzJ" firstAttribute="width" secondItem="MwN-po-X7k" secondAttribute="width" id="Z3a-gg-xHV"/>
                             <constraint firstItem="LGa-CV-VzJ" firstAttribute="leading" secondItem="MwN-po-X7k" secondAttribute="leading" priority="750" id="bUn-vI-XPJ"/>
                             <constraint firstItem="lg7-7n-7O6" firstAttribute="top" secondItem="LGa-CV-VzJ" secondAttribute="bottom" id="dgH-XR-yZd"/>
@@ -67,6 +67,7 @@
                             <constraint firstItem="LGa-CV-VzJ" firstAttribute="top" secondItem="7XA-Gy-fds" secondAttribute="bottom" constant="10" id="uz7-dQ-Bou"/>
                         </constraints>
                         <connections>
+                            <outlet property="leadingMapConstraint" destination="WsL-79-UvW" id="88Y-tZ-EfA"/>
                             <outlet property="segmentedSwitch" destination="7XA-Gy-fds" id="Bqb-nZ-LsG"/>
                         </connections>
                     </view>
