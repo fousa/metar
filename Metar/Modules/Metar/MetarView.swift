@@ -26,7 +26,12 @@ class MetarView: UIView {
         segmentedSwitch.titleColor = UIColor.mtrGreyColor()
         segmentedSwitch.selectedTitleColor = UIColor.mtrDarkBlueColor()
         segmentedSwitch.thumbColor = UIColor.mtrBlueColor()
-        segmentedSwitch.items = ["Metar", "Map"]
+        segmentedSwitch.items = [
+            NSLocalizedString("detail_segment_label_metar", comment: ""),
+            NSLocalizedString("detail_segment_label_map", comment: "")
+        ]
+
+
     }
 
     // MARK: - Action
