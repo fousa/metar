@@ -29,6 +29,8 @@
 		047688021C503CE30064FA85 /* AirportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047688011C503CE30064FA85 /* AirportsTableViewCell.swift */; };
 		047688051C5040E40064FA85 /* MTRStationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047688041C5040E40064FA85 /* MTRStationViewModel.swift */; };
 		048863041C4A334E00CD5B26 /* DashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048863031C4A334E00CD5B26 /* DashboardTests.swift */; };
+		04A850891C694CF10028F384 /* MetarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A850881C694CF10028F384 /* MetarDetailsViewController.swift */; };
+		04A8508C1C694DCB0028F384 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8508B1C694DCB0028F384 /* MapViewController.swift */; };
 		04C22BA01BD6A5D800175B52 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C22B9F1BD6A5D800175B52 /* Search.storyboard */; };
 		04C22BA21BD6A82F00175B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA11BD6A82F00175B52 /* SearchViewController.swift */; };
 		04C22BA41BD6A90E00175B52 /* UIStoryboard+Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */; };
@@ -116,6 +118,8 @@
 		047688011C503CE30064FA85 /* AirportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportsTableViewCell.swift; sourceTree = "<group>"; };
 		047688041C5040E40064FA85 /* MTRStationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRStationViewModel.swift; sourceTree = "<group>"; };
 		048863031C4A334E00CD5B26 /* DashboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTests.swift; sourceTree = "<group>"; };
+		04A850881C694CF10028F384 /* MetarDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetarDetailsViewController.swift; sourceTree = "<group>"; };
+		04A8508B1C694DCB0028F384 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		04C22B9F1BD6A5D800175B52 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		04C22BA11BD6A82F00175B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04C22BA31BD6A90E00175B52 /* UIStoryboard+Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Dismiss.swift"; sourceTree = "<group>"; };
@@ -317,6 +321,22 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		04A850871C694CDD0028F384 /* Metar details */ = {
+			isa = PBXGroup;
+			children = (
+				04A850881C694CF10028F384 /* MetarDetailsViewController.swift */,
+			);
+			name = "Metar details";
+			sourceTree = "<group>";
+		};
+		04A8508A1C694DBE0028F384 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				04A8508B1C694DCB0028F384 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		04D5BCA91C4C4F69004ABF12 /* Airports */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +492,8 @@
 		626D6B811BD68AD40042619F /* Metar */ = {
 			isa = PBXGroup;
 			children = (
+				04A8508A1C694DBE0028F384 /* Map */,
+				04A850871C694CDD0028F384 /* Metar details */,
 				046C5CD11C4BA3990090AD2C /* Station details */,
 				04361D711C4B90BE000B4721 /* Metar.storyboard */,
 				04361D6F1C4B90AA000B4721 /* MetarView.swift */,
@@ -921,6 +943,7 @@
 			files = (
 				04361D641C4A814B000B4721 /* MTRDelegatingNavigationController.swift in Sources */,
 				04D8840D1C58327D003B9DE8 /* MTRDefaults.swift in Sources */,
+				04A850891C694CF10028F384 /* MetarDetailsViewController.swift in Sources */,
 				62DD04CA1BD635C800628E9D /* AppDelegate.swift in Sources */,
 				047687EE1C4ECC300064FA85 /* MTRNotificationManager.swift in Sources */,
 				047688021C503CE30064FA85 /* AirportsTableViewCell.swift in Sources */,
@@ -931,6 +954,7 @@
 				626D6B761BD689B80042619F /* Cloud.swift in Sources */,
 				047688001C50269C0064FA85 /* MTRShortcutManager.swift in Sources */,
 				626D6B881BD68DE20042619F /* DashboardView.swift in Sources */,
+				04A8508C1C694DCB0028F384 /* MapViewController.swift in Sources */,
 				04D884071C582141003B9DE8 /* MTRLocationButton.swift in Sources */,
 				0422B20E1C4D86C60048DED5 /* MTRDistanceFormatter.swift in Sources */,
 				047687F21C4ED8CA0064FA85 /* Metar.xcdatamodeld in Sources */,
