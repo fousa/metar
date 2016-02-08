@@ -9,6 +9,7 @@
 import UIKit
 
 import AnimatedSegmentSwitch
+import Crashlytics
 
 class MetarView: UIView {
 
@@ -44,6 +45,9 @@ class MetarView: UIView {
         UIView.animateWithDuration(segmentedSwitch.animationDuration, delay: 0.0, usingSpringWithDamping: segmentedSwitch.animationSpringDamping, initialSpringVelocity: segmentedSwitch.animationInitialSpringVelocity, options: [], animations: { finished in
             self.layoutIfNeeded()
         }, completion: nil)
+
+        // Log the view event.
+        Answers.logContentViewWithName("Detail", contentType: "view", contentId: presentMap ? "map" : "metar", customAttributes: nil)
     }
 
 }
