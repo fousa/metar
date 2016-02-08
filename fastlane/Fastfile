@@ -1,4 +1,4 @@
-fastlane_version '1.56.0'
+fastlane_version '1.57.0'
 
 lane :deploy do
   # Run the tests.
