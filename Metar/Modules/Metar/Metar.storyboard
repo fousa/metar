@@ -283,15 +283,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-Hd-DHZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
                                 <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iM0-bC-SQi">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iM0-bC-SQi">
                                     <size key="itemSize" width="278" height="40"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Ohj-Qa-HPS">
-                                        <rect key="frame" x="18" y="0.0" width="278" height="40"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Ohj-Qa-HPS" customClass="MetarDataCollectionViewCell" customModule="Metar" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="278" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="278" height="40"/>
@@ -300,7 +300,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q20-JU-Lj5">
                                                     <rect key="frame" x="0.0" y="0.0" width="278" height="40"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND DIRECTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-IQ-Oo0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND DIRECTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-IQ-Oo0">
                                                             <rect key="frame" x="0.0" y="0.0" width="101" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
@@ -323,6 +323,10 @@
                                             <constraint firstAttribute="trailing" secondItem="Q20-JU-Lj5" secondAttribute="trailing" id="eJt-6A-B5n"/>
                                             <constraint firstItem="Q20-JU-Lj5" firstAttribute="leading" secondItem="Ohj-Qa-HPS" secondAttribute="leading" id="kE2-lx-lJV"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Q9I-IQ-Oo0" id="dB6-9M-cTo"/>
+                                            <outlet property="valueLabel" destination="iuy-Ua-WG3" id="cs8-na-Nec"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

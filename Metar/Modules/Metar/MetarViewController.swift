@@ -110,6 +110,8 @@ class MetarViewController: UIViewController {
             controller.metar = metar
         } else if let controller = segue.destinationViewController as? MapViewController {
             controller.metar = metar
+        } else if let controller = segue.destinationViewController as? MetarDetailsViewController {
+            controller.metar = metar
         }
     }
     
