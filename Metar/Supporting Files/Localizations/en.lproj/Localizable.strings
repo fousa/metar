@@ -31,6 +31,24 @@
 /* detail_segment_label_metar */
 "detail_segment_label_metar" = "Metar";
 
+/* metar_data_pressure */
+"metar_data_pressure" = "Atmospheric pressure";
+
+/* metar_data_visibility_horizontal */
+"metar_data_visibility_horizontal" = "Horizontal visibility";
+
+/* metar_data_wind_direction */
+"metar_data_wind_direction" = "Wind direction";
+
+/* metar_data_wind_gusts */
+"metar_data_wind_gusts" = "Wind gusts";
+
+/* metar_data_wind_speed */
+"metar_data_wind_speed" = "Wind speed";
+
+/* metar_data_wind_varying */
+"metar_data_wind_varying" = "Varying";
+
 /* metar_unit_celsius */
 "metar_unit_celsius" = "Celsius";
 

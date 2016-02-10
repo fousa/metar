@@ -20,14 +20,14 @@ class MetarDetailsViewController: UIViewController {
         [unowned self] in
 
         return [
-            (title: "WIND DIRECTION",        value: self.metar.formatWindDirection()),
-            (title: "ATMOSPHERIC PRESSURE",  value: self.metar.formatPressure()),
-            (title: "WIND SPEED",            value: self.metar.formatWindSpeed()),
-            (title: "HORIZONTAL VISIBILITY", value: self.metar.formatVisibility()),
-            (title: "WIND GUSTS",            value: self.metar.formatGustSpeed()),
-            (title: "FEW",                   value: nil),
-            (title: "VARYING",               value: self.metar.formatVarying()),
-            (title: "OVERCAST",              value: nil),
+            (title: NSLocalizedString("metar_data_wind_direction", comment: ""), value: self.metar.formatWindDirection()),
+            (title: NSLocalizedString("metar_data_pressure", comment: ""), value: self.metar.formatPressure()),
+            (title: NSLocalizedString("metar_data_wind_speed", comment: ""), value: self.metar.formatWindSpeed()),
+            (title: NSLocalizedString("metar_data_visibility_horizontal", comment: ""), value: self.metar.formatVisibility()),
+            (title: NSLocalizedString("metar_data_wind_gusts", comment: ""), value: self.metar.formatGustSpeed()),
+            (title: "FEW", value: nil),
+            (title: NSLocalizedString("metar_data_wind_varying", comment: ""), value: self.metar.formatVarying()),
+            (title: "OVERCAST", value: nil),
         ]
     }()
 
