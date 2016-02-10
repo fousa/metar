@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIColor {
+
     class func mtrGreyColor() -> UIColor {
         return UIColor(red: 91.0 / 255.0, green: 103.0 / 255.0, blue: 112.0 / 255.0, alpha: 1.0)
     }
@@ -19,4 +20,5 @@ extension UIColor {
     class func mtrBlueColor() -> UIColor {
         return UIColor(red: 83.0 / 255.0, green: 217.0 / 255.0, blue: 250.0 / 255.0, alpha: 1.0)
     }
+    
 }

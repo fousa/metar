@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TfD-W2-H5H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E39c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TfD-W2-H5H">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
@@ -272,11 +272,80 @@
         <scene sceneID="MFX-YX-Rh7">
             <objects>
                 <viewController id="XuX-DU-BVt" customClass="MetarDetailsViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ene-15-HSz"/>
+                        <viewControllerLayoutGuide type="bottom" id="QDF-KU-DYg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RAY-s0-8cc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-Hd-DHZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
+                                <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="iM0-bC-SQi">
+                                    <size key="itemSize" width="278" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Ohj-Qa-HPS" customClass="MetarDataCollectionViewCell" customModule="Metar" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="278" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q20-JU-Lj5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="278" height="40"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND DIRECTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-IQ-Oo0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="25"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="260º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-Ua-WG3">
+                                                            <rect key="frame" x="0.0" y="16" width="40" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Q20-JU-Lj5" secondAttribute="bottom" id="IWi-Sw-mrg"/>
+                                            <constraint firstItem="Q20-JU-Lj5" firstAttribute="top" secondItem="Ohj-Qa-HPS" secondAttribute="top" id="UNt-rc-CjL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q20-JU-Lj5" secondAttribute="trailing" id="eJt-6A-B5n"/>
+                                            <constraint firstItem="Q20-JU-Lj5" firstAttribute="leading" secondItem="Ohj-Qa-HPS" secondAttribute="leading" id="kE2-lx-lJV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Q9I-IQ-Oo0" id="dB6-9M-cTo"/>
+                                            <outlet property="valueLabel" destination="iuy-Ua-WG3" id="cs8-na-Nec"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XuX-DU-BVt" id="Tkk-qi-WnG"/>
+                                    <outlet property="delegate" destination="XuX-DU-BVt" id="Vdg-ty-7c7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDF-KU-DYg" firstAttribute="top" secondItem="Iqu-Hd-DHZ" secondAttribute="bottom" id="4Kj-1B-bkn"/>
+                            <constraint firstItem="Iqu-Hd-DHZ" firstAttribute="top" secondItem="Ene-15-HSz" secondAttribute="bottom" id="UDP-nm-Gv3"/>
+                            <constraint firstItem="Iqu-Hd-DHZ" firstAttribute="leading" secondItem="RAY-s0-8cc" secondAttribute="leading" id="ULl-Jc-KKl"/>
+                            <constraint firstAttribute="trailing" secondItem="Iqu-Hd-DHZ" secondAttribute="trailing" id="rnA-Rv-R0p"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Iqu-Hd-DHZ" id="4sG-un-e2J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Nm-Jk-r73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,6 +355,10 @@
         <scene sceneID="cey-H4-Gkk">
             <objects>
                 <viewController id="YAc-ZM-iSo" customClass="MapViewController" customModule="Metar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1GK-tL-634"/>
+                        <viewControllerLayoutGuide type="bottom" id="nLh-Nq-jGI"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3rq-aV-wrH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
