@@ -1,2 +1,5 @@
 exclude:
     - Pods
+except:
+    - trailing-whitespace
+    - terminating-newline
